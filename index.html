@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>The ZIPScribble Map</title>
+	<link rel="stylesheet" href="example.css" type="text/css" />
+	<style type="text/css">
+		.layer path {
+		  stroke: black;
+		  vector-effect: non-scaling-stroke;
+		  fill: none;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+	<script src="polymaps.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			var po = org.polymaps;
+			
+			var map = po.map()
+			    .container(document.getElementById("map").appendChild(po.svg("svg")))
+			    .add(po.interact())
+			    .add(po.hash());
+			
+			map.add(po.image()
+			    .url(po.url("http://{S}tile.cloudmade.com"
+			    + "/b12a0bb2f7844dda8b214fda256a6bbd"
+			    + "/998/256/{Z}/{X}/{Y}.png")
+			    .hosts(["a.", "b.", "c.", ""])));
+			
+			var scribble = po.geoJson().url("data/zipscribble_US.json");
+			
+			
+			map.add(scribble);
+			
+			map.add(po.compass()
+			    .pan("none"));
+		});		
+	</script>
+	</head>
+	<body>
+		<div id="map">
+		</div>
+	</body>
+</html>

@@ -1,0 +1,4 @@
+*.esproj
+data/*.txt
+data/*.json
+data/*.zip
