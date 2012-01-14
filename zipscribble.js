@@ -22,22 +22,58 @@ var scribbleLayer;
 
 var boundingboxes;
 
+var currentCountry = 'US';
+
+var PATH;
+
 function makeGeoJSONURL(country) {
-	return 'data/zipscribble_'+country+'.json';
+	return PATH+'zipscribble_'+country+'.json';
+}
+
+function setCookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) {
+        	return c.substring(nameEQ.length, c.length);
+        }
+    }
+    return null;
 }
 
 function initMap(){
 
-	var bbRequest = jQuery.getJSON('data/boundingboxes.json', function(bb) {
-		boundingboxes = bb;
+	if (document.location.hostname == "")
+		PATH = 'data/';
+	else
+		PATH = '/media/zipscribble/data/';
+
+	jQuery.ajax({
+		url: PATH+'boundingboxes.json',
+		async: false,
+		dataType: 'json',
+		success: function (bb) {
+			boundingboxes = bb;
+		}
 	});
 
 	var po = org.polymaps;
 	
 	map = po.map()
 	    .container(document.getElementById("map").appendChild(po.svg("svg")))
-	    .add(po.interact())
-	    .add(po.hash());
+	    .add(po.interact());
 	
 	mapLayer = po.image()
 	    .url(po.url("http://{S}tile.cloudmade.com"
@@ -54,19 +90,51 @@ function initMap(){
 	map.add(po.compass()
 	    .pan("none"));
 
-	bbRequest.complete(function() {
-		switchCountry('US');
-		jQuery('#country')[0].value = 'US';
-	});
+	if (document.location.hash.length == 0)
+		switchCountry(getCookie('lastCountry') || 'US', true);
+
+	map.add(po.hash().parser(hash_parser).formatter(hash_formatter));
 }
 
 function toggleMap(mapOn) {
 	mapLayer.visible(mapOn);
 }
 
-function switchCountry(country) {
+function switchCountry(country, panMap) {
+	currentCountry = country;
+	jQuery('#country')[0].value = country;
 	scribbleLayer.url(makeGeoJSONURL(country));
-	map.extent(boundingboxes[country]);
+	setCookie('lastCountry', country, 30);
+	if (panMap)
+		map.extent(boundingboxes[country]);
+}
+
+// hash functions slightly modified from https://github.com/simplegeo/polymaps/pull/41
+function hash_parser(map, s) {
+	var args = s.split("/");
+	var coords = args.slice(1, 4).map(Number);
+	if (boundingboxes[args[0]] != undefined)
+		switchCountry(args[0], coords.length == 0);
+	else
+		return true;
+	if (coords.length == 3 && !coords.some(isNaN)) {
+		var lat = 90 - 1e-8;
+		var size = map.size();
+		map.zoomBy(coords[0] - map.zoom(),
+			{x: size.x / 2, y: size.y / 2},
+			{lat: Math.min(lat, Math.max(-lat, coords[1])), lon: coords[2]});
+	}
+}
+
+function hash_formatter(map) {
+  var center = map.center(),
+      zoom = map.zoom(),
+      precision = Math.max(0, Math.ceil(Math.log(zoom) / Math.LN2));
+  return "#" + currentCountry
+      + "/" + zoom.toFixed(2)
+      + "/" + center.lat.toFixed(precision)
+      + "/" + center.lon.toFixed(precision)
+      ;
 }
 
 initMap();
