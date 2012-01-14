@@ -28,7 +28,7 @@ function makeGeoJSONURL(country) {
 
 function initMap(){
 
-	var bbRequest = $.getJSON('data/boundingboxes.json', function(bb) {
+	var bbRequest = jQuery.getJSON('data/boundingboxes.json', function(bb) {
 		boundingboxes = bb;
 	});
 
@@ -56,7 +56,7 @@ function initMap(){
 
 	bbRequest.complete(function() {
 		switchCountry('US');
-		$('#country')[0].value = 'US';
+		jQuery('#country')[0].value = 'US';
 	});
 }
 
@@ -68,3 +68,5 @@ function switchCountry(country) {
 	scribbleLayer.url(makeGeoJSONURL(country));
 	map.extent(boundingboxes[country]);
 }
+
+initMap();
