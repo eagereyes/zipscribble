@@ -28,7 +28,7 @@ function makeGeoJSONURL(country) {
 
 function initMap(){
 
-	$.getJSON('data/boundingboxes.json', function(bb) {
+	var bbRequest = $.getJSON('data/boundingboxes.json', function(bb) {
 		boundingboxes = bb;
 	});
 
@@ -47,20 +47,24 @@ function initMap(){
 	
 	map.add(mapLayer);
 	
-	scribbleLayer = po.geoJson().url(makeGeoJSONURL('US'));
+	scribbleLayer = po.geoJson();
 	
 	map.add(scribbleLayer);
 	
 	map.add(po.compass()
 	    .pan("none"));
+
+	bbRequest.complete(function() {
+		switchCountry('US');
+		$('#country')[0].value = 'US';
+	});
 }
 
 function toggleMap(mapOn) {
 	mapLayer.visible(mapOn);
 }
 
-function switchCountry(selector) {
-	var country = selector.value;
+function switchCountry(country) {
 	scribbleLayer.url(makeGeoJSONURL(country));
 	map.extent(boundingboxes[country]);
 }
