@@ -19,7 +19,8 @@ def convertCountry(country):
 					'minLon': 10000,
 					'maxLon': -10000
 					}
-	
+
+	states = {}
 	zips = []
 	for row in reader:
 		if (len(row) > 10 and len(row[9]) > 0 and len(row[10]) > 0 and
@@ -27,9 +28,13 @@ def convertCountry(country):
 			z = {'zip':   row[1],
 				 'lat':   float(row[9]),
 				 'lon':   float(row[10]),
-				 'state': row[4]
+				 'state': row[4] if len(row[4]) > 0 else 'None' 
 				 }
 			zips.append(z)
+
+			if not z['state'] in states:
+				states[z['state']] = []
+
 			boundingbox['minLat'] = min(boundingbox['minLat'], z['lat'])
 			boundingbox['maxLat'] = max(boundingbox['maxLat'], z['lat'])
 			boundingbox['minLon'] = min(boundingbox['minLon'], z['lon'])
@@ -57,19 +62,36 @@ def convertCountry(country):
 		    else:
 		        last = zips[i]
 		
-		geoJSON = {	'type': 'LineString' }
+		if len(states.keys()) == 1:
+			geoJSON = {	'type': 'LineString' }
+			
+			geoJSON['coordinates'] = map(lambda z : [z['lon'], z['lat']], zips)
+			
+		else:
 		
-		geoJSON['coordinates'] = map(lambda z : [z['lon'], z['lat']], zips)
+			previousState = ''
+			for zip in zips:
+				if zip['state'] != previousState:
+					previousState = zip['state']
+					states[previousState].append([])
+				if previousState == '':
+					print zip
+				states[previousState][-1].append([zip['lon'], zip['lat']])
+			
+			geoJSON = {'type': 'FeatureCollection'}
+			
+			geoJSON['features'] = map(lambda s :
+				{'type': 'Feature',
+				 'geometry': {
+				 	'type': 'MultiLineString',
+				 	'coordinates': states[s]
+				 },
+				 'properties': {},
+				 'id': s
+				}, states.keys())
 		
 		with open('zipscribble_'+country+'.json', 'wb') as out:
-			json.dump(geoJSON, out)
-		
-		#state = ''
-		#for zip in zips:
-		#	if zip['state'] != state:
-		#		state = zip['state']
-		#		print state
-
+			json.dump(geoJSON, out)		
 
 
 for file in os.listdir('.'):
