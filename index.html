@@ -9,37 +9,66 @@
 		  vector-effect: non-scaling-stroke;
 		  fill: none;
 		}
+		
+		svg {
+			width: 800px;
+			height: 600px;
+		}
+		
+		body {
+			background-color: white;
+		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
 	<script src="polymaps.min.js" type="text/javascript"></script>
+	<script src="zipscribble.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-
-			var po = org.polymaps;
-			
-			var map = po.map()
-			    .container(document.getElementById("map").appendChild(po.svg("svg")))
-			    .add(po.interact())
-			    .add(po.hash());
-			
-			map.add(po.image()
-			    .url(po.url("http://{S}tile.cloudmade.com"
-			    + "/b12a0bb2f7844dda8b214fda256a6bbd"
-			    + "/998/256/{Z}/{X}/{Y}.png")
-			    .hosts(["a.", "b.", "c.", ""])));
-			
-			var scribble = po.geoJson().url("data/zipscribble_US.json");
-			
-			
-			map.add(scribble);
-			
-			map.add(po.compass()
-			    .pan("none"));
-		});		
+		$(document).ready(initMap);
 	</script>
 	</head>
 	<body>
 		<div id="map">
 		</div>
+		<form>
+		<input type="checkbox" checked onclick="toggleMap(this.checked);">Map</input>
+		<select name="country" onchange="switchCountry(this);">
+			<option value="US">United States</option>
+			<option value="AR">Argentina</option>
+			<option value="AT">Austria</option>
+			<option value="AU">Australia</option>
+			<option value="BE">Belgium</option>
+			<option value="BG">Bulgaria</option>
+			<option value="CA">Canada</option>
+			<option value="HR">Croatia</option>
+			<option value="CZ">Czech Republic</option>
+			<option value="DK">Denmark</option>
+			<option value="FI">Finland</option>
+			<option value="FR">France</option>
+			<option value="DE">Germany</option>
+			<option value="GB">Great Britain</option>
+			<option value="HU">Hungary</option>
+			<option value="IS">Iceland</option>
+			<option value="IN">India</option>
+			<option value="IT">Italy</option>
+			<option value="JP">Japan</option>
+			<option value="LT">Lithuania</option>
+			<option value="MX">Mexico</option>
+			<option value="NL">The Netherlands</option>
+			<option value="NZ">New Zealand</option>
+			<option value="NO">Norway</option>
+			<option value="PK">Pakistan</option>
+			<option value="PH">Philippines</option>
+			<option value="PL">Poland</option>
+			<option value="PT">Portugal</option>
+			<option value="RU">Russia</option>
+			<option value="SK">Slovakia</option>
+			<option value="ZA">South Africa</option>
+			<option value="ES">Spain</option>
+			<option value="SE">Sweden</option>
+			<option value="CH">Switzerland</option>
+			<option value="TH">Thailand</option>
+			<option value="TR">Turkey</option>
+		 </select>
+		</form>
 	</body>
 </html>
