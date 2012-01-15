@@ -85,7 +85,8 @@ function initMap(){
 	
 	scribbleLayer = po.geoJson();
 	
-	map.add(scribbleLayer);
+	map.add(scribbleLayer.on('load', po.stylist()
+	.attr('stroke', function(d) { console.log(d.id); return '#'+('00000'+(Math.random()*16777216<<0).toString(16)).substr(-6); })));
 	
 	map.add(po.compass()
 	    .pan("none"));

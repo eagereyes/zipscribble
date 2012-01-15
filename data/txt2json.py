@@ -38,7 +38,8 @@ def convertCountry(country):
 	zips = []
 	for row in reader:
 		if (len(row) > 10 and len(row[9]) > 0 and len(row[10]) > 0 and
-			((country == 'US' and len(row[3]) > 0) or country != 'US')):
+			((country == 'US' and len(row[3]) > 0) or country != 'US') and
+			((country == 'RU' and float(row[10]) > 0) or country != 'RU')):
 			z = {'zip':   row[1],
 				 'lat':   float(row[9]),
 				 'lon':   float(row[10]),
@@ -46,13 +47,20 @@ def convertCountry(country):
 				 }
 			zips.append(z)
 
+#			if country == 'RU' and z['lon'] < 0:
+#				z['lon'] = 180 - z['lon']
+
 			if not z['state'] in states:
 				states[z['state']] = []
 
-			boundingbox['minLat'] = min(boundingbox['minLat'], z['lat'])
-			boundingbox['maxLat'] = max(boundingbox['maxLat'], z['lat'])
-			boundingbox['minLon'] = min(boundingbox['minLon'], z['lon'])
-			boundingbox['maxLon'] = max(boundingbox['maxLon'], z['lon'])
+			if not ((country == 'US' and (z['lat'] > 50 or z['lon'] < -125)) or
+				((country == 'ES' or country == 'PT') and z['lat'] < 35) or
+				(country == 'FR' and z['lon'] < -7)):
+
+				boundingbox['minLat'] = min(boundingbox['minLat'], z['lat'])
+				boundingbox['maxLat'] = max(boundingbox['maxLat'], z['lat'])
+				boundingbox['minLon'] = min(boundingbox['minLon'], z['lon'])
+				boundingbox['maxLon'] = max(boundingbox['maxLon'], z['lon'])
 	
 	centerLat = (boundingbox['minLat'] + boundingbox['maxLat'])/2;
 	centerLon = (boundingbox['minLon'] + boundingbox['maxLon'])/2;
@@ -83,15 +91,22 @@ def convertCountry(country):
 			
 		else:
 		
-			previousState = ''
+			stateConnectors = []
+
+			previousState = None
+			previousPoint = None
 			for zip in zips:
 				if zip['state'] != previousState:
 					previousState = zip['state']
 					states[previousState].append([])
-				if previousState == '':
-					print zip
+					if previousPoint != None:
+						stateConnectors.append(
+							[previousPoint['lon'], previousPoint['lat']])
+						stateConnectors.append([zip['lon'], zip['lat']])
+					
 				states[previousState][-1].append([zip['lon'], zip['lat']])
-			
+				previousPoint = zip
+
 			geoJSON = {'type': 'FeatureCollection'}
 			
 			geoJSON['features'] = map(lambda s :
@@ -103,6 +118,16 @@ def convertCountry(country):
 				 'properties': {},
 				 'id': s
 				}, states.keys())
+		
+			geoJSON['features'].insert(0, {
+				'type': 'Feature',
+				'geometry': {
+					'type': 'LineString',
+					'coordinates': stateConnectors
+				},
+				'properties': {},
+				'id': '000stateconnectors'
+			})
 		
 		with open('zipscribble_'+country+'.json', 'wb') as out:
 			json.dump(geoJSON, out)		
