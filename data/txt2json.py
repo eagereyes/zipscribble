@@ -39,7 +39,8 @@ def convertCountry(country):
 	for row in reader:
 		if (len(row) > 10 and len(row[9]) > 0 and len(row[10]) > 0 and
 			((country == 'US' and len(row[3]) > 0) or country != 'US') and
-			((country == 'RU' and float(row[10]) > 0) or country != 'RU')):
+			((country == 'RU' and float(row[10]) > 0) or country != 'RU') and
+			((country == 'CA' and float(row[9]) < 90) or country != 'CA')):
 			z = {'zip':   row[1],
 				 'lat':   float(row[9]),
 				 'lon':   float(row[10]),

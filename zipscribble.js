@@ -28,11 +28,7 @@ var showStates = false;
 
 var PATH;
 
-var colorBrewer = [[166, 206, 227], [31, 120, 180], [178, 223, 138], [51, 160, 44], [251, 154, 153], [227, 26, 28], [253, 191, 111], [255, 127, 0], [202, 178, 214], [106, 61, 154], [255, 255, 153]];
-
 var stateColors = {}
-
-var nextColor = 0;
 
 function makeGeoJSONURL(country) {
 	return PATH+'zipscribble_'+country+'.json';
@@ -99,17 +95,7 @@ function initMap(){
 				if (d.id == '000stateconnectors')
 					return 'gray'
 				else {
-//					if (stateColors[d.id] === undefined) {
-//						stateColors[d.id] = colorBrewer[nextColor];
-//						if (Math.floor(nextColor/colorBrewer.length) % 2 == 1)
-//							stateColors[d.id] = 'rgb('+colorBrewer[nextColor].map(function(d) { return Math.floor(d/2); }).join(',')+')';
-//						else
-//							stateColors[d.id] =  'rgb('+stateColors[d.id].join(',')+')';
-//						nextColor = (nextColor+1) % colorBrewer.length;
-//					}
-//					return stateColors[d.id];
 					if (stateColors[d.id] === undefined) {
-//						stateColors[d.id] = '#'+('00000'+(Math.random()*16777216<<0).toString(16)).substr(-6);
 						stateColors[d.id] = 'rgb('+Math.floor(Math.random()*160)+','+Math.floor(Math.random()*160)+','+Math.floor(Math.random()*160)+')';
 					}
 					return stateColors[d.id];
@@ -136,7 +122,6 @@ function toggleStates(statesOn) {
 	showStates = statesOn;
 	scribbleLayer.reload();
 	stateColors = {};
-	nextColor = 0;
 }
 
 function switchCountry(country, panMap) {
@@ -144,8 +129,10 @@ function switchCountry(country, panMap) {
 	jQuery('#country')[0].value = country;
 	scribbleLayer.url(makeGeoJSONURL(country));
 	setCookie('lastCountry', country, 30);
-	if (panMap)
+	if (panMap) {
+//		console.log(countryInfo[country].bbox);
 		map.extent(countryInfo[country].bbox);
+	}
 	if (countryInfo[country].states) {
 		jQuery('#showStates').removeAttr('disabled');
 		showStates = jQuery('#showStates')[0].checked;
@@ -154,7 +141,6 @@ function switchCountry(country, panMap) {
 		showStates = false;
 	}
 	stateColors = {};
-	nextColor = 0;
 }
 
 // hash functions slightly modified from https://github.com/simplegeo/polymaps/pull/41
