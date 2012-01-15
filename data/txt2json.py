@@ -22,7 +22,7 @@ import os
 def compare(a, b):
 	return cmp(a['zip'], b['zip'])
 
-boundingboxes = {}
+countryInfo = {}
 
 def convertCountry(country):
 	
@@ -65,12 +65,13 @@ def convertCountry(country):
 	centerLat = (boundingbox['minLat'] + boundingbox['maxLat'])/2;
 	centerLon = (boundingbox['minLon'] + boundingbox['maxLon'])/2;
 
-	boundingboxes[country] = [
-		{'lon': centerLon - (centerLon - boundingbox['minLon']) * 1.1,
+	countryInfo[country] = { 'bbox':
+		[{'lon': centerLon - (centerLon - boundingbox['minLon']) * 1.1,
 		 'lat': centerLat - (centerLat - boundingbox['minLat']) * 1.1},
 		{'lon': centerLon + (boundingbox['maxLon'] - centerLon) * 1.1,
 		 'lat': centerLat + (boundingbox['maxLat'] - centerLat) * 1.1}]
-	
+	}
+		 
 	if len(zips) == 0:
 		print 'No data for '+country+'!'
 	else:
@@ -88,6 +89,8 @@ def convertCountry(country):
 			geoJSON = {	'type': 'LineString' }
 			
 			geoJSON['coordinates'] = map(lambda z : [z['lon'], z['lat']], zips)
+			
+			countryInfo[country]['states'] = False
 			
 		else:
 		
@@ -128,9 +131,13 @@ def convertCountry(country):
 				'properties': {},
 				'id': '000stateconnectors'
 			})
+	
+			countryInfo[country]['states'] = True
+	
 		
 		with open('zipscribble_'+country+'.json', 'wb') as out:
 			json.dump(geoJSON, out)		
+
 
 
 for file in os.listdir('.'):
@@ -139,5 +146,5 @@ for file in os.listdir('.'):
 		print country
 		convertCountry(country)
 
-with open('boundingboxes.json', 'wb') as bb:
-	json.dump(boundingboxes, bb)
+with open('countryinfo.json', 'wb') as info:
+	json.dump(countryInfo, info)

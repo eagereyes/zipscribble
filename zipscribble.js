@@ -20,7 +20,7 @@ var mapLayer;
 
 var scribbleLayer;
 
-var boundingboxes;
+var countryInfo;
 
 var currentCountry = 'US';
 
@@ -61,11 +61,11 @@ function initMap(){
 		PATH = '/media/zipscribble/data/';
 
 	jQuery.ajax({
-		url: PATH+'boundingboxes.json',
+		url: PATH+'countryinfo.json',
 		async: false,
 		dataType: 'json',
-		success: function (bb) {
-			boundingboxes = bb;
+		success: function (info) {
+			countryInfo = info;
 		}
 	});
 
@@ -107,14 +107,14 @@ function switchCountry(country, panMap) {
 	scribbleLayer.url(makeGeoJSONURL(country));
 	setCookie('lastCountry', country, 30);
 	if (panMap)
-		map.extent(boundingboxes[country]);
+		map.extent(countryInfo[country].bbox);
 }
 
 // hash functions slightly modified from https://github.com/simplegeo/polymaps/pull/41
 function hash_parser(map, s) {
 	var args = s.split("/");
 	var coords = args.slice(1, 4).map(Number);
-	if (boundingboxes[args[0]] != undefined)
+	if (countryInfo[args[0]] != undefined)
 		switchCountry(args[0], coords.length == 0);
 	else
 		return true;

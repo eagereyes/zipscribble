@@ -32,7 +32,8 @@
 			        <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors,
 			        <a href="http://creativecommons.org/licenses/by-sa/2.0/">CCBYSA</a>. ZIP/postal code data from <a href="http://geonames.org/">geonames</a>.</p>
 			<form>
-			<input type="checkbox" checked onclick="toggleMap(this.checked);">Map</input>
+			<label for="showMap">
+			<input type="checkbox" name="showMap" id="showMap" checked onclick="toggleMap(this.checked);" />Show Map</label>
 			<select name="country" id="country" onchange="switchCountry(this.value, true);">
 				<option value="AR">Argentina</option>
 				<option value="AT">Austria</option>
