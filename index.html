@@ -27,52 +27,62 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<div id="map">
 			</div>
-			<p>Surface map &copy; 2010
-			        <a href="http://www.cloudmade.com/">CloudMade</a>,
-			        <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors,
-			        <a href="http://creativecommons.org/licenses/by-sa/2.0/">CCBYSA</a>. ZIP/postal code data from <a href="http://geonames.org/">geonames</a>.</p>
-			<form>
-			<label for="showMap">
-			<input type="checkbox" name="showMap" id="showMap" checked onclick="toggleMap(this.checked);" />Show Map</label>
-			<select name="country" id="country" onchange="switchCountry(this.value, true);">
-				<option value="AR">Argentina</option>
-				<option value="AT">Austria</option>
-				<option value="AU">Australia</option>
-				<option value="BE">Belgium</option>
-				<option value="BG">Bulgaria</option>
-				<option value="CA">Canada</option>
-				<option value="HR">Croatia</option>
-				<option value="CZ">Czech Republic</option>
-				<option value="DK">Denmark</option>
-				<option value="FI">Finland</option>
-				<option value="FR">France</option>
-				<option value="DE">Germany</option>
-				<option value="GB">Great Britain</option>
-				<option value="HU">Hungary</option>
-				<option value="IS">Iceland</option>
-				<option value="IN">India</option>
-				<option value="IT">Italy</option>
-				<option value="JP">Japan</option>
-				<option value="LT">Lithuania</option>
-				<option value="MX">Mexico</option>
-				<option value="NL">The Netherlands</option>
-				<option value="NZ">New Zealand</option>
-				<option value="NO">Norway</option>
-				<option value="PK">Pakistan</option>
-				<option value="PH">Philippines</option>
-				<option value="PL">Poland</option>
-				<option value="PT">Portugal</option>
-				<option value="RU">Russia</option>
-				<option value="SK">Slovakia</option>
-				<option value="ZA">South Africa</option>
-				<option value="ES">Spain</option>
-				<option value="SE">Sweden</option>
-				<option value="CH">Switzerland</option>
-				<option value="TH">Thailand</option>
-				<option value="TR">Turkey</option>
-				<option value="US">United States</option>
-			 </select>
-			</form>
+			<div style="width:50%;float:left;">
+				Surface map &copy; 2010
+				        <a href="http://www.cloudmade.com/">CloudMade</a>,
+				        <a href="http://www.openstreetmap.org/">OpenStreetMap</a> contributors,
+				        <a href="http://creativecommons.org/licenses/by-sa/2.0/">CCBYSA</a>. ZIP/postal code data from <a href="http://geonames.org/">geonames</a>.
+			</div>
+			<div style="width:50%;float:left;">
+				<form style="float: right;">
+				<label for="showMap">
+				<input type="checkbox" name="showMap" id="showMap" checked onclick="toggleMap(this.checked);" />Show Map
+				</label>
+				<label for="showStates">
+				<input type="checkbox" name="showStates" id="showStates" onclick="toggleStates(this.checked);" />Show States
+				</label>
+				<select name="country" id="country" onchange="switchCountry(this.value, true);">
+					<option value="AR">Argentina</option>
+					<option value="AU">Australia</option>
+					<option value="AT">Austria</option>
+					<option value="BE">Belgium</option>
+					<option value="BG">Bulgaria</option>
+					<option value="CA">Canada</option>
+					<option value="HR">Croatia</option>
+					<option value="CZ">Czech Republic</option>
+					<option value="DK">Denmark</option>
+					<option value="FI">Finland</option>
+					<option value="FR">France</option>
+					<option value="DE">Germany</option>
+					<option value="GB">Great Britain</option>
+					<option value="GL">Greenland</option>
+					<option value="HU">Hungary</option>
+					<option value="IS">Iceland</option>
+					<option value="IN">India</option>
+					<option value="IT">Italy</option>
+					<option value="JP">Japan</option>
+					<option value="LT">Lithuania</option>
+					<option value="MX">Mexico</option>
+					<option value="NL">The Netherlands</option>
+					<option value="NZ">New Zealand</option>
+					<option value="NO">Norway</option>
+					<option value="PK">Pakistan</option>
+					<option value="PH">Philippines</option>
+					<option value="PL">Poland</option>
+					<option value="PT">Portugal</option>
+					<option value="RU">Russia</option>
+					<option value="SK">Slovakia</option>
+					<option value="SI">Slovenia</option>
+					<option value="ZA">South Africa</option>
+					<option value="ES">Spain</option>
+					<option value="SE">Sweden</option>
+					<option value="CH">Switzerland</option>
+					<option value="TH">Thailand</option>
+					<option value="US">United States</option>
+				 </select>
+				</form>
+			</div>
+			<div style="clear: both;"></div>
 			<script src="zipscribble.js" type="text/javascript"></script>
 			<script src="fullscreen.js" type="text/javascript"></script>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

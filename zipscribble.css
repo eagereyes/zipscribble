@@ -6,7 +6,7 @@ svg {
 div#map {
   position: relative;
   border: solid 4px #ccc;
-  background: #eee;
+  background: white;
   height: 500px;
 }
 
