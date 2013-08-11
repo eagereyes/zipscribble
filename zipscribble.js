@@ -75,8 +75,12 @@ function initMap(){
 
 	var po = org.polymaps;
 	
+	var svg = po.svg('svg');
+	svg.setAttribute('width', '100%');
+	svg.setAttribute('height', '100%');
+
 	map = po.map()
-	    .container(document.getElementById("map").appendChild(po.svg("svg")))
+	    .container(document.getElementById("map").appendChild(svg))
 	    .add(po.interact());
 	
 	mapLayer = po.image()
