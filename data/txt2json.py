@@ -24,8 +24,8 @@ def compare(a, b):
 
 countryInfo = {}
 
-def convertCountry(country):
-	
+def convertCountry(country, sortZIPs):
+
 	reader = csv.reader(open(country+'.txt', 'rb'), delimiter='\t')
 
 	boundingbox = {	'minLat': 10000,
@@ -76,7 +76,9 @@ def convertCountry(country):
 	if len(zips) == 0:
 		print 'No data for '+country+'!'
 	else:
-		zips.sort(compare)
+	
+		if sortZIPs:
+			zips.sort(compare)
 		
 		# uniq
 		last = zips[-1]
@@ -145,7 +147,10 @@ for file in os.listdir('.'):
 	if len(file) == 6 and file[-4:] == '.txt':
 		country = file[:2]
 		print country
-		convertCountry(country)
+		convertCountry(country, True)
+
+print 'US-bydate'
+convertCountry('US-bydate', False)
 
 with open('countryinfo.json', 'wb') as info:
 	json.dump(countryInfo, info)
