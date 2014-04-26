@@ -67,8 +67,7 @@ def convertCountry(country, sortZIPs):
 	centerLon = (boundingbox['minLon'] + boundingbox['maxLon'])/2;
 
 	countryInfo[country] = { 'bbox':
-		[centerLon - (centerLon - boundingbox['minLon']) * 1.1, centerLon + (boundingbox['maxLon'] - centerLon) * 1.1,
-		 centerLat - (centerLat - boundingbox['minLat']) * 1.1, centerLat + (boundingbox['maxLat'] - centerLat) * 1.1]
+		[boundingbox['minLon'], boundingbox['maxLon'], boundingbox['minLat'], boundingbox['maxLat']]
 	}
 		 
 	if len(zips) == 0:
@@ -87,7 +86,10 @@ def convertCountry(country, sortZIPs):
 		        last = zips[i]
 		
 		if len(states.keys()) == 1:
-			geoJSON = {	'type': 'LineString' }
+			geoJSON = {
+				'type': 'LineString',
+				'bbox': countryInfo[country]['bbox']
+			}
 			
 			geoJSON['coordinates'] = map(lambda z : [z['lon'], z['lat']], zips)
 			
@@ -111,8 +113,10 @@ def convertCountry(country, sortZIPs):
 				states[previousState][-1].append([zip['lon'], zip['lat']])
 				previousPoint = zip
 
-			geoJSON = {'type': 'FeatureCollection',
-						'bbox': countryInfo[country]['bbox']}
+			geoJSON = {
+				'type': 'FeatureCollection',
+				'bbox': countryInfo[country]['bbox']
+			}
 			
 			geoJSON['features'] = map(lambda s :
 				{'type': 'Feature',
