@@ -69,7 +69,9 @@ def convertCountry(country, sortZIPs):
 	countryInfo[country] = { 'bbox':
 		[boundingbox['minLon'], boundingbox['maxLon'], boundingbox['minLat'], boundingbox['maxLat']]
 	}
-		 
+	
+	print countryInfo[country]['bbox'];
+
 	if len(zips) == 0:
 		print 'No data for '+country+'!'
 	else:
