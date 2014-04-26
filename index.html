@@ -94,8 +94,11 @@
 						if (zipLayer != null) {
 							map.removeLayer(zipLayer);
 						}
-
-						// map.fitBounds();
+						console.log(data.bbox);
+						var southWest = L.latLng(data.bbox[2], data.bbox[0]);
+						var northEast = L.latLng(data.bbox[3], data.bbox[1]);
+						var bounds = L.latLngBounds(southWest, northEast);
+						map.fitBounds(bounds);
 						zipLayer = L.mapbox.featureLayer(data);
 						zipLayer.addTo(map);
 						zipLayer.setStyle({color: '#333', weight: 1});
