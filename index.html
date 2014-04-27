@@ -86,7 +86,13 @@
 		</div>
 	</body>
 			<script>
-				var map = L.mapbox.map('map', 'eagereyes.i309hlkm');
+				var map = L.mapbox.map('map');
+				
+				var tileLayer = L.mapbox.tileLayer('eagereyes.i309hlkm', {
+					detectRetina: true
+				});
+				map.addLayer(tileLayer);
+
 				var zipLayer;
 
 				function loadCountry(cc) {
@@ -104,6 +110,14 @@
 						zipLayer.setStyle({color: '#333', weight: 1});
 					});
 
+				}
+
+				function toggleMap(showMap) {
+					if (showMap) {
+						map.addLayer(tileLayer);
+					} else {
+						map.removeLayer(tileLayer);
+					}
 				}
 
 				loadCountry('US');
