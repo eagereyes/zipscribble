@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-#	Copyright (c) 2012, Robert Kosara <rkosara@me.com>
+#	Copyright (c) 2012-2014, Robert Kosara <rkosara@me.com>
 #	
 #	Permission to use, copy, modify, and/or distribute this software for any
 #	purpose with or without fee is hereby granted, provided that the above
@@ -38,7 +38,7 @@ def convertCountry(country, sortZIPs):
 	zips = []
 	for row in reader:
 		if (len(row) > 10 and len(row[9]) > 0 and len(row[10]) > 0 and
-			((country == 'US' and len(row[3]) > 0) or country != 'US') and
+			((country == 'US' and (len(row[3]) > 0 and row[4] != 'GU')) or country != 'US') and
 			((country == 'RU' and float(row[10]) > 0) or country != 'RU') and
 			((country == 'CA' and float(row[9]) < 90) or country != 'CA')):
 			z = {'zip':   row[1],
