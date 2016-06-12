@@ -2,3 +2,6 @@
 data/*.txt
 data/*.json
 data/*.zip
+ZIPTPCMap/LKH*
+ZIPTPCMap/qsopt*
+ZIPTPCMap/concorde

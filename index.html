@@ -76,7 +76,7 @@
 					<option value="SE">Sweden</option>
 					<option value="CH">Switzerland</option>
 					<option value="TH">Thailand</option>
-					<option value="US">United States</option>
+					<option value="US" selected>United States</option>
 					<option value="US-bydate">U.S. by date established</option>
 				 </select>
 				</form>
@@ -90,26 +90,35 @@
 
 				var map = L.mapbox.map('map');
 				
-				var tileLayer = L.mapbox.tileLayer('eagereyes.i309hlkm', {
-					detectRetina: true
-				});
+				var tileLayer = L.mapbox.tileLayer('eagereyes.i309hlkm');
 				map.addLayer(tileLayer);
 
-				var zipLayer;
+				var zipLayers = [];
 
 				function loadCountry(cc) {
 					$.getJSON('data/zipscribble_'+cc+'.json', function(data) {
-						if (zipLayer != null) {
-							map.removeLayer(zipLayer);
+						while (zipLayers.length > 0) {
+							var z = zipLayers.pop();
+							map.removeLayer(z);
 						}
+						data.features.forEach(function(state) {
+							var color = '#'+Math.floor(Math.random()*10)+Math.floor(Math.random()*16)+Math.floor(Math.random()*10);
+							var lls = state.geometry.coordinates[0].map(function(llpair) {
+								if (llpair[0] == undefined) {
+									console.log(state.id);
+								}
+								return L.latLng(llpair[0], llpair[1]);
+							});
+							// console.log(lls);
+							var z = L.polyline(lls, {'color': color, 'weight': 1});
+							z.addTo(map);
+							zipLayers.push(z);
+						});
 						// console.log(data);
 						var southWest = L.latLng(data.bbox[2], data.bbox[0]);
 						var northEast = L.latLng(data.bbox[3], data.bbox[1]);
 						var bounds = L.latLngBounds(southWest, northEast);
 						map.fitBounds(bounds);
-						zipLayer = L.mapbox.featureLayer(data);
-						zipLayer.addTo(map);
-						zipLayer.setStyle({color: '#333', weight: 1});
 					});
 
 				}
@@ -120,6 +129,10 @@
 					} else {
 						map.removeLayer(tileLayer);
 					}
+				}
+
+				function toggleStates(showStates) {
+
 				}
 
 				loadCountry('US');
