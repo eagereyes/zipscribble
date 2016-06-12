@@ -90,8 +90,8 @@
 				var map = new mapboxgl.Map({
 					container: 'map', // container id
 					style: 'mapbox://styles/eagereyes/cipcwyts1001tbcm6oeh8bbmd',
-					center: [-74.50, 40], // starting position
-					zoom: 9 // starting zoom
+					center: [-95.81675000000139, 37.96665689460623],
+					zoom: 3.2132434991663246
 				});
 
 				var zipLayers = [];
@@ -120,6 +120,23 @@
 						var northEast = new mapboxgl.LngLat(data.bbox[1], data.bbox[3]);
 						var bounds = new mapboxgl.LngLatBounds(southWest, northEast);
 						map.fitBounds(bounds, {padding: 20});
+						map.addSource(cc, {
+							"type": "geojson",
+							"data": data}
+						);
+						map.addLayer({
+							"id": cc,
+							"type": "line",
+							"source": cc,
+							"layout": {
+								"line-join": "round",
+								"line-cap": "round"
+							},
+							"paint": {
+								"line-color": "#888",
+								"line-width": 0.5
+							}
+						});
 					});
 
 				}
@@ -135,8 +152,10 @@
 				function toggleStates(showStates) {
 
 				}
-
-				loadCountry('US');
+				
+				map.on('load', function() {
+					loadCountry('US');
+				});
 
 			</script>
 </html>
