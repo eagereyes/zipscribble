@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
-#	Copyright (c) 2012-2014, Robert Kosara <rkosara@me.com>
+# Convert all the ZIP code tab-separated files to geoJSON that can be used on the web
+
+#	Copyright (c) 2012-2016, Robert Kosara <rkosara@me.com>
 #	
 #	Permission to use, copy, modify, and/or distribute this software for any
 #	purpose with or without fee is hereby granted, provided that the above
