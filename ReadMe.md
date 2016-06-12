@@ -19,6 +19,5 @@ There are two scripts that download and process the data to be ready for renderi
 
 ## External Libraries and Resources
 
-* [Polymaps](http://polymaps.org/)
-* [jQuery](http://jquery.com/)
+* [Mapbox](https://www.mapbox.com/)
 * [The GeoJSON format](http://geojson.org/) used by the geoJSON layer in Polymaps

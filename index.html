@@ -3,10 +3,10 @@
 	<head>
 	<title>The ZIPScribble Map</title>
 	<meta charset='utf-8' />
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.css' rel='stylesheet' />
-	
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.20.0/mapbox-gl.css' rel='stylesheet' />
+
 	<script type="text/javascript" src="jquery.min.js"></script>
 
 	<link rel="stylesheet" href="zipscribble.css" type="text/css" />
@@ -77,7 +77,6 @@
 					<option value="CH">Switzerland</option>
 					<option value="TH">Thailand</option>
 					<option value="US" selected>United States</option>
-					<option value="US-bydate">U.S. by date established</option>
 				 </select>
 				</form>
 			</div>
@@ -86,39 +85,41 @@
 		</div>
 	</body>
 			<script>
-				L.mapbox.accessToken = 'pk.eyJ1IjoiZWFnZXJleWVzIiwiYSI6ImdfdHlIclkifQ.spuItrU2721vfEsRI_jeXQ'; // please change to your own if you're using this somewhere else!
+				mapboxgl.accessToken = 'pk.eyJ1IjoiZWFnZXJleWVzIiwiYSI6ImdfdHlIclkifQ.spuItrU2721vfEsRI_jeXQ'; // please change to your own if you're using this somewhere else!
 
-				var map = L.mapbox.map('map');
-				
-				var tileLayer = L.mapbox.tileLayer('eagereyes.i309hlkm');
-				map.addLayer(tileLayer);
+				var map = new mapboxgl.Map({
+					container: 'map', // container id
+					style: 'mapbox://styles/eagereyes/cipcwyts1001tbcm6oeh8bbmd',
+					center: [-74.50, 40], // starting position
+					zoom: 9 // starting zoom
+				});
 
 				var zipLayers = [];
 
 				function loadCountry(cc) {
 					$.getJSON('data/zipscribble_'+cc+'.json', function(data) {
-						while (zipLayers.length > 0) {
-							var z = zipLayers.pop();
-							map.removeLayer(z);
-						}
-						data.features.forEach(function(state) {
-							var color = '#'+Math.floor(Math.random()*10)+Math.floor(Math.random()*16)+Math.floor(Math.random()*10);
-							var lls = state.geometry.coordinates[0].map(function(llpair) {
-								if (llpair[0] == undefined) {
-									console.log(state.id);
-								}
-								return L.latLng(llpair[0], llpair[1]);
-							});
-							// console.log(lls);
-							var z = L.polyline(lls, {'color': color, 'weight': 1});
-							z.addTo(map);
-							zipLayers.push(z);
-						});
+						// while (zipLayers.length > 0) {
+						// 	var z = zipLayers.pop();
+						// 	map.removeLayer(z);
+						// }
+						// data.features.forEach(function(state) {
+						// 	var color = '#'+Math.floor(Math.random()*10)+Math.floor(Math.random()*16)+Math.floor(Math.random()*10);
+						// 	var lls = state.geometry.coordinates[0].map(function(llpair) {
+						// 		if (llpair[0] == undefined) {
+						// 			console.log(state.id);
+						// 		}
+						// 		return new mapboxgl.LngLat(llpair[0], llpair[1]);
+						// 	});
+						// 	// console.log(lls);
+						// 	var z = new mapboxgl.polyline(lls, {'color': color, 'weight': 1});
+						// 	z.addTo(map);
+						// 	zipLayers.push(z);
+						// });
 						// console.log(data);
-						var southWest = L.latLng(data.bbox[2], data.bbox[0]);
-						var northEast = L.latLng(data.bbox[3], data.bbox[1]);
-						var bounds = L.latLngBounds(southWest, northEast);
-						map.fitBounds(bounds);
+						var southWest = new mapboxgl.LngLat(data.bbox[0], data.bbox[2]);
+						var northEast = new mapboxgl.LngLat(data.bbox[1], data.bbox[3]);
+						var bounds = new mapboxgl.LngLatBounds(southWest, northEast);
+						map.fitBounds(bounds, {padding: 20});
 					});
 
 				}
