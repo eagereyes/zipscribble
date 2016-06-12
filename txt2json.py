@@ -26,7 +26,7 @@ countryInfo = {}
 
 def convertCountry(country, sortZIPs):
 
-	reader = csv.reader(open(country+'.txt', 'rb'), delimiter='\t')
+	reader = csv.reader(open('data/'+country+'.txt', 'rb'), delimiter='\t')
 
 	boundingbox = {	'minLat': 10000,
 					'maxLat': -10000,
@@ -143,12 +143,12 @@ def convertCountry(country, sortZIPs):
 			countryInfo[country]['states'] = True
 	
 		
-		with open('zipscribble_'+country+'.json', 'wb') as out:
+		with open('data/zipscribble_'+country+'.json', 'wb') as out:
 			json.dump(geoJSON, out)		
 
 
 
-for file in os.listdir('.'):
+for file in os.listdir('data'):
 	if len(file) == 6 and file[-4:] == '.txt':
 		country = file[:2]
 		print country
@@ -157,5 +157,5 @@ for file in os.listdir('.'):
 print 'US-bydate'
 convertCountry('US-bydate', False)
 
-with open('countryinfo.json', 'wb') as info:
+with open('data/countryinfo.json', 'wb') as info:
 	json.dump(countryInfo, info)

@@ -1,6 +1,6 @@
-# The ZIPScribble Map
+# The ZIPScribble Map and Traveling Presidential Candidate Map
 
-Connect all the ZIP/postal codes in a country in ascending order. On a website. On top of a map that can be zoomed and dragged.
+Connect all the ZIP/postal codes in a country in ascending order.
 
 ## Data Source
 
@@ -10,7 +10,7 @@ The data quality is a bit uneven, with the U.S. data being the best. There are l
 
 ## Scripts
 
-In the data directory, there are two scripts that download and process the data to be ready for rendering.
+There are two scripts that download and process the data to be ready for rendering.
 
 * `download.sh` downloads the files from geonames. It only downloads versions of files that already exist in the directory. To get the process started, use `touch` to create some empty files (`US.txt`, `CA.txt`, `DE.txt`, etc.) and then run download. The files are refreshed every night on geonames, though it's unclear when the data actually changes.
 
