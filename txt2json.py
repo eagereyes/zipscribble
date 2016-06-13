@@ -26,15 +26,9 @@ def compare(a, b):
 
 countryInfo = {}
 
-def convertCountry(country, sortZIPs):
-
+# Parses the geonames ZIP code location file and returns a list of ZIP items and a list of states
+def parseZIPsFile(country):
 	reader = csv.reader(open('data/'+country+'.txt', 'rb'), delimiter='\t')
-
-	boundingbox = {	'minLat': 10000,
-					'maxLat': -10000,
-					'minLon': 10000,
-					'maxLon': -10000
-					}
 
 	states = {}
 	zips = []
@@ -56,14 +50,40 @@ def convertCountry(country, sortZIPs):
 			if not z['state'] in states:
 				states[z['state']] = []
 
-			if not ((country == 'US' and (z['lat'] > 50 or z['lon'] < -125)) or
-				((country == 'ES' or country == 'PT') and z['lat'] < 35) or
-				(country == 'FR' and z['lon'] < -7)):
+	return (zips, states)
 
-				boundingbox['minLat'] = min(boundingbox['minLat'], z['lat'])
-				boundingbox['maxLat'] = max(boundingbox['maxLat'], z['lat'])
-				boundingbox['minLon'] = min(boundingbox['minLon'], z['lon'])
-				boundingbox['maxLon'] = max(boundingbox['maxLon'], z['lon'])
+def parseTPCFile(filename):
+	reader = csv.DictReader(open(filename, 'rb'))
+
+	states = {}
+	zips = []
+	for row in reader:
+		row['lat'] = float(row['lat'])
+		row['lon'] = float(row['lon'])
+		zips.append(row)
+
+		if not row['state'] in states:
+			states[row['state']] = []
+	
+	return (zips, states)
+
+def convertCountry(country, zips, states, sortZIPs):
+
+	boundingbox = {	'minLat': 10000,
+					'maxLat': -10000,
+					'minLon': 10000,
+					'maxLon': -10000
+					}
+
+	for z in zips:
+		if not ((country[:2] == 'US' and (z['lat'] > 50 or z['lon'] < -125)) or
+			((country == 'ES' or country == 'PT') and z['lat'] < 35) or
+			(country == 'FR' and z['lon'] < -7)):
+
+			boundingbox['minLat'] = min(boundingbox['minLat'], z['lat'])
+			boundingbox['maxLat'] = max(boundingbox['maxLat'], z['lat'])
+			boundingbox['minLon'] = min(boundingbox['minLon'], z['lon'])
+			boundingbox['maxLon'] = max(boundingbox['maxLon'], z['lon'])
 	
 	centerLat = (boundingbox['minLat'] + boundingbox['maxLat'])/2;
 	centerLon = (boundingbox['minLon'] + boundingbox['maxLon'])/2;
@@ -154,10 +174,11 @@ for file in os.listdir('data'):
 	if len(file) == 6 and file[-4:] == '.txt':
 		country = file[:2]
 		print country
-		convertCountry(country, True)
+		zips, states = parseZIPsFile(country)
+		convertCountry(country, zips, states, True)
 
-print 'US-bydate'
-convertCountry('US-bydate', False)
+zips, states = parseTPCFile('ZIPTPCMap/USTPCmap.csv')
+convertCountry('USTPC', zips, {'US': []}, False)
 
 with open('data/countryinfo.json', 'wb') as info:
 	json.dump(countryInfo, info)
