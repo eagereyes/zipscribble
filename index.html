@@ -24,17 +24,25 @@
 		div#container {
 			width:  800px;
 		}
+
+		svg {
+			display: block;
+			overflow: hidden;
+		}
+
+		#map {
+			background: white;
+  			width: 100%;
+			height: 600px;
+		}
 	</style>
 	</head>
 	<body>
 		<div id="container">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<div id="map"></div>
-			<div style="width:50%;float:left;">
-				<form style="float: right;">
-				<label for="showStates">
-				<input type="checkbox" name="showStates" id="showStates" onclick="toggleStates(this.checked);" />Show States
-				</label>
+			<div style="width:100%;margin-top:1em;">
+				<form style="width:420px;margin-left:auto;margin-right:auto;">
 				<select name="country" id="country" onchange="loadCountry(this.value);">
 					<option value="AR">Argentina</option>
 					<option value="AU">Australia</option>
@@ -97,59 +105,41 @@
 		var zipLayers = [];
 
 		function loadCountry(cc) {
-			$.getJSON('data/zipscribble_'+cc+'.json', function(data) {
-				if (lastCC) {
-					map.removeLayer(lastCC);
-					map.removeSource(lastCC);
-				}
-				// while (zipLayers.length > 0) {
-				// 	var z = zipLayers.pop();
-				// 	map.removeLayer(z);
-				// }
-				// data.features.forEach(function(state) {
-				// 	var color = '#'+Math.floor(Math.random()*10)+Math.floor(Math.random()*16)+Math.floor(Math.random()*10);
-				// 	var lls = state.geometry.coordinates[0].map(function(llpair) {
-				// 		if (llpair[0] == undefined) {
-				// 			console.log(state.id);
-				// 		}
-				// 		return new mapboxgl.LngLat(llpair[0], llpair[1]);
-				// 	});
-				// 	// console.log(lls);
-				// 	var z = new mapboxgl.polyline(lls, {'color': color, 'weight': 1});
-				// 	z.addTo(map);
-				// 	zipLayers.push(z);
-				// });
-				// console.log(data);
+			jQuery.getJSON('data/zipscribble_'+cc+'.json', function(data) {
 				var southWest = new mapboxgl.LngLat(data.bbox[0], data.bbox[2]);
 				var northEast = new mapboxgl.LngLat(data.bbox[1], data.bbox[3]);
 				var bounds = new mapboxgl.LngLatBounds(southWest, northEast);
 				map.fitBounds(bounds, {padding: 20});
-				map.addSource(cc, {
-					"type": "geojson",
-					"data": data}
-				);
-				map.addLayer({
-					"id": cc,
-					"type": "line",
-					"source": cc,
-					"layout": {
-						"line-join": "round",
-						"line-cap": "round"
-					},
-					"paint": {
-						"line-color": "#444",
-						"line-width": 0.75
+
+				if (lastCC != cc) {
+					if (lastCC) {
+						map.removeLayer(lastCC);
+						map.removeSource(lastCC);
 					}
-				});
-				lastCC = cc;
+
+					map.addSource(cc, {
+						"type": "geojson",
+						"data": data}
+					);
+					map.addLayer({
+						"id": cc,
+						"type": "line",
+						"source": cc,
+						"layout": {
+							"line-join": "round",
+							"line-cap": "round"
+						},
+						"paint": {
+							"line-color": "#444",
+							"line-width": 0.75
+						}
+					});
+					lastCC = cc;
+				}
 			});
 
 		}
 
-		function toggleStates(showStates) {
-
-		}
-		
 		map.on('load', function() {
 			loadCountry('US');
 		});
