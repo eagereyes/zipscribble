@@ -55,17 +55,13 @@ def parseZIPsFile(country):
 def parseTPCFile(filename):
 	reader = csv.DictReader(open(filename, 'rb'))
 
-	states = {}
 	zips = []
 	for row in reader:
 		row['lat'] = float(row['lat'])
 		row['lon'] = float(row['lon'])
 		zips.append(row)
-
-		if not row['state'] in states:
-			states[row['state']] = []
 	
-	return (zips, states)
+	return zips
 
 def convertCountry(country, zips, states, sortZIPs):
 
@@ -101,14 +97,26 @@ def convertCountry(country, zips, states, sortZIPs):
 		if sortZIPs:
 			zips.sort(compare)
 		
-		# uniq
-		last = zips[-1]
-		for i in range(len(zips)-2, -1, -1):
-		    if last['lon'] == zips[i]['lon'] and last['lat'] == zips[i]['lat']:
-		        del zips[i]
-		    else:
-		        last = zips[i]
+			# uniq
+			last = zips[-1]
+			for i in range(len(zips)-2, -1, -1):
+				if last['lon'] == zips[i]['lon'] and last['lat'] == zips[i]['lat']:
+					del zips[i]
+				else:
+					last = zips[i]
 		
+		# fake states consisting of 1000 zip codes each
+		stateNum = 1;
+		counter = 0;
+		states['s'+str(stateNum)] = []
+		for z in zips:
+			z['state'] = 's'+str(stateNum)
+			counter += 1
+			if counter == 1000:
+				stateNum += 1
+				states['s'+str(stateNum)] = []
+				counter = 0
+
 		if len(states.keys()) == 1:
 			geoJSON = {
 				'type': 'LineString',
@@ -175,9 +183,12 @@ for file in os.listdir('data'):
 		country = file[:2]
 		print country
 		zips, states = parseZIPsFile(country)
-		convertCountry(country, zips, states, True)
+#		convertCountry(country, zips, states, True)
+		# pretend we have no states, to see if that reduces artifacts
+		convertCountry(country, zips, {country: []}, True)
 
-zips, states = parseTPCFile('ZIPTPCMap/USTPCmap.csv')
+
+zips = parseTPCFile('ZIPTPCMap/USTPCmap.csv')
 convertCountry('USTPC', zips, {'US': []}, False)
 
 with open('data/countryinfo.json', 'wb') as info:
