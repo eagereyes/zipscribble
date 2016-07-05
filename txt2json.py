@@ -108,6 +108,7 @@ def convertCountry(country, zips, states, sortZIPs):
 		# fake states consisting of 1000 zip codes each
 		stateNum = 1;
 		counter = 0;
+		states = {}
 		states['s'+str(stateNum)] = []
 		for z in zips:
 			z['state'] = 's'+str(stateNum)
@@ -135,14 +136,11 @@ def convertCountry(country, zips, states, sortZIPs):
 			previousPoint = None
 			for zip in zips:
 				if zip['state'] != previousState:
+					if previousState != None:
+						states[previousState].append([zip['lon'], zip['lat']])
 					previousState = zip['state']
-					states[previousState].append([])
-					if previousPoint != None:
-						stateConnectors.append(
-							[previousPoint['lon'], previousPoint['lat']])
-						stateConnectors.append([zip['lon'], zip['lat']])
 					
-				states[previousState][-1].append([zip['lon'], zip['lat']])
+				states[previousState].append([zip['lon'], zip['lat']])
 				previousPoint = zip
 
 			geoJSON = {
@@ -153,22 +151,22 @@ def convertCountry(country, zips, states, sortZIPs):
 			geoJSON['features'] = map(lambda s :
 				{'type': 'Feature',
 				 'geometry': {
-				 	'type': 'MultiLineString',
+				 	'type': 'LineString',
 				 	'coordinates': states[s]
 				 },
 				 'properties': {},
 				 'id': s
 				}, states.keys())
 		
-			geoJSON['features'].insert(0, {
-				'type': 'Feature',
-				'geometry': {
-					'type': 'LineString',
-					'coordinates': stateConnectors
-				},
-				'properties': {},
-				'id': '000stateconnectors'
-			})
+			# geoJSON['features'].insert(0, {
+			# 	'type': 'Feature',
+			# 	'geometry': {
+			# 		'type': 'LineString',
+			# 		'coordinates': stateConnectors
+			# 	},
+			# 	'properties': {},
+			# 	'id': '000stateconnectors'
+			# })
 	
 			countryInfo[country]['states'] = True
 	
