@@ -1,0 +1,1624 @@
+{
+    "activeComp": "compNode#1",
+    "assets": [
+        {
+            "data": {
+                "decimalSeparator": ".",
+                "delimiter": ",",
+                "factorize": false,
+                "filePath": "@project/../../../src/ZIPScribble/us-projected-lower48.csv",
+                "quote": "\""
+            },
+            "nodeId": "asset#3",
+            "type": "file"
+        }
+    ],
+    "connections": [
+        {
+            "from": "asset#3.id",
+            "to": "spreadsheet#3.file"
+        },
+        {
+            "from": "pointDistribution#2.count",
+            "to": "spreadsheet#3.rowIndex"
+        },
+        {
+            "from": "asset#3.id",
+            "to": "spreadsheet#5.file"
+        },
+        {
+            "from": "pointDistribution#2.count",
+            "to": "spreadsheet#5.rowIndex"
+        },
+        {
+            "from": "duplicator#1.id",
+            "to": "meshDistribution#1.inputShape"
+        },
+        {
+            "from": "concatenateStringArray#1.id",
+            "to": "stringManipulator#1.generator"
+        },
+        {
+            "from": "compNode#1.time",
+            "to": "animationCurve#5.time"
+        },
+        {
+            "from": "compNode#1.outActiveAnimationLayer",
+            "to": "animationCurve#5.activeAnimationLayer"
+        },
+        {
+            "from": "linearDistribution#1.id",
+            "to": "customDistribution#2.input"
+        },
+        {
+            "from": "duplicator#1.id",
+            "to": "shapePointDistribution#1.inputShape"
+        },
+        {
+            "from": "compNode#1.time",
+            "to": "animationCurve#6.time"
+        },
+        {
+            "from": "compNode#1.outActiveAnimationLayer",
+            "to": "animationCurve#6.activeAnimationLayer"
+        },
+        {
+            "from": "pointDistribution#2.count",
+            "to": "spreadsheet#4.rowIndex"
+        },
+        {
+            "from": "asset#3.id",
+            "to": "spreadsheet#4.file"
+        },
+        {
+            "from": "spreadsheet#5.id",
+            "to": "concatenateStringArray#1.array.0"
+        },
+        {
+            "from": "spreadsheet#4.id",
+            "to": "concatenateStringArray#1.array.1"
+        },
+        {
+            "from": "compNode#1.time",
+            "to": "animationCurve#7.time"
+        },
+        {
+            "from": "compNode#1.outActiveAnimationLayer",
+            "to": "animationCurve#7.activeAnimationLayer"
+        },
+        {
+            "from": "asset#3.id",
+            "to": "spreadsheet#1.file"
+        },
+        {
+            "from": "compNode#1.outActiveAnimationLayer",
+            "to": "animationCurve#4.activeAnimationLayer"
+        },
+        {
+            "from": "compNode#1.time",
+            "to": "animationCurve#4.time"
+        },
+        {
+            "from": "frame#1.id",
+            "to": "pointDistribution#2.count"
+        },
+        {
+            "from": "spreadsheet#1.rowOffset",
+            "to": "spreadsheet#2.rowOffset"
+        },
+        {
+            "from": "asset#3.id",
+            "to": "spreadsheet#2.file"
+        },
+        {
+            "from": "duplicator#1.scale.x",
+            "to": "math#1.second"
+        },
+        {
+            "from": "duplicator#1.id",
+            "to": "shapeEdgeDistribution#1.inputShape"
+        },
+        {
+            "from": "compNode#1.outActiveAnimationLayer",
+            "to": "animationCurve#3.activeAnimationLayer"
+        },
+        {
+            "from": "compNode#1.time",
+            "to": "animationCurve#3.time"
+        },
+        {
+            "from": "linearDistribution#1.id",
+            "to": "sortDistribution#1.input"
+        },
+        {
+            "from": "compNode#1.outActiveAnimationLayer",
+            "to": "animationCurve#1.activeAnimationLayer"
+        },
+        {
+            "from": "compNode#1.time",
+            "to": "animationCurve#1.time"
+        },
+        {
+            "from": "ellipseShape#1.radius.x",
+            "to": "ellipseShape#1.radius.y"
+        },
+        {
+            "from": "compNode#1.time",
+            "to": "frame#1.time"
+        },
+        {
+            "from": "animationCurve#5.out",
+            "to": "textShape#1.on"
+        },
+        {
+            "from": "colorMaterial#7.id",
+            "to": "textShape#1.material"
+        },
+        {
+            "from": "spreadsheet#3.id",
+            "to": "textShape#1.text"
+        },
+        {
+            "from": "animationCurve#7.out",
+            "to": "group#1.on"
+        },
+        {
+            "from": "colorMaterial#8.id",
+            "to": "textShape#2.material"
+        },
+        {
+            "from": "animationCurve#6.out",
+            "to": "textShape#2.on"
+        },
+        {
+            "from": "stringManipulator#1.id",
+            "to": "textShape#2.manipulators.0"
+        },
+        {
+            "from": "colorMaterial#4.id",
+            "to": "basicShape#1.material"
+        },
+        {
+            "from": "animationCurve#4.out",
+            "to": "basicShape#1.on"
+        },
+        {
+            "from": "ellipseShape#1.id",
+            "to": "basicShape#1.generator"
+        },
+        {
+            "from": "meshDistribution#1.id",
+            "to": "pointsToCurve#1.generator"
+        },
+        {
+            "from": "strokeMaterial#1.id",
+            "to": "pointsToCurve#1.stroke"
+        },
+        {
+            "from": "animationCurve#1.out",
+            "to": "pointsToCurve#1.on"
+        },
+        {
+            "from": "basicShape#1.id",
+            "to": "duplicator#1.shapes.0"
+        },
+        {
+            "from": "spreadsheet#2.id",
+            "to": "duplicator#1.shapePosition.y"
+        },
+        {
+            "from": "duplicator#1.shapeScale.x",
+            "to": "duplicator#1.shapeScale.y"
+        },
+        {
+            "from": "math#1.id",
+            "to": "duplicator#1.scale.y"
+        },
+        {
+            "from": "spreadsheet#1.id",
+            "to": "duplicator#1.shapePosition.x"
+        },
+        {
+            "from": "pointDistribution#2.id",
+            "to": "duplicator#1.generator"
+        },
+        {
+            "from": "animationCurve#3.out",
+            "to": "duplicator#1.on"
+        },
+        {
+            "from": "compNode#1.outActiveAnimationLayer",
+            "to": "animationCurve#8.activeAnimationLayer"
+        },
+        {
+            "from": "compNode#1.time",
+            "to": "animationCurve#8.time"
+        },
+        {
+            "from": "animationCurve#8.out",
+            "to": "group#2.on"
+        }
+    ],
+    "nodeMeta": [
+        {
+            "children": [
+                "asset#3",
+                "compNode#1"
+            ],
+            "nodeId": "asset#1"
+        },
+        {
+            "children": [
+                "concatenateStringArray#1",
+                "shuffleString#1"
+            ],
+            "nodeId": "hiddenFolder#8"
+        },
+        {
+            "children": [
+                "colorArray#1"
+            ],
+            "nodeId": "paletteContainer#1"
+        },
+        {
+            "children": [
+                "hiddenFolder#8"
+            ],
+            "nodeId": "stringManipulator#1"
+        },
+        {
+            "children": [
+                "strokeMaterial#7",
+                "colorMaterial#7"
+            ],
+            "nodeId": "hiddenFolder#5"
+        },
+        {
+            "children": [
+                "strokeMaterial#8",
+                "colorMaterial#8"
+            ],
+            "nodeId": "hiddenFolder#7"
+        },
+        {
+            "children": [
+                "strokeMaterial#9",
+                "colorMaterial#9"
+            ],
+            "nodeId": "hiddenFolder#9"
+        },
+        {
+            "children": [
+                "pathDistribution#1",
+                "shapePointDistribution#2",
+                "pointDistribution#2",
+                "strokeMaterial#3",
+                "colorMaterial#3",
+                "gridDistribution#1"
+            ],
+            "nodeId": "hiddenFolder#3"
+        },
+        {
+            "children": [
+                "ellipseShape#1",
+                "strokeMaterial#4",
+                "polygonShape#1",
+                "colorMaterial#4"
+            ],
+            "nodeId": "hiddenFolder#4"
+        },
+        {
+            "children": [
+                "meshDistribution#1",
+                "shapeEdgeDistribution#1",
+                "sortDistribution#1",
+                "customDistribution#2",
+                "linearDistribution#1",
+                "mathDistribution#1",
+                "shapePointDistribution#1",
+                "arrayDistribution#2",
+                "pointDistribution#1",
+                "colorMaterial#1",
+                "strokeMaterial#1"
+            ],
+            "nodeId": "hiddenFolder#1"
+        },
+        {
+            "children": [
+                "hiddenFolder#5",
+                "animationCurve#5"
+            ],
+            "nodeId": "textShape#1"
+        },
+        {
+            "children": [
+                "hiddenFolder#9",
+                "spreadsheet#5",
+                "spreadsheet#4",
+                "spreadsheet#3",
+                "spreadsheet#1",
+                "spreadsheet#2",
+                "animationCurve#7"
+            ],
+            "nodeId": "group#1"
+        },
+        {
+            "children": [
+                "stringManipulator#1",
+                "hiddenFolder#7",
+                "animationCurve#6"
+            ],
+            "nodeId": "textShape#2"
+        },
+        {
+            "children": [
+                "hiddenFolder#4",
+                "animationCurve#4"
+            ],
+            "nodeId": "basicShape#1"
+        },
+        {
+            "children": [
+                "hiddenFolder#1",
+                "animationCurve#1"
+            ],
+            "nodeId": "pointsToCurve#1"
+        },
+        {
+            "children": [
+                "basicShape#1",
+                "math#1",
+                "frame#1",
+                "hiddenFolder#3",
+                "animationCurve#3"
+            ],
+            "nodeId": "duplicator#1"
+        },
+        {
+            "children": [
+                "textShape#2",
+                "textShape#1",
+                "group#2",
+                "group#1"
+            ],
+            "nodeId": "compNode#1"
+        },
+        {
+            "children": [
+                "strokeMaterial#10",
+                "colorMaterial#10"
+            ],
+            "nodeId": "hiddenFolder#10"
+        },
+        {
+            "children": [
+                "hiddenFolder#10",
+                "pointsToCurve#1",
+                "duplicator#1",
+                "animationCurve#8"
+            ],
+            "nodeId": "group#2"
+        }
+    ],
+    "nodes": [
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "us-projected-lower48",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "asset#3",
+            "nodeType": "asset"
+        },
+        {
+            "nodeId": "asset#1",
+            "nodeType": "asset"
+        },
+        {
+            "nodeId": "renderQueue#1",
+            "nodeType": "renderQueue"
+        },
+        {
+            "nodeId": "dynamicIndexManager#1",
+            "nodeType": "dynamicIndexManager"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Shuffle String 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "shuffleString#1",
+            "nodeType": "shuffleString"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "us-projected-lower48 ZIP",
+                    "varType": "string"
+                },
+                "rowIndex": {
+                    "value": 40466,
+                    "varType": "int"
+                },
+                "rowOffset": {
+                    "value": 1446,
+                    "varType": "int"
+                },
+                "useFixedRow": {
+                    "value": true,
+                    "varType": "bool"
+                }
+            },
+            "nodeId": "spreadsheet#3",
+            "nodeType": "spreadsheet"
+        },
+        {
+            "attributes": {
+                "column": {
+                    "value": 1,
+                    "varType": "int"
+                },
+                "niceName": {
+                    "value": "us-projected-lower48 Place",
+                    "varType": "string"
+                },
+                "rowIndex": {
+                    "value": 40466,
+                    "varType": "int"
+                },
+                "rowOffset": {
+                    "value": 1446,
+                    "varType": "int"
+                },
+                "useFixedRow": {
+                    "value": true,
+                    "varType": "bool"
+                }
+            },
+            "nodeId": "spreadsheet#5",
+            "nodeType": "spreadsheet"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "subUINodes",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "hiddenFolder#8",
+            "nodeType": "hiddenFolder"
+        },
+        {
+            "attributes": {
+                "count": {
+                    "value": 168,
+                    "varType": "int"
+                },
+                "niceName": {
+                    "value": "Sub-Mesh 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "meshDistribution#1",
+            "nodeType": "meshDistribution"
+        },
+        {
+            "nodeId": "paletteContainer#1",
+            "nodeType": "paletteContainer"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Default Scene Palette",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorArray#1",
+            "nodeType": "colorArray"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "String Manipulator 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "stringManipulator#1",
+            "nodeType": "stringManipulator"
+        },
+        {
+            "attributes": {
+                "animationLayers": {
+                    "list": [
+                        {
+                            "compound": {
+                                "data": {
+                                    "value": [
+                                        {
+                                            "frame": 0,
+                                            "keyData": {
+                                                "value": 1.0
+                                            }
+                                        },
+                                        {
+                                            "frame": 601,
+                                            "keyData": {
+                                                "value": 0.0
+                                            }
+                                        }
+                                    ],
+                                    "varType": "numericAnimationLayer"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "dataType": {
+                    "value": 2,
+                    "varType": "enum"
+                },
+                "preInfinity": {
+                    "value": 5,
+                    "varType": "enum"
+                },
+                "time": {
+                    "value": 466.0,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "animationCurve#5",
+            "nodeType": "animationCurve"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "subUINodes",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "hiddenFolder#5",
+            "nodeType": "hiddenFolder"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Stroke 6",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "strokeMaterial#6",
+            "nodeType": "strokeMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Custom... 2",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "customDistribution#2",
+            "nodeType": "customDistribution"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Color 5",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorMaterial#5",
+            "nodeType": "colorMaterial"
+        },
+        {
+            "attributes": {
+                "count": {
+                    "value": 168,
+                    "varType": "int"
+                },
+                "niceName": {
+                    "value": "Shape Points 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "shapePointDistribution#1",
+            "nodeType": "shapePointDistribution"
+        },
+        {
+            "attributes": {
+                "animationLayers": {
+                    "list": [
+                        {
+                            "compound": {
+                                "data": {
+                                    "value": [
+                                        {
+                                            "frame": 0,
+                                            "keyData": {
+                                                "value": 1.0
+                                            }
+                                        },
+                                        {
+                                            "frame": 601,
+                                            "keyData": {
+                                                "value": 0.0
+                                            }
+                                        }
+                                    ],
+                                    "varType": "numericAnimationLayer"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "dataType": {
+                    "value": 2,
+                    "varType": "enum"
+                },
+                "preInfinity": {
+                    "value": 5,
+                    "varType": "enum"
+                },
+                "time": {
+                    "value": 466.0,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "animationCurve#6",
+            "nodeType": "animationCurve"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Stroke 7 [Copy]",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "strokeMaterial#8",
+            "nodeType": "strokeMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Color 7 [Copy]",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorMaterial#8",
+            "nodeType": "colorMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "subUINodes",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "hiddenFolder#7",
+            "nodeType": "hiddenFolder"
+        },
+        {
+            "attributes": {
+                "column": {
+                    "value": 2,
+                    "varType": "int"
+                },
+                "niceName": {
+                    "value": "us-projected-lower48 State",
+                    "varType": "string"
+                },
+                "rowIndex": {
+                    "value": 40466,
+                    "varType": "int"
+                },
+                "rowOffset": {
+                    "value": 1446,
+                    "varType": "int"
+                },
+                "useFixedRow": {
+                    "value": true,
+                    "varType": "bool"
+                }
+            },
+            "nodeId": "spreadsheet#4",
+            "nodeType": "spreadsheet"
+        },
+        {
+            "attributes": {
+                "array": {
+                    "list": [
+                        {
+                            "value": "Yelm",
+                            "varType": "string"
+                        },
+                        {
+                            "value": "WA",
+                            "varType": "string"
+                        }
+                    ]
+                },
+                "delimiter": {
+                    "value": ", ",
+                    "varType": "string"
+                },
+                "niceName": {
+                    "value": "Join String 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "concatenateStringArray#1",
+            "nodeType": "concatenateStringArray"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Stroke 9",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "strokeMaterial#9",
+            "nodeType": "strokeMaterial"
+        },
+        {
+            "attributes": {
+                "animationLayers": {
+                    "list": [
+                        {
+                            "compound": {
+                                "data": {
+                                    "value": [
+                                        {
+                                            "frame": 0,
+                                            "keyData": {
+                                                "value": 1.0
+                                            }
+                                        },
+                                        {
+                                            "frame": 600,
+                                            "keyData": {
+                                                "value": 0.0
+                                            }
+                                        }
+                                    ],
+                                    "varType": "numericAnimationLayer"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "dataType": {
+                    "value": 2,
+                    "varType": "enum"
+                },
+                "preInfinity": {
+                    "value": 5,
+                    "varType": "enum"
+                },
+                "time": {
+                    "value": 466.0,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "animationCurve#7",
+            "nodeType": "animationCurve"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "subUINodes",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "hiddenFolder#9",
+            "nodeType": "hiddenFolder"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Color 9",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorMaterial#9",
+            "nodeType": "colorMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Stroke 7",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "strokeMaterial#7",
+            "nodeType": "strokeMaterial"
+        },
+        {
+            "attributes": {
+                "column": {
+                    "value": 5,
+                    "varType": "int"
+                },
+                "niceName": {
+                    "value": "us-projected-lower48 Longitude",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "spreadsheet#1",
+            "nodeType": "spreadsheet"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "subUINodes",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "hiddenFolder#3",
+            "nodeType": "hiddenFolder"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Polygon 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "polygonShape#1",
+            "nodeType": "polygonShape"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Color 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorMaterial#1",
+            "nodeType": "colorMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Stroke 3",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "strokeMaterial#3",
+            "nodeType": "strokeMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Color 3",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorMaterial#3",
+            "nodeType": "colorMaterial"
+        },
+        {
+            "attributes": {
+                "joinStyle": {
+                    "value": 1,
+                    "varType": "enum"
+                },
+                "niceName": {
+                    "value": "Stroke 1",
+                    "varType": "string"
+                },
+                "strokeColor": {
+                    "value": {
+                        "a": 255,
+                        "b": 45,
+                        "g": 45,
+                        "r": 45
+                    },
+                    "varType": "color"
+                },
+                "width": {
+                    "value": 0.3,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "strokeMaterial#1",
+            "nodeType": "strokeMaterial"
+        },
+        {
+            "attributes": {
+                "animationLayers": {
+                    "list": [
+                        {
+                            "compound": {
+                                "data": {
+                                    "value": [
+                                        {
+                                            "frame": 0,
+                                            "keyData": {
+                                                "value": 1.0
+                                            }
+                                        },
+                                        {
+                                            "frame": 601,
+                                            "keyData": {
+                                                "value": 0.0
+                                            }
+                                        }
+                                    ],
+                                    "varType": "numericAnimationLayer"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "dataType": {
+                    "value": 2,
+                    "varType": "enum"
+                },
+                "preInfinity": {
+                    "value": 5,
+                    "varType": "enum"
+                },
+                "time": {
+                    "value": 466.0,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "animationCurve#4",
+            "nodeType": "animationCurve"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Grid 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "gridDistribution#1",
+            "nodeType": "gridDistribution"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Math 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "mathDistribution#1",
+            "nodeType": "mathDistribution"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "subUINodes",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "hiddenFolder#4",
+            "nodeType": "hiddenFolder"
+        },
+        {
+            "attributes": {
+                "count": {
+                    "value": 40466,
+                    "varType": "int"
+                },
+                "niceName": {
+                    "value": "Point 2",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "pointDistribution#2",
+            "nodeType": "pointDistribution"
+        },
+        {
+            "attributes": {
+                "materialColor": {
+                    "value": {
+                        "a": 87,
+                        "b": 255,
+                        "g": 220,
+                        "r": 164
+                    },
+                    "varType": "color"
+                },
+                "niceName": {
+                    "value": "Color 4",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorMaterial#4",
+            "nodeType": "colorMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Stroke 4",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "strokeMaterial#4",
+            "nodeType": "strokeMaterial"
+        },
+        {
+            "attributes": {
+                "column": {
+                    "value": 6,
+                    "varType": "int"
+                },
+                "niceName": {
+                    "value": "us-projected-lower48 Latitude",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "spreadsheet#2",
+            "nodeType": "spreadsheet"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Scale negator",
+                    "varType": "string"
+                },
+                "operation": {
+                    "value": 1,
+                    "varType": "enum"
+                },
+                "second": {
+                    "value": 3.71,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "math#1",
+            "nodeType": "math"
+        },
+        {
+            "attributes": {
+                "count": {
+                    "value": 327,
+                    "varType": "int"
+                },
+                "fill": {
+                    "value": false,
+                    "varType": "bool"
+                },
+                "niceName": {
+                    "value": "Shape Edges 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "shapeEdgeDistribution#1",
+            "nodeType": "shapeEdgeDistribution"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Color 7",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorMaterial#7",
+            "nodeType": "colorMaterial"
+        },
+        {
+            "attributes": {
+                "animationLayers": {
+                    "list": [
+                        {
+                            "compound": {
+                                "data": {
+                                    "value": [
+                                        {
+                                            "frame": 0,
+                                            "keyData": {
+                                                "value": 1.0
+                                            }
+                                        },
+                                        {
+                                            "frame": 601,
+                                            "keyData": {
+                                                "value": 0.0
+                                            }
+                                        }
+                                    ],
+                                    "varType": "numericAnimationLayer"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "dataType": {
+                    "value": 2,
+                    "varType": "enum"
+                },
+                "preInfinity": {
+                    "value": 5,
+                    "varType": "enum"
+                },
+                "time": {
+                    "value": 466.0,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "animationCurve#3",
+            "nodeType": "animationCurve"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Sort 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "sortDistribution#1",
+            "nodeType": "sortDistribution"
+        },
+        {
+            "attributes": {
+                "animationLayers": {
+                    "list": [
+                        {
+                            "compound": {
+                                "data": {
+                                    "value": [
+                                        {
+                                            "frame": 0,
+                                            "keyData": {
+                                                "value": 1.0
+                                            }
+                                        },
+                                        {
+                                            "frame": 601,
+                                            "keyData": {
+                                                "value": 0.0
+                                            }
+                                        }
+                                    ],
+                                    "varType": "numericAnimationLayer"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "dataType": {
+                    "value": 2,
+                    "varType": "enum"
+                },
+                "preInfinity": {
+                    "value": 5,
+                    "varType": "enum"
+                },
+                "time": {
+                    "value": 466.0,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "animationCurve#1",
+            "nodeType": "animationCurve"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Color 6",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorMaterial#6",
+            "nodeType": "colorMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Point 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "pointDistribution#1",
+            "nodeType": "pointDistribution"
+        },
+        {
+            "attributes": {
+                "count": {
+                    "value": 748,
+                    "varType": "int"
+                },
+                "niceName": {
+                    "value": "Shape Points 2",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "shapePointDistribution#2",
+            "nodeType": "shapePointDistribution"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Linear 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "linearDistribution#1",
+            "nodeType": "linearDistribution"
+        },
+        {
+            "attributes": {
+                "array": {
+                    "list": [
+                        {
+                            "value": {
+                                "x": 0.0,
+                                "y": 0.0
+                            },
+                            "varType": "double2"
+                        }
+                    ]
+                },
+                "niceName": {
+                    "value": "Array 2",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "arrayDistribution#2",
+            "nodeType": "arrayDistribution"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Ellipse 1",
+                    "varType": "string"
+                },
+                "radius": {
+                    "value": {
+                        "x": 20.0,
+                        "y": 20.0
+                    },
+                    "varType": "double2"
+                }
+            },
+            "nodeId": "ellipseShape#1",
+            "nodeType": "ellipseShape"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "subUINodes",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "hiddenFolder#1",
+            "nodeType": "hiddenFolder"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Frame 1 [Count]",
+                    "varType": "string"
+                },
+                "offset": {
+                    "value": 40000.0,
+                    "varType": "double"
+                },
+                "time": {
+                    "value": 466.0,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "frame#1",
+            "nodeType": "frame"
+        },
+        {
+            "attributes": {
+                "autoHeight": {
+                    "value": true,
+                    "varType": "bool"
+                },
+                "autoWidth": {
+                    "value": true,
+                    "varType": "bool"
+                },
+                "font": {
+                    "value": {
+                        "font": "Lato",
+                        "style": "Regular"
+                    },
+                    "varType": "font"
+                },
+                "niceName": {
+                    "value": "ZIP Text",
+                    "varType": "string"
+                },
+                "position": {
+                    "value": {
+                        "x": 994.72802734375,
+                        "y": -933.8594360351563
+                    },
+                    "varType": "double2"
+                },
+                "text": {
+                    "value": "98597",
+                    "varType": "richText"
+                }
+            },
+            "nodeId": "textShape#1",
+            "nodeType": "textShape"
+        },
+        {
+            "attributes": {
+                "hierarchy": {
+                    "value": false,
+                    "varType": "bool"
+                },
+                "niceName": {
+                    "value": "Data",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "group#1",
+            "nodeType": "group"
+        },
+        {
+            "attributes": {
+                "autoHeight": {
+                    "value": true,
+                    "varType": "bool"
+                },
+                "autoWidth": {
+                    "value": true,
+                    "varType": "bool"
+                },
+                "font": {
+                    "value": {
+                        "font": "Lato",
+                        "style": "Light Italic"
+                    },
+                    "varType": "font"
+                },
+                "niceName": {
+                    "value": "Place Text",
+                    "varType": "string"
+                },
+                "position": {
+                    "value": {
+                        "x": 1297.9119873046875,
+                        "y": -949.3399658203125
+                    },
+                    "varType": "double2"
+                },
+                "text": {
+                    "value": "",
+                    "varType": "richText"
+                }
+            },
+            "nodeId": "textShape#2",
+            "nodeType": "textShape"
+        },
+        {
+            "attributes": {
+                "hidden": {
+                    "value": true,
+                    "varType": "bool"
+                },
+                "niceName": {
+                    "value": "Dummy ellipse",
+                    "varType": "string"
+                },
+                "position": {
+                    "value": {
+                        "x": 462.32611083984375,
+                        "y": 273.85443115234375
+                    },
+                    "varType": "double2"
+                },
+                "scale": {
+                    "value": {
+                        "x": 0.26954177021980286,
+                        "y": -0.26954177021980286
+                    },
+                    "varType": "double2"
+                }
+            },
+            "nodeId": "basicShape#1",
+            "nodeType": "basicShape"
+        },
+        {
+            "attributes": {
+                "bezier": {
+                    "value": false,
+                    "varType": "bool"
+                },
+                "niceName": {
+                    "value": "Points To Curve 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "pointsToCurve#1",
+            "nodeType": "pointsToCurve"
+        },
+        {
+            "attributes": {
+                "hidden": {
+                    "value": true,
+                    "varType": "bool"
+                },
+                "niceName": {
+                    "value": "Point duplicator",
+                    "varType": "string"
+                },
+                "position": {
+                    "value": {
+                        "x": -1715.23,
+                        "y": 1016.0
+                    },
+                    "varType": "double2"
+                },
+                "scale": {
+                    "value": {
+                        "x": 3.71,
+                        "y": -3.71
+                    },
+                    "varType": "double2"
+                },
+                "shapePosition": {
+                    "value": {
+                        "x": 202.4710522742792,
+                        "y": 171.49690340183906
+                    },
+                    "varType": "double2"
+                },
+                "shapeScale": {
+                    "value": {
+                        "x": 0.02,
+                        "y": 0.02
+                    },
+                    "varType": "double2"
+                }
+            },
+            "nodeId": "duplicator#1",
+            "nodeType": "duplicator"
+        },
+        {
+            "attributes": {
+                "backgroundColor": {
+                    "value": {
+                        "a": 255,
+                        "b": 255,
+                        "g": 255,
+                        "r": 255
+                    },
+                    "varType": "color"
+                },
+                "endFrame": {
+                    "value": 600,
+                    "varType": "int"
+                },
+                "fps": {
+                    "value": 29.97,
+                    "varType": "double"
+                },
+                "inTime": {
+                    "value": 466.0,
+                    "varType": "double"
+                },
+                "niceName": {
+                    "value": "Composition 1",
+                    "varType": "string"
+                },
+                "playbackEnd": {
+                    "value": 600,
+                    "varType": "int"
+                },
+                "resolution": {
+                    "value": {
+                        "x": 3840,
+                        "y": 2160
+                    },
+                    "varType": "int2"
+                }
+            },
+            "nodeId": "compNode#1",
+            "nodeType": "compNode"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Color 10",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "colorMaterial#10",
+            "nodeType": "colorMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "subUINodes",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "hiddenFolder#10",
+            "nodeType": "hiddenFolder"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Path 1",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "pathDistribution#1",
+            "nodeType": "pathDistribution"
+        },
+        {
+            "attributes": {
+                "animationLayers": {
+                    "list": [
+                        {
+                            "compound": {
+                                "data": {
+                                    "value": [
+                                        {
+                                            "frame": 0,
+                                            "keyData": {
+                                                "value": 1.0
+                                            }
+                                        },
+                                        {
+                                            "frame": 601,
+                                            "keyData": {
+                                                "value": 0.0
+                                            }
+                                        }
+                                    ],
+                                    "varType": "numericAnimationLayer"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "dataType": {
+                    "value": 2,
+                    "varType": "enum"
+                },
+                "preInfinity": {
+                    "value": 5,
+                    "varType": "enum"
+                },
+                "time": {
+                    "value": 466.0,
+                    "varType": "double"
+                }
+            },
+            "nodeId": "animationCurve#8",
+            "nodeType": "animationCurve"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "Stroke 10",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "strokeMaterial#10",
+            "nodeType": "strokeMaterial"
+        },
+        {
+            "attributes": {
+                "niceName": {
+                    "value": "ZIPScribble",
+                    "varType": "string"
+                }
+            },
+            "nodeId": "group#2",
+            "nodeType": "group"
+        }
+    ],
+    "other": {
+        "viewport": {
+            "backgroundMode": 0,
+            "rulers": {}
+        }
+    },
+    "resourceType": "cavalry.scenefile",
+    "version": "1.0.16"
+}

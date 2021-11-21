@@ -6,3 +6,5 @@ ZIPTPCMap/qsopt*
 ZIPTPCMap/concorde
 *.twbx
 *.icloud
+node_modules
+Cavalry Autosaves

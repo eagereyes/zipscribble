@@ -1,0 +1,26 @@
+{
+  "name": "zipscribble",
+  "version": "1.0.0",
+  "description": "Connect all the ZIP/postal codes in a country in ascending order.",
+  "main": "jquery.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eagereyes/zipscribble.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eagereyes/zipscribble/issues"
+  },
+  "homepage": "https://github.com/eagereyes/zipscribble#readme",
+  "dependencies": {
+    "csv-generate": "^4.0.3",
+    "csv-parse": "^5.0.3",
+    "csv-stringify": "^6.0.4",
+    "d3-geo": "^3.0.1"
+  }
+}
