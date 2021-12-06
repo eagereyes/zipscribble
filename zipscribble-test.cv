@@ -235,6 +235,10 @@
             "to": "animationCurve#8.time"
         },
         {
+            "from": "group#2.scale.x",
+            "to": "group#2.scale.y"
+        },
+        {
             "from": "animationCurve#8.out",
             "to": "group#2.on"
         }
@@ -440,7 +444,7 @@
                     "varType": "string"
                 },
                 "rowIndex": {
-                    "value": 40466,
+                    "value": 7864,
                     "varType": "int"
                 },
                 "rowOffset": {
@@ -466,7 +470,7 @@
                     "varType": "string"
                 },
                 "rowIndex": {
-                    "value": 40466,
+                    "value": 7864,
                     "varType": "int"
                 },
                 "rowOffset": {
@@ -565,7 +569,7 @@
                     "varType": "enum"
                 },
                 "time": {
-                    "value": 466.0,
+                    "value": 212.0,
                     "varType": "double"
                 }
             },
@@ -662,7 +666,7 @@
                     "varType": "enum"
                 },
                 "time": {
-                    "value": 466.0,
+                    "value": 212.0,
                     "varType": "double"
                 }
             },
@@ -710,7 +714,7 @@
                     "varType": "string"
                 },
                 "rowIndex": {
-                    "value": 40466,
+                    "value": 7864,
                     "varType": "int"
                 },
                 "rowOffset": {
@@ -730,11 +734,11 @@
                 "array": {
                     "list": [
                         {
-                            "value": "Yelm",
+                            "value": "Hiltons",
                             "varType": "string"
                         },
                         {
-                            "value": "WA",
+                            "value": "VA",
                             "varType": "string"
                         }
                     ]
@@ -797,7 +801,7 @@
                     "varType": "enum"
                 },
                 "time": {
-                    "value": 466.0,
+                    "value": 212.0,
                     "varType": "double"
                 }
             },
@@ -961,7 +965,7 @@
                     "varType": "enum"
                 },
                 "time": {
-                    "value": 466.0,
+                    "value": 212.0,
                     "varType": "double"
                 }
             },
@@ -1001,7 +1005,7 @@
         {
             "attributes": {
                 "count": {
-                    "value": 40466,
+                    "value": 7864,
                     "varType": "int"
                 },
                 "niceName": {
@@ -1137,7 +1141,7 @@
                     "varType": "enum"
                 },
                 "time": {
-                    "value": 466.0,
+                    "value": 212.0,
                     "varType": "double"
                 }
             },
@@ -1190,7 +1194,7 @@
                     "varType": "enum"
                 },
                 "time": {
-                    "value": 466.0,
+                    "value": 212.0,
                     "varType": "double"
                 }
             },
@@ -1296,11 +1300,11 @@
                     "varType": "string"
                 },
                 "offset": {
-                    "value": 40000.0,
+                    "value": 7652.0,
                     "varType": "double"
                 },
                 "time": {
-                    "value": 466.0,
+                    "value": 212.0,
                     "varType": "double"
                 }
             },
@@ -1336,7 +1340,7 @@
                     "varType": "double2"
                 },
                 "text": {
-                    "value": "98597",
+                    "value": "24258",
                     "varType": "richText"
                 }
             },
@@ -1428,7 +1432,7 @@
                     "varType": "bool"
                 },
                 "niceName": {
-                    "value": "Points To Curve 1",
+                    "value": "Points To Curve",
                     "varType": "string"
                 }
             },
@@ -1461,7 +1465,7 @@
                 },
                 "shapePosition": {
                     "value": {
-                        "x": 202.4710522742792,
+                        "x": 763.2643068153973,
                         "y": 171.49690340183906
                     },
                     "varType": "double2"
@@ -1497,7 +1501,7 @@
                     "varType": "double"
                 },
                 "inTime": {
-                    "value": 466.0,
+                    "value": 212.0,
                     "varType": "double"
                 },
                 "niceName": {
@@ -1585,7 +1589,7 @@
                     "varType": "enum"
                 },
                 "time": {
-                    "value": 466.0,
+                    "value": 212.0,
                     "varType": "double"
                 }
             },
