@@ -8,3 +8,4 @@ ZIPTPCMap/concorde
 *.icloud
 node_modules
 Cavalry Autosaves
+*.cv
