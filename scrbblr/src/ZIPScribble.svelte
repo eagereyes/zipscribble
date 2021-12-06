@@ -8,6 +8,7 @@
 	export let width;
 	export let height;
 	export let zipCodes;
+	export let range;
 
 	let xScale;
 	let yScale;
@@ -17,14 +18,22 @@
 		yScale = scaleLinear(extent(zipCodes, z => z.lat_proj), [0, height]);
 	}
 
-	function makePath(zips) {
+	function subsetZIPs(zips, range) {
+		if (range && range.length > 0) {
+			return zips.filter(z => z.zip >= range[0] && z.zip <= range[1]);
+		} else {
+			return zips;
+		}
+	}
+
+	function makePath(zips) {		
 		return 'M '+zips.map(z => `${xScale(z.lon_proj)},${yScale(z.lat_proj)}`).join(' L ');
 	}
 </script>
 
 {#if zipCodes}
 <g transform={`translate(${x}, ${y})`}>
-	<path d={makePath(zipCodes)} />
+	<path d={makePath(subsetZIPs(zipCodes, range))} />
 </g>
 {/if}
 

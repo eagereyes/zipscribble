@@ -1,10 +1,9 @@
 <script>
 	import { text } from 'd3-fetch';
 	import { geoAlbers } from 'd3-geo';
-	import { scaleLinear } from 'd3-scale';
-	import { extent } from 'd3-array';
 
 	import ZIPScribble from './ZIPScribble.svelte';
+	import PlacesBars from './PlacesBars.svelte';
 
 	const FILENAME = 'data/US.txt';
 	const EXCLUDES = ['AA', 'AK', 'AP', 'HI', 'GU', 'FM', 'PW', 'MP', 'MH'];
@@ -14,6 +13,9 @@
 	const SVGHEIGHT = 600;
 
 	let zipCodes = null;
+	let places = [];
+
+	let range = [];
 
 	text(FILENAME).then(data => {
 		let records = data.split('\n');
@@ -25,11 +27,11 @@
 				const lat = +row[9];
 				const p = PROJECTION([lon, lat]);
 				let z = {
-					zip:		row[1],
+					zip:		+row[1],
 					place:		row[2],
 					state:		row[4],
-					lon:		lon,
-					lat:		lat,
+					lon:		+lon,
+					lat:		+lat,
 					lon_proj:	p[0],
 					lat_proj:	p[1]
 				};
@@ -43,14 +45,14 @@
 
 		zipCodes = zips;
 
-		let places = {};
+		let placeHash = {};
 
 		for (let z of zips) {
 			const p = `${z.place}, ${z.state}`;
-			if (p in places) {
-				places[p].zips += 1;
+			if (p in placeHash) {
+				placeHash[p].zips += 1;
 			} else {
-				places[p] = {
+				placeHash[p] = {
 					name: p,
 					firstZIP: z.zip,
 					zips: 1
@@ -58,17 +60,19 @@
 			}
 		}
 
-		let placesList = Object.values(places);
+		places = Object.values(placeHash);
 
-		placesList.sort((a, b) => b.zips - a.zips);
-
+		places.sort((a, b) => b.zips - a.zips);
 	});
 
 </script>
 
 <main>
 	<svg width={SVGWIDTH} height={SVGHEIGHT}>
-		<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT} zipCodes={zipCodes} />
+		<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-50} {zipCodes}
+			{range} />
+		<PlacesBars y={SVGHEIGHT-50} height={50} width={SVGWIDTH}
+			places={places.filter(p => p.zips > 20)} bind:range={range} />
 	</svg>
 </main>
 
