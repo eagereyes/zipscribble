@@ -33,6 +33,9 @@
 
 {#if zipCodes}
 <g transform={`translate(${x}, ${y})`}>
+	{#if range && range.length > 0}
+		<path d={makePath(zipCodes)} class="background" />
+	{/if}
 	<path d={makePath(subsetZIPs(zipCodes, range))} />
 </g>
 {/if}
@@ -42,5 +45,9 @@
 		stroke: #333;
 		stroke-width: 1px;
 		fill: none;
+	}
+
+	path.background {
+		stroke: lightgrey;
 	}
 </style>
