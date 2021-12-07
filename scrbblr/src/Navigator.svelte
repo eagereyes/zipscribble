@@ -41,10 +41,14 @@
 <g transform={`translate(${x}, ${y})`}>
 	<rect x={0} y={0} {width} {height} class="background"
 		on:mousemove={mouseMove} on:mouseleave={mouseLeave} />
-	<rect x={0} y={height-20} width={width} height={20} class="bar" />
+	<rect x={0} y={height-40} width={width} height={20} class="bar" />
 	{#each digits as d, i}
-		<line x1={xScale(d)} y1={0} x2={xScale(d)} y2={height-20} />
-		<text x={i < 9 ? (xScale(d)+xScale(digits[i+1]))/2 : (xScale(d)+width)/2 } y={height-20} >{i}</text>
+		<line x1={xScale(d)} y1={0} x2={xScale(d)} y2={height-40} />
+		<text x={i < 9 ? (xScale(d)+xScale(digits[i+1]))/2 : (xScale(d)+width)/2 } y={height-42} >{i}</text>
+	{/each}
+	{#each states as state, i}
+		<line x1={xScale(state.offset)} y1={height-20} x2={xScale(state.offset)} y2={height} />
+		<text x={i < states.length-1 ? (xScale(state.offset)+xScale(states[i+1].offset))/2 : (xScale(state.offset)+width)/2 } y={height-5} >{state.state}</text>
 	{/each}
 </g>
 
@@ -61,6 +65,9 @@
 	}
 
 	text {
+		fill: darkgray;
+		font-size: 8pt;
+		text-anchor: middle;
 		pointer-events: none;
 	}
 
