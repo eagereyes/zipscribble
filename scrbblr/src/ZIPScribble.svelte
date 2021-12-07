@@ -20,7 +20,8 @@
 
 	function subsetZIPs(zips, range) {
 		if (range && range.length > 0) {
-			return zips.filter(z => z.zip >= range[0] && z.zip <= range[1]);
+			// return zips.filter(z => z.zip >= range[0] && z.zip <= range[1]);
+			return zips.slice(range[0], range[1]);
 		} else {
 			return zips;
 		}

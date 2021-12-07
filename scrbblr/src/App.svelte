@@ -1,9 +1,11 @@
 <script>
 	import { text } from 'd3-fetch';
 	import { geoAlbers } from 'd3-geo';
+	import { onMount } from 'svelte';
 
 	import ZIPScribble from './ZIPScribble.svelte';
 	import PlacesBars from './PlacesBars.svelte';
+	import Navigator from './Navigator.svelte';
 
 	const FILENAME = 'data/US.txt';
 	const EXCLUDES = ['AA', 'AK', 'AP', 'HI', 'GU', 'FM', 'PW', 'MP', 'MH'];
@@ -14,66 +16,93 @@
 
 	let zipCodes = null;
 	let places = [];
+	let digits = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	let states = [];
 
 	let range = [];
 
-	text(FILENAME).then(data => {
-		let records = data.split('\n');
-		let zips = [];
-		for (let r of records) {
-			let row = r.split('\t');
-			if (!EXCLUDES.includes(row[4]) && row.length > 1) {
-				const lon = +row[10];
-				const lat = +row[9];
-				const p = PROJECTION([lon, lat]);
-				let z = {
-					zip:		+row[1],
-					place:		row[2],
-					state:		row[4],
-					lon:		+lon,
-					lat:		+lat,
-					lon_proj:	p[0],
-					lat_proj:	p[1]
-				};
-				zips.push(z);
-			}
-		}
-
-		zips.sort((a, b) => a.zip-b.zip);
-
-		console.log(`${zips.length} ZIP codes`);
-
-		zipCodes = zips;
-
-		let placeHash = {};
-
-		for (let z of zips) {
-			const p = `${z.place}, ${z.state}`;
-			if (p in placeHash) {
-				placeHash[p].zips += 1;
-			} else {
-				placeHash[p] = {
-					name: p,
-					firstZIP: z.zip,
-					zips: 1
+	onMount(async () => {
+		text(FILENAME).then(data => {
+			let records = data.split('\n');
+			let zips = [];
+			for (let r of records) {
+				let row = r.split('\t');
+				if (!EXCLUDES.includes(row[4]) && row.length > 1) {
+					const lon = +row[10];
+					const lat = +row[9];
+					const p = PROJECTION([lon, lat]);
+					let z = {
+						zip:		+row[1],
+						place:		row[2],
+						state:		row[4],
+						lon:		+lon,
+						lat:		+lat,
+						lon_proj:	p[0],
+						lat_proj:	p[1]
+					};
+					zips.push(z);
 				}
 			}
-		}
 
-		places = Object.values(placeHash);
+			zips.sort((a, b) => a.zip-b.zip);
 
-		places.sort((a, b) => b.zips - a.zips);
+			let prevDigit = 0;
+			let prevState = '';
+			for (let rowNum = 0; rowNum < zips.length; rowNum += 1) {
+				let z = zips[rowNum];
+				if (Math.floor(z.zip/10000) > prevDigit) {
+					prevDigit = Math.floor(z.zip/10000);
+					digits[prevDigit] = rowNum;
+				}
+				if (z.state !== prevState) {
+					states.push({
+						state:	z.state,
+						offset:	rowNum
+					});
+					prevState = z.state;
+				}
+			}
+
+			// console.log(digits);
+			// console.log(states);
+
+			console.log(`${zips.length} ZIP codes`);
+
+			zipCodes = zips;
+
+			let placeHash = {};
+
+			for (let z of zips) {
+				const p = `${z.place}, ${z.state}`;
+				if (p in placeHash) {
+					placeHash[p].zips += 1;
+				} else {
+					placeHash[p] = {
+						name: p,
+						firstZIP: z.zip,
+						zips: 1
+					}
+				}
+			}
+
+			places = Object.values(placeHash);
+
+			places.sort((a, b) => b.zips - a.zips);
+		});
 	});
-
 </script>
 
 <main>
-	<svg width={SVGWIDTH} height={SVGHEIGHT}>
-		<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-50} {zipCodes}
-			{range} />
-		<PlacesBars y={SVGHEIGHT-50} height={50} width={SVGWIDTH}
-			places={places.filter(p => p.zips > 20)} bind:range={range} />
-	</svg>
+	{#if zipCodes}
+		<svg width={SVGWIDTH} height={SVGHEIGHT}>
+			<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-50} {zipCodes}
+				{range} />
+			<!-- <PlacesBars y={SVGHEIGHT-50} height={50} width={SVGWIDTH}
+				places={places.filter(p => p.zips > 20)} bind:range={range} /> -->
+			<Navigator y={SVGHEIGHT-50} height={50} width={SVGWIDTH}
+				{digits} {states} numZIPs={zipCodes.length} bind:range={range} />
+		</svg>
+	{/if}
 </main>
 
 <style>
