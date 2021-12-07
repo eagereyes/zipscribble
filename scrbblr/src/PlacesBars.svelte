@@ -17,7 +17,7 @@
 
 	$: if (places) {
 		yScale = scaleLog(extent(places, p => p.zips), [0, height]);
-		barWidth = width/places.length;
+		barWidth = Math.floor(width/places.length);
 	}
 
 	function mouseMove(e) {
@@ -41,8 +41,11 @@
 		on:mouseleave={mouseLeave}
 		on:mousemove={mouseMove} on:mousedown={mouseClick} />
 	{#each places as p, i}
-		<rect x={i*barWidth} y={height-yScale(p.zips)} width={barWidth} height={yScale(p.zips)} class={activeIndex === i ? 'active' : 'zipbar'} />
+		<rect x={i*barWidth} y={height-yScale(p.zips)} width={barWidth-1} height={yScale(p.zips)} class={activeIndex === i ? 'active' : 'zipbar'} />
 	{/each}
+	{#if activeIndex >= 0}
+		<text x={0} y={height}>{`${places[activeIndex].name}: ${places[activeIndex].firstZIP}-${places[activeIndex].firstZIP+places[activeIndex].zips}`}</text>
+	{/if}
 </g>
 
 <style>
@@ -57,7 +60,7 @@
 	}
 
 	.zipbar {
-		fill: #333;
+		fill: lightgray;
 		pointer-events: none;
 	}
 </style>
