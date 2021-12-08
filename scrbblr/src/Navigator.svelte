@@ -1,6 +1,7 @@
 <script>
 
 	import { scaleLinear } from "d3-scale";
+	import { onMount } from 'svelte';
 
 	export let x = 0;
 	export let y;
@@ -15,10 +16,22 @@
 
 	let prevDigit = -1;
 
+	let svg;
+	let point;
+
+	onMount(() => {
+		svg = document.querySelector('svg');
+		point = svg.createSVGPoint();
+	});
+
 	function mouseMove(e) {
-		console.log(e.clientX);
+		point.x = e.clientX;
+		point.y = e.clientY;
+		point = point.matrixTransform(svg.getScreenCTM().inverse());
+
+		// console.log(point.x);
 		let digit = 9;
-		while (e.clientX < xScale(digits[digit])) {
+		while (point.x < xScale(digits[digit])) {
 			digit -= 1;
 		}
 		if (digit != prevDigit) {
