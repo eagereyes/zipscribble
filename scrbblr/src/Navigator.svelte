@@ -68,11 +68,16 @@
 		activeDigit = -1;
 	}
 
+	function mouseClick() {
+		
+	}
+
 </script>
 
 <g transform={`translate(${x}, ${y})`}>
 	<rect x={0} y={0} {width} {height} class="background"
-		on:mousemove={mouseMove} on:mouseleave={mouseLeave} />
+		on:mousemove={mouseMove} on:mouseleave={mouseLeave}
+		on:click={mouseClick} />
 	<rect x={0} y={height-30} width={width} height={10} class="bar" />
 	{#each digits as d, i}
 		{#if i === activeDigit}
