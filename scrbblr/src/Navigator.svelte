@@ -66,10 +66,11 @@
 	function mouseLeave() {
 		range = [];
 		activeDigit = -1;
+		activeState = -1;
 	}
 
 	function mouseClick() {
-		
+
 	}
 
 </script>
