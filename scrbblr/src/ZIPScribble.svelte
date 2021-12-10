@@ -1,7 +1,8 @@
 <script>
 
-	import { scaleLinear } from 'd3-scale';
 	import { extent } from 'd3-array';
+	import { interpolateZoom } from 'd3-interpolate';
+	import { tweened } from 'svelte/motion';
 
 	export let x = 0;
 	export let y = 0;
@@ -11,25 +12,27 @@
 	export let range;
 	export let view;
 
-	let xScale;
-	let yScale;
-
 	let maxView;
 	let scaleWidth = true;
+	let interpolator;
+	let t = tweened(0);
 
 	$: if (zipCodes) {
-		xScale = scaleLinear(extent(zipCodes, z => z.lon_proj), [-width/2, width/2]);
-		yScale = scaleLinear(extent(zipCodes, z => z.lat_proj), [-height/2, height/2]);
-		// xScale = scaleLinear(extent(zipCodes, z => z.lon_proj), [0, width]);
-		// yScale = scaleLinear(extent(zipCodes, z => z.lat_proj), [0, height]);
 		view = maxView = makeView(zipCodes);
 	}
 
 	function makeView(zips) {
-		const xExt = extent(zips, z => xScale(z.lon_proj));
-		const yExt = extent(zips, z => yScale(z.lat_proj));
-		scaleWidth = xExt[1]-xExt[0] > yExt[1]-yExt[0];
-		return [(xExt[1]+xExt[1])/2, (yExt[0]+yExt[1])/2, (scaleWidth ? xExt[1]-xExt[0] : yExt[1]-yExt[0]) * 1.05];
+		const xExt = extent(zips, z => z.lon_proj);
+		const yExt = extent(zips, z => z.lat_proj);
+		scaleWidth = xExt[1]-xExt[0] > yExt[1]-yExt[0] * (height/width);
+		// console.log(xExt, yExt, scaleWidth);
+		const newView = [(xExt[0]+xExt[1])/2, (yExt[0]+yExt[1])/2, (scaleWidth ? xExt[1]-xExt[0] : yExt[1]-yExt[0]) * 1.05];
+		if (view) {
+			interpolator = interpolateZoom(view, newView);
+			t.set(0, {duration: 0});
+			t.set(1, {duration: interpolator.duration/2});
+		}
+		return newView;
 	}
 
 	function subsetZIPs(zips, range) {
@@ -38,6 +41,9 @@
 			view = makeView(z);
 			return z;
 		} else {
+			interpolator = interpolateZoom(view, maxView);
+			t.set(0, {duration: 0});
+			t.set(1, {duration: interpolator.duration/2});
 			view = maxView;
 			scaleWidth = true;
 			return zips;
@@ -45,15 +51,15 @@
 	}
 
 	function makePath(zips) {		
-		return 'M '+zips.map(z => `${xScale(z.lon_proj)},${yScale(z.lat_proj)}`).join(' L ');
+		return 'M '+zips.map(z => `${z.lon_proj},${z.lat_proj}`).join(' L ');
 	}
 
 	// https://observablehq.com/@d3/d3-interpolatezoom
 	function makeTransform(t) {
-		// const view = interpolator(t);
+		const v = interpolator ? interpolator(t) : view;
 
-		const k = (scaleWidth ? width : height) / view[2]; // scale
-		const translate = [width / 2 - view[0] * k, height / 2 - view[1] * k]; // translate
+		const k = (scaleWidth ? width : height) / v[2]; // scale
+		const translate = [x + width / 2 - v[0] * k, y + height / 2 - v[1] * k]; // translate
 
 		return `translate(${translate}) scale(${k})`;
 	}
@@ -61,13 +67,11 @@
 
 {#if zipCodes}
 <!-- <g transform={`translate(${x}, ${y})`}> -->
-<g transform={`translate(${width/2}, 0)`}>
-<g transform={makeTransform(view)}>
+<g transform={makeTransform($t)}>
 	{#if range && range.length > 0}
 		<path d={makePath(zipCodes)} class="background" />
 	{/if}
 	<path d={makePath(subsetZIPs(zipCodes, range))} />
-</g>
 </g>
 {/if}
 
