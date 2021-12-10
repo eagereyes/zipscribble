@@ -24,8 +24,7 @@
 	function makeView(zips) {
 		const xExt = extent(zips, z => z.lon_proj);
 		const yExt = extent(zips, z => z.lat_proj);
-		scaleWidth = xExt[1]-xExt[0] > yExt[1]-yExt[0] * (height/width);
-		// console.log(xExt, yExt, scaleWidth);
+		scaleWidth = xExt[1]-xExt[0] > (yExt[1]-yExt[0]) * (width/height);
 		const newView = [(xExt[0]+xExt[1])/2, (yExt[0]+yExt[1])/2, (scaleWidth ? xExt[1]-xExt[0] : yExt[1]-yExt[0]) * 1.05];
 		if (view) {
 			interpolator = interpolateZoom(view, newView);
