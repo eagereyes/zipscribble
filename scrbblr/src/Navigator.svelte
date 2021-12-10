@@ -74,17 +74,17 @@
 	<rect x={0} y={0} {width} {height} class="background"
 		on:mousemove={mouseMove} on:mouseleave={mouseLeave} />
 	<rect x={0} y={height-30} width={width} height={10} class="bar" />
-	{#if activeDigit >= 0}
-		<rect x={xScale(digits[activeDigit])} y={0} width={activeDigit < 9 ? xScale(digits[activeDigit+1])-xScale(digits[activeDigit]) : width-xScale(digits[activeDigit])} height={20} class="active" />
-	{/if}
 	{#each digits as d, i}
+		{#if i === activeDigit}
+			<rect x={xScale(digits[i])} y={0} width={i < 9 ? xScale(digits[i+1])-xScale(digits[i]) : width-xScale(digits[i])} height={20} class="active" />
+		{/if}
 		<line x1={xScale(d)} y1={0} x2={xScale(d)} y2={height-30} />
 		<text x={i < 9 ? (xScale(d)+xScale(digits[i+1]))/2 : (xScale(d)+width)/2 } y={height-37} >{i}</text>
 	{/each}
-	{#if activeState >= 0}
-		<rect x={xScale(states[activeState].offset)} y={30} width={activeState < states.length-1 ? xScale(states[activeState+1].offset)-xScale(states[activeState].offset) : width-xScale(states[activeState].offset)} height={20} class="active" />
-	{/if}
 	{#each states as state, i}
+		{#if activeState === i || (activeState >= 0 && states[activeState].state === states[i].state) }
+			<rect x={xScale(states[i].offset)} y={30} width={i < states.length-1 ? xScale(states[i+1].offset)-xScale(states[i].offset) : width-xScale(states[i].offset)} height={20} class="active" />
+		{/if}
 		<line x1={xScale(state.offset)} y1={height-20} x2={xScale(state.offset)} y2={height} />
 		{#if i < states.length-1 && xScale(states[i+1].offset)-xScale(state.offset) > 20}
 			<text x={i < states.length-1 ? (xScale(state.offset)+xScale(states[i+1].offset))/2 : (xScale(state.offset)+width)/2 } y={height-5} >{state.state}</text>
