@@ -12,13 +12,21 @@
 	export let range;
 	export let view;
 
-	let maxView;
 	let scaleWidth = true;
 	let interpolator;
-	let t = tweened(0);
+	const t = tweened(0);
+
+	const prevAlpha = tweened(0);
+	let prevPath = null;
+	const currentAlpha = tweened(1);
+	let currentPath = null;
 
 	$: if (zipCodes) {
-		view = maxView = makeView(zipCodes);
+		view = makeView(zipCodes);
+	}
+
+	$: if (range) {
+		subsetZIPs(zipCodes, range);
 	}
 
 	function makeView(zips) {
@@ -26,11 +34,20 @@
 		const yExt = extent(zips, z => z.lat_proj);
 		scaleWidth = xExt[1]-xExt[0] > (yExt[1]-yExt[0]) * (width/height);
 		const newView = [(xExt[0]+xExt[1])/2, (yExt[0]+yExt[1])/2, (scaleWidth ? xExt[1]-xExt[0] : yExt[1]-yExt[0]) * 1.05];
+
 		if (view) {
 			interpolator = interpolateZoom(view, newView);
 			t.set(0, {duration: 0});
 			t.set(1, {duration: interpolator.duration/2});
 		}
+
+		prevPath = currentPath;
+		prevAlpha.set(1, {duration: 0});
+		prevAlpha.set(0, {duration: interpolator ? interpolator.duration/2 : 200});
+		currentPath = makePath(zips);
+		currentAlpha.set(0, {duration: 0});
+		currentAlpha.set(1, {duration: interpolator ? interpolator.duration/2 : 200});
+
 		return newView;
 	}
 
@@ -40,16 +57,12 @@
 			view = makeView(z);
 			return z;
 		} else {
-			interpolator = interpolateZoom(view, maxView);
-			t.set(0, {duration: 0});
-			t.set(1, {duration: interpolator.duration/2});
-			view = maxView;
-			scaleWidth = true;
+			view = makeView(zips);
 			return zips;
 		}
 	}
 
-	function makePath(zips) {		
+	function makePath(zips) {	
 		return 'M '+zips.map(z => `${z.lon_proj},${z.lat_proj}`).join(' L ');
 	}
 
@@ -70,7 +83,11 @@
 	{#if range && range.length > 0}
 		<path d={makePath(zipCodes)} class="background" />
 	{/if}
-	<path d={makePath(subsetZIPs(zipCodes, range))} />
+	{#if prevPath && $prevAlpha > 0}
+		<path d={prevPath} style={`stroke:rgba(51,51,51,${$prevAlpha});`} />
+	{/if}
+	<!-- <path d={makePath(subsetZIPs(zipCodes, range))} /> -->
+	<path d={currentPath} style={`stroke:rgba(51,51,51,${$currentAlpha});`} />
 </g>
 {/if}
 
