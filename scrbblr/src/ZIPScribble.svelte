@@ -12,7 +12,6 @@
 	export let range;
 	export let view;
 
-	let scaleWidth = true;
 	let interpolator;
 	const t = tweened(0);
 
@@ -21,8 +20,11 @@
 	const currentAlpha = tweened(1);
 	let currentPath = null;
 
+	let fullPath = '';
+
 	$: if (zipCodes) {
 		view = makeView(zipCodes);
+		fullPath = makePath(zipCodes);
 	}
 
 	$: if (range) {
@@ -32,8 +34,8 @@
 	function makeView(zips) {
 		const xExt = extent(zips, z => z.lon_proj);
 		const yExt = extent(zips, z => z.lat_proj);
-		scaleWidth = xExt[1]-xExt[0] > (yExt[1]-yExt[0]) * (width/height);
-		const newView = [(xExt[0]+xExt[1])/2, (yExt[0]+yExt[1])/2, (scaleWidth ? xExt[1]-xExt[0] : yExt[1]-yExt[0]) * 1.05];
+		const size = xExt[1]-xExt[0] > (yExt[1]-yExt[0]) * (width/height) ? (xExt[1]-xExt[0]) * (height/width) : yExt[1]-yExt[0];
+		const newView = [(xExt[0]+xExt[1])/2, (yExt[0]+yExt[1])/2, size * 1.05];
 
 		if (view) {
 			interpolator = interpolateZoom(view, newView);
@@ -70,7 +72,7 @@
 	function makeTransform(t) {
 		const v = interpolator ? interpolator(t) : view;
 
-		const k = (scaleWidth ? width : height) / v[2]; // scale
+		const k = height / v[2]; // scale
 		const translate = [x + width / 2 - v[0] * k, y + height / 2 - v[1] * k]; // translate
 
 		return `translate(${translate}) scale(${k})`;
@@ -80,7 +82,7 @@
 {#if zipCodes}
 <g transform={makeTransform($t)}>
 	{#if range && range.length > 0}
-		<path d={makePath(zipCodes)} class="background" />
+		<path d={fullPath} class="background" />
 	{/if}
 	{#if prevPath && $prevAlpha > 0}
 		<path d={prevPath} style={`opacity:${$prevAlpha};`} />
