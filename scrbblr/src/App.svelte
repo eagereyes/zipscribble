@@ -16,8 +16,11 @@
 
 	let zipCodes = null;
 	let places = [];
-	let digits = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-	let states = [];
+	let digits = [...Array(10)].map(d => {
+		return {
+			lastIndex:	0,
+			states:		[]
+		}});
 
 	let range = [];
 
@@ -51,21 +54,26 @@
 			for (let rowNum = 0; rowNum < zips.length; rowNum += 1) {
 				let z = zips[rowNum];
 				if (Math.floor(z.zip/10000) > prevDigit) {
+					digits[prevDigit].states[digits[prevDigit].states.length-1].endOffset = rowNum;
 					prevDigit = Math.floor(z.zip/10000);
-					digits[prevDigit] = rowNum;
+					digits[prevDigit].lastIndex = rowNum;
 				}
 				if (z.state !== prevState) {
-					states.push({
-						state:	z.state,
-						offset:	rowNum
+					if (digits[prevDigit].states.length > 0) {
+						digits[prevDigit].states[digits[prevDigit].states.length-1].endOffset = rowNum;
+					}
+					digits[prevDigit].states.push({
+						state:			z.state,
+						startOffset:	rowNum,
+						endOffset:		rowNum
 					});
 					prevState = z.state;
 				}
 			}
 
-			// console.log(digits);
-			// console.log(states);
+			digits[9].states[digits[9].states.length-1].endOffset = zips.length;
 
+			console.log(digits);
 			console.log(`${zips.length} ZIP codes`);
 
 			zipCodes = zips;
@@ -100,7 +108,7 @@
 			<!-- <PlacesBars y={SVGHEIGHT-50} height={50} width={SVGWIDTH}
 				places={places.filter(p => p.zips > 20)} bind:range={range} /> -->
 			<Navigator y={SVGHEIGHT-50} height={50} width={SVGWIDTH}
-				{digits} {states} numZIPs={zipCodes.length} bind:range={range} />
+				{digits} numZIPs={zipCodes.length} bind:range={range} />
 		</svg>
 	{/if}
 </main>

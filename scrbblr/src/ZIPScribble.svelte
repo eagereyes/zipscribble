@@ -95,6 +95,7 @@
 	path {
 		stroke: #333;
 		stroke-width: 1px;
+		stroke-linejoin: miter;
 		fill: none;
 	}
 

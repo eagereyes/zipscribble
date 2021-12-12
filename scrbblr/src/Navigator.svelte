@@ -8,7 +8,6 @@
 	export let width;
 	export let height;
 	export let digits;
-	export let states;
 	export let numZIPs;
 	export let range = [];
 
@@ -31,33 +30,35 @@
 		point = point.matrixTransform(svg.getScreenCTM().inverse());
 
 		// console.log(point.x, point.y-y);
-		if (point.y-y <= 20) {
-			let digit = 9;
-			while (point.x < xScale(digits[digit])) {
-				digit -= 1;
-			}
-			if (digit != activeDigit) {
-				if (digit < 9)
-					range = [digits[digit], digits[digit+1]];
-				else
-					range = [digits[digit], numZIPs];
+		let digit = 9;
+		while (point.x < xScale(digits[digit].lastIndex)) {
+			digit -= 1;
+		}
+		if (digit != activeDigit) {
+			if (digit < 9)
+				range = [digits[digit].lastIndex, digits[digit+1].lastIndex];
+			else
+				range = [digits[digit].lastIndex, numZIPs];
 
-				activeDigit = digit;
-			}
-		} else if (point.y-y >= 30) {
-			let mouseOffset = xScale.invert(point.x);
-			let state = states.length-1;
-			while (states[state].offset > mouseOffset) {
-				state -= 1;
-			}
-			if (state !== activeState) {
-				if (state < states.length-1)
-					range = [states[state].offset, states[state+1].offset];
-				else
-					range = [states[state].offset, numZIPs];
-				activeState = state;
-			}
-		} else {
+			activeDigit = digit;
+		}
+
+		let mouseOffset = xScale.invert(point.x);
+		const states = digits[activeDigit].states;
+		let state = states.length-1;
+		while (states[state].startOffset > mouseOffset) {
+			state -= 1;
+		}
+		if (state !== activeState) {
+			// if (state < states.length-1)
+			// 	range = [states[state].offset, states[state+1].offset];
+			// else
+			// 	range = [states[state].offset, numZIPs];
+			// console.log(state);
+			activeState = state;
+		}
+
+		if (y > 20 && y < 40) {
 			activeDigit = -1;
 			activeState = -1;
 		}
@@ -82,19 +83,19 @@
 	<rect x={0} y={height-30} width={width} height={10} class="bar" />
 	{#each digits as d, i}
 		{#if i === activeDigit}
-			<rect x={xScale(digits[i])} y={0} width={i < 9 ? xScale(digits[i+1])-xScale(digits[i]) : width-xScale(digits[i])} height={20} class="active" />
+			<rect x={xScale(digits[i].lastIndex)} y={0} width={i < 9 ? xScale(digits[i+1].lastIndex)-xScale(digits[i].lastIndex) : width-xScale(digits[i].lastIndex)} height={20} class="active" />
 		{/if}
-		<line x1={xScale(d)} y1={0} x2={xScale(d)} y2={height-30} />
-		<text x={i < 9 ? (xScale(d)+xScale(digits[i+1]))/2 : (xScale(d)+width)/2 } y={height-37} >{i}</text>
-	{/each}
-	{#each states as state, i}
-		{#if activeState === i || (activeState >= 0 && states[activeState].state === states[i].state) }
-			<rect x={xScale(states[i].offset)} y={30} width={i < states.length-1 ? xScale(states[i+1].offset)-xScale(states[i].offset) : width-xScale(states[i].offset)} height={20} class="active" />
-		{/if}
-		<line x1={xScale(state.offset)} y1={height-20} x2={xScale(state.offset)} y2={height} />
-		{#if i < states.length-1 && xScale(states[i+1].offset)-xScale(state.offset) > 20}
-			<text x={i < states.length-1 ? (xScale(state.offset)+xScale(states[i+1].offset))/2 : (xScale(state.offset)+width)/2 } y={height-5} >{state.state}</text>
-		{/if}
+		<line x1={xScale(d.lastIndex)} y1={0} x2={xScale(d.lastIndex)} y2={height-30} />
+		<text x={i < 9 ? (xScale(d.lastIndex)+xScale(digits[i+1].lastIndex))/2 : (xScale(d.lastIndex)+width)/2 } y={height-37} >{i}</text>
+		{#each d.states as state, s}
+			{#if (activeState === s && i === activeDigit) || ((activeState >= 0 && activeState < d.states.length && digits[activeDigit].states[activeState].state === d.states[s].state)) }
+				<rect x={xScale(state.startOffset)} y={30} width={xScale(state.endOffset)-xScale(state.startOffset)} height={20} class="active" />
+			{/if}
+			<line x1={xScale(state.startOffset)} y1={height-20} x2={xScale(state.startOffset)} y2={height} />
+			{#if xScale(state.endOffset)-xScale(state.startOffset) > 20}
+				<text x={(xScale(state.startOffset)+xScale(state.endOffset))/2} y={height-5} >{state.state}</text>
+			{/if}
+		{/each}
 	{/each}
 </g>
 
