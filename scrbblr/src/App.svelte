@@ -28,7 +28,8 @@
 											}})
 					}});
 
-	let range = [];
+	let zoomRange = [];
+	let highlightRange = [];
 
 	onMount(async () => {
 		text(FILENAME).then(data => {
@@ -91,8 +92,8 @@
 			digits[9].secondDigits[9].endOffset = zips.length;
 			digits[9].states[digits[9].states.length-1].endOffset = zips.length;
 
-			console.log(digits);
-			console.log(`${zips.length} ZIP codes`);
+			// console.log(digits);
+			// console.log(`${zips.length} ZIP codes`);
 
 			zipCodes = zips;
 
@@ -122,11 +123,10 @@
 	{#if zipCodes}
 		<svg width={SVGWIDTH} height={SVGHEIGHT}>
 			<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-50} {zipCodes}
-				{range} />
-			<!-- <PlacesBars y={SVGHEIGHT-50} height={50} width={SVGWIDTH}
-				places={places.filter(p => p.zips > 20)} bind:range={range} /> -->
-			<Navigator y={SVGHEIGHT-50} height={50} width={SVGWIDTH}
-				{digits} numZIPs={zipCodes.length} bind:range={range} />
+				{zoomRange} {highlightRange} />
+			<Navigator y={SVGHEIGHT-60} width={SVGWIDTH}
+				{digits} numZIPs={zipCodes.length}
+				bind:zoomRange={zoomRange} bind:highlightRange={highlightRange} />
 		</svg>
 	{/if}
 </main>

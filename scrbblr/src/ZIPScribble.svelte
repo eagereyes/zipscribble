@@ -9,9 +9,10 @@
 	export let width;
 	export let height;
 	export let zipCodes;
-	export let range;
-	export let view;
-
+	export let zoomRange;
+	export let highlightRange;
+	
+	let view;
 	let interpolator;
 	const t = tweened(0);
 
@@ -27,8 +28,16 @@
 		fullPath = makePath(zipCodes);
 	}
 
-	$: if (range) {
-		subsetZIPs(zipCodes, range);
+	$: if (zoomRange) {
+		subsetZIPs(zipCodes, zoomRange);
+	}
+
+	$: if (highlightRange) {
+		if (highlightRange === []) {
+			currentPath = fullPath;
+		} else {
+			currentPath = makePath(zipCodes.slice(highlightRange[0], highlightRange[1]));
+		}
 	}
 
 	function makeView(zips) {
@@ -81,7 +90,7 @@
 
 {#if zipCodes}
 <g transform={makeTransform($t)}>
-	{#if range && range.length > 0}
+	{#if zoomRange && zoomRange.length > 0}
 		<path d={fullPath} class="background" />
 	{/if}
 	{#if prevPath && $prevAlpha > 0}

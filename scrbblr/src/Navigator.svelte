@@ -6,15 +6,18 @@
 	export let x = 0;
 	export let y;
 	export let width;
-	export let height;
 	export let digits;
 	export let numZIPs;
-	export let range = [];
+	export let zoomRange = [];
+	export let highlightRange = [];
 
 	let xScale = scaleLinear([0, numZIPs], [1, width]);
 
-	let activeDigit = -1;
+	let activeFirst = -1;
+	let activeSecond = -1;
 	let activeState = -1;
+
+	let timeoutID = 0;
 
 	let svg;
 	let point;
@@ -24,87 +27,68 @@
 		point = svg.createSVGPoint();
 	});
 
-	function mouseMove(e) {
-		point.x = e.clientX;
-		point.y = e.clientY;
-		point = point.matrixTransform(svg.getScreenCTM().inverse());
-
-		// console.log(point.x, point.y-y);
-		let digit = 9;
-		while (point.x < xScale(digits[digit].startOffset) && digit > 0) {
-			digit -= 1;
+	function setActiveDigit(first, second, state) {
+		if (timeoutID) {
+			clearTimeout(timeoutID);
+			timeoutID = 0;
 		}
-		if (digit != activeDigit) {
-			range = [digits[digit].startOffset, digits[digit].endOffset];
-
-			activeDigit = digit;
+		if (first >= 0) {
+			if (first !== activeFirst) {
+				zoomRange = [digits[first].startOffset, digits[first].endOffset];
+			}
+			if (second >= 0) {
+				highlightRange = [digits[first].secondDigits[second].startOffset, digits[first].secondDigits[second].endOffset];
+			} else {
+				highlightRange = zoomRange;
+			}
+		} else {
+			timeoutID = setTimeout(() => {
+				zoomRange = [];
+				highlightRange = [];
+				timeoutID = 0;
+			}, 10);
 		}
-
-		let mouseOffset = xScale.invert(point.x);
-		const states = digits[activeDigit].states;
-		let state = states.length-1;
-		while (states[state].startOffset > mouseOffset && state > 0) {
-			state -= 1;
-		}
-		if (state !== activeState) {
-			// if (state < states.length-1)
-			// 	range = [states[state].offset, states[state+1].offset];
-			// else
-			// 	range = [states[state].offset, numZIPs];
-			// console.log(state);
-			activeState = state;
-		}
-
-		if (y > 20 && y < 40) {
-			activeDigit = -1;
-			activeState = -1;
-		}
+		activeFirst = first;
+		activeSecond = second;
 	}
 
-	function mouseLeave() {
-		range = [];
-		activeDigit = -1;
-		activeState = -1;
-	}
-
-	function mouseClick() {
-
-	}
 
 </script>
 
 <g transform={`translate(${x}, ${y})`}>
-	<rect x={0} y={0} {width} {height} class="background"
-		on:mousemove={mouseMove} on:mouseleave={mouseLeave}
-		on:click={mouseClick} />
-	<rect x={0} y={height-30} width={width} height={10} class="bar" />
 	{#each digits as d, i}
-		{#if i === activeDigit}
-			<rect x={xScale(digits[i].startOffset)} y={0} width={xScale(d.endOffset)-xScale(d.startOffset)} height={20} class="active" />
-		{/if}
-		<line x1={xScale(d.startOffset)} y1={0} x2={xScale(d.startOffset)} y2={height-30} />
-		<text x={(xScale(d.startOffset)+xScale(d.endOffset))/2} y={height-37} >{i}</text>
+		<rect x={xScale(d.startOffset)} y={0} width={xScale(d.endOffset)-xScale(d.startOffset)} height={20}
+			class={activeFirst === i ? 'active' : 'bar'}
+			on:mouseenter={() => setActiveDigit(i)} on:mouseleave={() => setActiveDigit(-1)} />
+		<line x1={xScale(d.startOffset)} y1={0} x2={xScale(d.startOffset)} y2={20} />
+		<text x={(xScale(d.startOffset)+xScale(d.endOffset))/2} y={13} >{i}</text>
+		{#each d.secondDigits as second, s}
+			<rect x={xScale(second.startOffset)} y={20} width={xScale(second.endOffset)-xScale(second.startOffset)} height={20}
+				class={activeFirst === i && activeSecond === s ? 'active' : 'bar'}
+				on:mouseenter={() => setActiveDigit(i, s)} on:mouseleave={() => setActiveDigit(i, -1)} />
+			<line x1={xScale(second.startOffset)} y1={20} x2={xScale(second.startOffset)} y2={40} />
+		{/each}
 		{#each d.states as state, s}
-			{#if (activeState === s && i === activeDigit) || ((activeState >= 0 && activeState < d.states.length && digits[activeDigit].states[activeState].state === d.states[s].state)) }
-				<rect x={xScale(state.startOffset)} y={30} width={xScale(state.endOffset)-xScale(state.startOffset)} height={20} class="active" />
-			{/if}
-			<line x1={xScale(state.startOffset)} y1={height-20} x2={xScale(state.startOffset)} y2={height} />
+			<rect x={xScale(state.startOffset)} y={40} width={xScale(state.endOffset)-xScale(state.startOffset)} height={20} class={activeState === state ? 'active' : 'bar'} />
+			<line x1={xScale(state.startOffset)} y1={40} x2={xScale(state.startOffset)} y2={60} />
 			{#if xScale(state.endOffset)-xScale(state.startOffset) > 20}
-				<text x={(xScale(state.startOffset)+xScale(state.endOffset))/2} y={height-5} >{state.state}</text>
+				<text x={(xScale(state.startOffset)+xScale(state.endOffset))/2} y={55} >{state.state}</text>
 			{/if}
 		{/each}
+		<line x1={0} y1={20} x2={width} y2={20} />
+		<line x1={0} y1={40} x2={width} y2={40} />
+		<line x1={width-0.5} y1={0} x2={width-0.5} y2={60} />
 	{/each}
 </g>
 
 <style>
 	rect.bar {
-		fill: lightgray;
+		fill: white;
 		stroke: none;
-		pointer-events: none;
 	}
 
 	line {
-		stroke: darkgray;
+		stroke: lightgray;
 		pointer-events: none;
 	}
 
@@ -117,17 +101,15 @@
 
 	rect.active {
 		fill: lightsteelblue;
-		pointer-events: none;
-	}
-
-	rect.background {
-		fill: white;
-		pointer-events: all;
 	}
 
 	@media (prefers-color-scheme: dark) {
-		rect.background {
-			fill: lightgray;
+		rect.bar {
+			fill: #222;
+		}
+
+		line {
+			stroke: #444;
 		}
 	}
 </style>
