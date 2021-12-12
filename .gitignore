@@ -4,8 +4,11 @@ data/*.zip
 ZIPTPCMap/LKH*
 ZIPTPCMap/qsopt*
 ZIPTPCMap/concorde
+srcdata
+
 *.twbx
 *.icloud
 node_modules
 Cavalry Autosaves
 *.cv
+.DS_Store
