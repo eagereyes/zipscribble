@@ -17,10 +17,16 @@
 	let zipCodes = null;
 	let places = [];
 	let digits = [...Array(10)].map(d => {
-		return {
-			lastIndex:	0,
-			states:		[]
-		}});
+					return {
+						startOffset:	0,
+						endOffset:		0,
+						states:			[],
+						secondDigits:	[...Array(10)].map(d => {
+											return {
+												startOffset:	0,
+												endOffset:		0,
+											}})
+					}});
 
 	let range = [];
 
@@ -49,20 +55,30 @@
 
 			zips.sort((a, b) => a.zip-b.zip);
 
-			let prevDigit = 0;
+			let currentDigit = 0;
+			let currentSecondDig = 0;
 			let prevState = '';
 			for (let rowNum = 0; rowNum < zips.length; rowNum += 1) {
 				let z = zips[rowNum];
-				if (Math.floor(z.zip/10000) > prevDigit) {
-					digits[prevDigit].states[digits[prevDigit].states.length-1].endOffset = rowNum;
-					prevDigit = Math.floor(z.zip/10000);
-					digits[prevDigit].lastIndex = rowNum;
+				if (Math.floor(z.zip/10000) > currentDigit) {
+					digits[currentDigit].states[digits[currentDigit].states.length-1].endOffset = rowNum;
+					digits[currentDigit].endOffset = rowNum;
+					digits[currentDigit].secondDigits[currentSecondDig].endOffset = rowNum;
+					currentDigit = Math.floor(z.zip/10000);
+					digits[currentDigit].startOffset = rowNum;
+					digits[currentDigit].secondDigits[0].startOffset = rowNum;
+					currentSecondDig = 0;
+				}
+				if (Math.floor(z.zip/1000)-currentDigit*10 > currentSecondDig) {
+					digits[currentDigit].secondDigits[currentSecondDig].endOffset = rowNum;
+					currentSecondDig = Math.floor(z.zip/1000)-currentDigit*10;
+					digits[currentDigit].secondDigits[currentSecondDig].startOffset = rowNum;
 				}
 				if (z.state !== prevState) {
-					if (digits[prevDigit].states.length > 0) {
-						digits[prevDigit].states[digits[prevDigit].states.length-1].endOffset = rowNum;
+					if (digits[currentDigit].states.length > 0) {
+						digits[currentDigit].states[digits[currentDigit].states.length-1].endOffset = rowNum;
 					}
-					digits[prevDigit].states.push({
+					digits[currentDigit].states.push({
 						state:			z.state,
 						startOffset:	rowNum,
 						endOffset:		rowNum
@@ -71,6 +87,8 @@
 				}
 			}
 
+			digits[9].endOffset = zips.length;
+			digits[9].secondDigits[9].endOffset = zips.length;
 			digits[9].states[digits[9].states.length-1].endOffset = zips.length;
 
 			console.log(digits);

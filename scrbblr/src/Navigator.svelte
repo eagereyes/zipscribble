@@ -31,14 +31,11 @@
 
 		// console.log(point.x, point.y-y);
 		let digit = 9;
-		while (point.x < xScale(digits[digit].lastIndex) && digit > 0) {
+		while (point.x < xScale(digits[digit].startOffset) && digit > 0) {
 			digit -= 1;
 		}
 		if (digit != activeDigit) {
-			if (digit < 9)
-				range = [digits[digit].lastIndex, digits[digit+1].lastIndex];
-			else
-				range = [digits[digit].lastIndex, numZIPs];
+			range = [digits[digit].startOffset, digits[digit].endOffset];
 
 			activeDigit = digit;
 		}
@@ -83,10 +80,10 @@
 	<rect x={0} y={height-30} width={width} height={10} class="bar" />
 	{#each digits as d, i}
 		{#if i === activeDigit}
-			<rect x={xScale(digits[i].lastIndex)} y={0} width={i < 9 ? xScale(digits[i+1].lastIndex)-xScale(digits[i].lastIndex) : width-xScale(digits[i].lastIndex)} height={20} class="active" />
+			<rect x={xScale(digits[i].startOffset)} y={0} width={xScale(d.endOffset)-xScale(d.startOffset)} height={20} class="active" />
 		{/if}
-		<line x1={xScale(d.lastIndex)} y1={0} x2={xScale(d.lastIndex)} y2={height-30} />
-		<text x={i < 9 ? (xScale(d.lastIndex)+xScale(digits[i+1].lastIndex))/2 : (xScale(d.lastIndex)+width)/2 } y={height-37} >{i}</text>
+		<line x1={xScale(d.startOffset)} y1={0} x2={xScale(d.startOffset)} y2={height-30} />
+		<text x={(xScale(d.startOffset)+xScale(d.endOffset))/2} y={height-37} >{i}</text>
 		{#each d.states as state, s}
 			{#if (activeState === s && i === activeDigit) || ((activeState >= 0 && activeState < d.states.length && digits[activeDigit].states[activeState].state === d.states[s].state)) }
 				<rect x={xScale(state.startOffset)} y={30} width={xScale(state.endOffset)-xScale(state.startOffset)} height={20} class="active" />
