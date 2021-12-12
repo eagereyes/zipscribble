@@ -78,16 +78,14 @@
 </script>
 
 {#if zipCodes}
-<!-- <g transform={`translate(${x}, ${y})`}> -->
 <g transform={makeTransform($t)}>
 	{#if range && range.length > 0}
 		<path d={makePath(zipCodes)} class="background" />
 	{/if}
 	{#if prevPath && $prevAlpha > 0}
-		<path d={prevPath} style={`stroke:rgba(51,51,51,${$prevAlpha});`} />
+		<path d={prevPath} style={`opacity:${$prevAlpha};`} />
 	{/if}
-	<!-- <path d={makePath(subsetZIPs(zipCodes, range))} /> -->
-	<path d={currentPath} style={`stroke:rgba(51,51,51,${$currentAlpha});`} />
+	<path d={currentPath} style={`opacity:${$currentAlpha};`} />
 </g>
 {/if}
 
@@ -101,5 +99,15 @@
 
 	path.background {
 		stroke: lightgrey;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		path {
+			stroke: lightgray;
+		}
+
+		path.background {
+			stroke: #666;
+		}
 	}
 </style>

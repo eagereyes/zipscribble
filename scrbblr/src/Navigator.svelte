@@ -31,7 +31,7 @@
 
 		// console.log(point.x, point.y-y);
 		let digit = 9;
-		while (point.x < xScale(digits[digit].lastIndex)) {
+		while (point.x < xScale(digits[digit].lastIndex) && digit > 0) {
 			digit -= 1;
 		}
 		if (digit != activeDigit) {
@@ -46,7 +46,7 @@
 		let mouseOffset = xScale.invert(point.x);
 		const states = digits[activeDigit].states;
 		let state = states.length-1;
-		while (states[state].startOffset > mouseOffset) {
+		while (states[state].startOffset > mouseOffset && state > 0) {
 			state -= 1;
 		}
 		if (state !== activeState) {
@@ -126,5 +126,11 @@
 	rect.background {
 		fill: white;
 		pointer-events: all;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		rect.background {
+			fill: lightgray;
+		}
 	}
 </style>
