@@ -8,6 +8,10 @@ All data is coming from [geonames](http://geonames.org), in particular the daily
 
 The data quality is a bit uneven, with the U.S. data being the best. There are lots of countries for which no data is available at all, and others for which the data looks quite bad.
 
+Additional data sources:
+- [Simple Maps ZIP Codes Database, Basic version](https://simplemaps.com/data/us-zips)
+- [Zip Codes.org, Personal/Free version](https://www.unitedstateszipcodes.org/zip-code-database/)
+
 ## Scripts
 
 There are two scripts that download and process the data to be ready for rendering.

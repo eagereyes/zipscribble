@@ -1,16 +1,18 @@
 Place,FirstZIP,Count
-"Washington, DC",20001,274
+"APO AE, ",09007,295
+"Washington, DC",20001,271
 "Houston, TX",77001,178
-"New York City, NY",10001,146
-"El Paso, TX",79901,139
+"New York, NY",10001,146
+"El Paso, TX",79901,137
+"APO AA, ",09001,128
 "Dallas, TX",75201,105
 "Sacramento, CA",94203,100
-"Miami, FL",33101,96
+"Miami, FL",33101,95
 "Los Angeles, CA",90001,94
 "Atlanta, GA",30301,92
 "Philadelphia, PA",19019,87
-"San Antonio, TX",78201,85
-"Chicago, IL",60601,83
+"Chicago, IL",60601,84
+"San Antonio, TX",78201,83
 "Phoenix, AZ",85001,77
 "Las Vegas, NV",89101,77
 "San Diego, CA",92101,76
@@ -22,130 +24,130 @@ Place,FirstZIP,Count
 "Kansas City, MO",64101,71
 "Minneapolis, MN",55401,69
 "Saint Louis, MO",63101,68
-"Denver, CO",80201,67
 "Louisville, KY",40201,66
-"Birmingham, AL",35201,61
+"Denver, CO",80201,66
+"Indianapolis, IN",46201,63
+"Birmingham, AL",35201,62
 "Memphis, TN",37501,61
-"Indianapolis, IN",46201,61
 "New Orleans, LA",70112,61
+"Portland, OR",97201,60
 "Orlando, FL",32801,59
-"Portland, OR",97201,59
 "Seattle, WA",98101,59
 "Tampa, FL",33601,58
 "Fresno, CA",93650,58
+"Des Moines, IA",50301,57
 "San Jose, CA",95101,57
-"Des Moines, IA",50301,56
-"Fort Worth, TX",76101,55
-"Salt Lake City, UT",84101,55
+"Fort Worth, TX",76101,56
+"Tucson, AZ",85701,54
 "Colorado Springs, CO",80901,53
-"Tucson, AZ",85701,53
+"FPO AA, ",34050,52
 "Tulsa, OK",74101,52
+"Salt Lake City, UT",84101,52
 "San Francisco, CA",94102,51
 "Albany, NY",12201,50
-"Jacksonville, FL",32099,49
-"Richmond, VA",23218,48
-"Fort Lauderdale, FL",33301,48
+"Jacksonville, FL",32099,48
 "Omaha, NE",68101,48
 "Brooklyn, NY",11201,47
-"Charleston, WV",25301,47
-"Baltimore, MD",21201,46
+"Fort Lauderdale, FL",33301,47
 "Detroit, MI",48201,46
+"Charleston, WV",25301,45
 "Columbus, OH",43085,45
 "Buffalo, NY",14201,44
 "Raleigh, NC",27601,44
 "Dayton, OH",45401,43
 "Fort Wayne, IN",46801,43
-"Boston, MA",02108,42
-"Milwaukee, WI",53201,42
-"Saint Paul, MN",55101,42
+"Saint Paul, MN",55101,43
+"Baltimore, MD",21201,42
 "Baton Rouge, LA",70801,42
+"Albuquerque, NM",87101,42
 "Roanoke, VA",24001,41
-"Albuquerque, NM",87101,41
+"Milwaukee, WI",53201,41
 "Rochester, NY",14602,40
 "Huntington, WV",25701,40
 "Cleveland, OH",44101,40
+"Richmond, VA",23173,39
 "Nashville, TN",37201,39
 "Lexington, KY",40502,39
+"Boston, MA",02108,36
 "Hartford, CT",06101,36
-"Tacoma, WA",98401,36
+"FPO AE, ",09415,35
 "Madison, WI",53701,35
 "Springfield, IL",62701,35
 "Shreveport, LA",71101,35
+"Tacoma, WA",98401,35
 "Columbia, SC",29201,34
 "Mobile, AL",36601,34
-"Shawnee Mission, KS",66201,34
 "Montgomery, AL",36101,33
-"Jackson, MS",39201,32
 "Evansville, IN",47701,32
 "Wichita, KS",67201,32
 "Saint Petersburg, FL",33701,31
 "Knoxville, TN",37901,31
 "Toledo, OH",43601,31
-"Peoria, IL",61601,31
-"Trenton, NJ",08601,30
-"Topeka, KS",66601,30
+"Topeka, KS",66601,31
 "Corpus Christi, TX",78401,30
+"Peoria, IL",61601,29
 "Lincoln, NE",68501,29
-"Boise, ID",83701,29
+"New Haven, CT",06501,28
 "Syracuse, NY",13201,28
 "Greensboro, NC",27401,28
-"Akron, OH",44301,28
+"Boise, ID",83701,28
 "Spokane, WA",99201,28
+"Trenton, NJ",08601,27
 "Arlington, VA",22201,27
-"Grand Rapids, MI",49501,27
+"Jackson, MS",39201,27
+"Akron, OH",44301,27
 "Amarillo, TX",79101,27
 "Long Beach, CA",90801,27
-"New Haven, CT",06501,26
 "Erie, PA",16501,26
 "Harrisburg, PA",17101,26
+"Grand Rapids, MI",49501,26
 "Lubbock, TX",79401,26
 "Oakland, CA",94601,26
 "Bronx, NY",10451,25
 "Wilmington, DE",19801,25
-"Winston Salem, NC",27101,25
+"Winston-Salem, NC",27101,25
+"Little Rock, AR",72201,25
 "Pasadena, CA",91101,25
 "Huntsville, AL",35801,24
-"Little Rock, AR",72201,24
 "Reno, NV",89501,24
 "Pensacola, FL",32501,23
 "Lansing, MI",48901,22
 "Bakersfield, CA",93301,22
 "Alexandria, VA",22301,21
 "Norfolk, VA",23501,21
-"West Palm Beach, FL",33401,21
 "Newark, NJ",07101,20
 "Virginia Beach, VA",23450,20
 "Macon, GA",31201,20
 "Tallahassee, FL",32301,20
 "Chattanooga, TN",37401,20
-"Canton, OH",44701,20
+"Stockton, CA",95201,20
 "Springfield, MA",01101,19
-"Charleston, SC",29401,19
-"Savannah, GA",31401,19
-"Pompano Beach, FL",33060,19
 "Arlington, TX",76001,19
 "Mesa, AZ",85201,19
-"Stockton, CA",95201,18
+"Savannah, GA",31401,18
+"Sarasota, FL",34230,18
+"Canton, OH",44701,18
 "Stamford, CT",06901,17
 "Greenville, SC",29601,17
 "Gainesville, FL",32601,17
-"Sarasota, FL",34230,17
+"West Palm Beach, FL",33401,17
+"Naples, FL",34101,17
 "Flint, MI",48501,17
 "Aurora, CO",80010,17
-"Littleton, CO",80120,17
 "Riverside, CA",92501,17
 "Anaheim, CA",92801,17
 "Santa Barbara, CA",93101,17
 "Waterbury, CT",06701,16
 "Silver Spring, MD",20901,16
 "Durham, NC",27701,16
-"Daytona Beach, FL",32114,16
-"Naples, FL",34101,16
+"Charleston, SC",29401,16
+"Pompano Beach, FL",33060,16
+"Boca Raton, FL",33427,16
 "South Bend, IN",46601,16
 "Springfield, MO",65801,16
 "Waco, TX",76701,16
+"Littleton, CO",80120,16
 "Worcester, MA",01601,15
-"Boca Raton, FL",33427,15
 "Fort Myers, FL",33901,15
 "Bradenton, FL",34201,15
 "Youngstown, OH",44501,15
@@ -156,6 +158,7 @@ Place,FirstZIP,Count
 "San Bernardino, CA",92401,15
 "Paterson, NJ",07501,14
 "Staten Island, NY",10301,14
+"Jamaica, NY",11405,14
 "Wilkes Barre, PA",18701,14
 "Marietta, GA",30006,14
 "Columbus, GA",31901,14
@@ -167,12 +170,14 @@ Place,FirstZIP,Count
 "Glendale, CA",91201,14
 "Salem, OR",97301,14
 "Vancouver, WA",98660,14
-"Jamaica, NY",11405,13
+"Scranton, PA",18501,13
 "Augusta, GA",30901,13
+"Daytona Beach, FL",32114,13
 "Hollywood, FL",33019,13
 "Clearwater, FL",33755,13
 "Lakeland, FL",33801,13
 "Fargo, ND",58102,13
+"Overland Park, KS",66204,13
 "Fort Smith, AR",72901,13
 "Beaumont, TX",77701,13
 "Ogden, UT",84201,13
@@ -181,13 +186,12 @@ Place,FirstZIP,Count
 "Irvine, CA",92602,13
 "Providence, RI",02901,12
 "Jersey City, NJ",07097,12
-"Scranton, PA",18501,12
 "Reading, PA",19601,12
 "Wilmington, NC",28401,12
 "Green Bay, WI",54301,12
-"Maple Plain, MN",55348,12
 "Metairie, LA",70001,12
 "Lafayette, LA",70501,12
+"Irving, TX",75014,12
 "Spring, TX",77373,12
 "Pueblo, CO",81001,12
 "Glendale, AZ",85301,12
@@ -195,14 +199,15 @@ Place,FirstZIP,Count
 "Inglewood, CA",90301,12
 "Schenectady, NY",12301,11
 "Lancaster, PA",17601,11
-"Newark, DE",19702,11
 "Bethesda, MD",20810,11
 "Charlottesville, VA",22901,11
+"Henrico, VA",23075,11
 "Hampton, VA",23630,11
 "Asheville, NC",28801,11
 "Panama City, FL",32401,11
 "Fort Pierce, FL",34945,11
 "Saginaw, MI",48601,11
+"Maple Plain, MN",55348,11
 "Saint Cloud, MN",56301,11
 "Jefferson City, MO",65101,11
 "Lake Charles, LA",70601,11
@@ -217,18 +222,17 @@ Place,FirstZIP,Count
 "Olympia, WA",98501,11
 "Bridgeport, CT",06601,10
 "Norwalk, CT",06850,10
+"Newark, DE",19702,10
 "Newport News, VA",23601,10
 "Fayetteville, NC",28301,10
 "Athens, GA",30601,10
 "Melbourne, FL",32901,10
 "Vero Beach, FL",32960,10
 "Hialeah, FL",33002,10
-"Lake Worth, FL",33449,10
 "Kalamazoo, MI",49001,10
+"Aurora, IL",60502,10
 "Columbia, MO",65201,10
 "Monroe, LA",71201,10
-"Irving, TX",75014,10
-"Garland, TX",75040,10
 "Denton, TX",76201,10
 "Abilene, TX",79601,10
 "North Las Vegas, NV",89030,10
@@ -236,6 +240,7 @@ Place,FirstZIP,Count
 "Torrance, CA",90501,10
 "Whittier, CA",90601,10
 "Modesto, CA",95350,10
+"Beaverton, OR",97003,10
 "Portland, ME",04101,9
 "Gaithersburg, MD",20877,9
 "Fairfax, VA",22030,9
@@ -243,24 +248,22 @@ Place,FirstZIP,Count
 "Fredericksburg, VA",22401,9
 "Chesapeake, VA",23320,9
 "Lynchburg, VA",24501,9
-"Spartanburg, SC",29301,9
 "Albany, GA",31701,9
 "Homestead, FL",33030,9
 "Boynton Beach, FL",33424,9
-"Brooksville, FL",34601,9
 "Kissimmee, FL",34741,9
 "Tuscaloosa, AL",35401,9
 "Frankfort, KY",40601,9
 "Sioux City, IA",51101,9
 "Davenport, IA",52801,9
-"Aurora, IL",60502,9
 "Independence, MO",64050,9
 "North Little Rock, AR",72114,9
 "Plano, TX",75023,9
+"Garland, TX",75040,9
 "Longview, TX",75601,9
 "Odessa, TX",79760,9
 "Fort Collins, CO",80521,9
-"Beaverton, OR",97003,9
+"Las Cruces, NM",88001,9
 "Manchester, NH",03101,8
 "Flushing, NY",11351,8
 "Johnstown, PA",15901,8
@@ -270,8 +273,9 @@ Place,FirstZIP,Count
 "Annapolis, MD",21401,8
 "Suffolk, VA",23432,8
 "Portsmouth, VA",23701,8
+"Spartanburg, SC",29301,8
 "Decatur, GA",30030,8
-"Valdosta, GA",31601,8
+"Lake Worth, FL",33449,8
 "Cape Coral, FL",33904,8
 "Port Saint Lucie, FL",34952,8
 "Anderson, IN",46011,8
@@ -284,7 +288,6 @@ Place,FirstZIP,Count
 "Young America, MN",55397,8
 "Helena, MT",59601,8
 "Missoula, MT",59801,8
-"Schaumburg, IL",60159,8
 "Bloomington, IL",61701,8
 "Saint Joseph, MO",64501,8
 "Wichita Falls, TX",76301,8
@@ -293,7 +296,6 @@ Place,FirstZIP,Count
 "Pasadena, TX",77501,8
 "Cheyenne, WY",82001,8
 "Chandler, AZ",85224,8
-"Las Cruces, NM",88001,8
 "Chula Vista, CA",91909,8
 "Fullerton, CA",92831,8
 "Ventura, CA",93001,8
@@ -311,15 +313,15 @@ Place,FirstZIP,Count
 "Bowie, MD",20715,7
 "Hyattsville, MD",20781,7
 "Morgantown, WV",26501,7
+"High Point, NC",27260,7
 "Myrtle Beach, SC",29572,7
-"Duluth, GA",30026,7
+"Valdosta, GA",31601,7
 "Palm Bay, FL",32905,7
+"Miami Beach, FL",33109,7
 "Delray Beach, FL",33444,7
-"Largo, FL",33770,7
 "Winter Haven, FL",33880,7
 "Lehigh Acres, FL",33936,7
-"Port Charlotte, FL",33948,7
-"Anniston, AL",36201,7
+"Brooksville, FL",34601,7
 "Murfreesboro, TN",37127,7
 "Meridian, MS",39301,7
 "Mansfield, OH",44901,7
@@ -328,12 +330,11 @@ Place,FirstZIP,Count
 "Midland, MI",48640,7
 "Bismarck, ND",58501,7
 "Palatine, IL",60038,7
+"Schaumburg, IL",60159,7
 "East Saint Louis, IL",62201,7
 "Lees Summit, MO",64002,7
 "Alexandria, LA",71301,7
-"Killeen, TX",76540,7
 "San Angelo, TX",76901,7
-"Humble, TX",77325,7
 "Bryan, TX",77801,7
 "Laredo, TX",78040,7
 "Arvada, CO",80001,7
@@ -342,7 +343,7 @@ Place,FirstZIP,Count
 "Idaho Falls, ID",83401,7
 "Gilbert, AZ",85233,7
 "Tempe, AZ",85280,7
-"Northridge, CA",91324,7
+"Sparks, NV",89431,7
 "Escondido, CA",92025,7
 "Oceanside, CA",92049,7
 "Moreno Valley, CA",92551,7
@@ -371,20 +372,20 @@ Place,FirstZIP,Count
 "Frederick, MD",21701,6
 "Hagerstown, MD",21740,6
 "Falls Church, VA",22040,6
-"High Point, NC",27260,6
+"Mc Lean, VA",22101,6
 "Florence, SC",29501,6
 "Anderson, SC",29621,6
 "Aiken, SC",29801,6
 "Beaufort, SC",29901,6
-"Norcross, GA",30003,6
 "Lawrenceville, GA",30042,6
 "Saint Augustine, FL",32080,6
-"Miami Beach, FL",33109,6
-"Zephyrhills, FL",33539,6
-"Punta Gorda, FL",33927,6
+"Largo, FL",33770,6
+"Port Charlotte, FL",33948,6
+"Punta Gorda, FL",33950,6
 "North Port, FL",34286,6
 "Spring Hill, FL",34606,6
 "Gadsden, AL",35901,6
+"Anniston, AL",36201,6
 "Johnson City, TN",37601,6
 "Kingsport, TN",37660,6
 "Jackson, TN",38301,6
@@ -392,6 +393,7 @@ Place,FirstZIP,Count
 "Gulfport, MS",39501,6
 "Biloxi, MS",39530,6
 "Columbus, MS",39701,6
+"London, KY",40741,6
 "Warren, OH",44481,6
 "Springfield, OH",45501,6
 "Lima, OH",45801,6
@@ -414,10 +416,12 @@ Place,FirstZIP,Count
 "Naperville, IL",60540,6
 "Champaign, IL",61820,6
 "Decatur, IL",62521,6
+"Shawnee, KS",66203,6
+"Lenexa, KS",66215,6
 "Edmond, OK",73003,6
 "Norman, OK",73019,6
-"Mesquite, TX",75149,6
 "Texarkana, TX",75501,6
+"Killeen, TX",76540,6
 "Katy, TX",77449,6
 "Galveston, TX",77550,6
 "College Station, TX",77840,6
@@ -429,7 +433,7 @@ Place,FirstZIP,Count
 "Peoria, AZ",85345,6
 "Flagstaff, AZ",86001,6
 "Prescott, AZ",86301,6
-"Sparks, NV",89431,6
+"Northridge, CA",91324,6
 "Alhambra, CA",91801,6
 "Carlsbad, CA",92008,6
 "Huntington Beach, CA",92605,6
@@ -453,7 +457,6 @@ Place,FirstZIP,Count
 "Augusta, ME",04330,5
 "Burlington, VT",05401,5
 "Clifton, NJ",07011,5
-"Elizabeth, NJ",07201,5
 "Camden, NJ",08101,5
 "Princeton, NJ",08540,5
 "Toms River, NJ",08753,5
@@ -462,19 +465,23 @@ Place,FirstZIP,Count
 "Binghamton, NY",13901,5
 "Niagara Falls, NY",14301,5
 "Elmira, NY",14901,5
-"Mc Keesport, PA",15131,5
+"Mckeesport, PA",15131,5
+"Hanover, PA",17331,5
 "Easton, PA",18040,5
 "Levittown, PA",19054,5
 "Dover, DE",19901,5
 "Dulles, VA",20101,5
 "Sterling, VA",20163,5
 "Herndon, VA",20170,5
+"Washington Navy Yard, DC",20374,5
 "Capitol Heights, MD",20731,5
 "Upper Marlboro, MD",20772,5
+"Towson, MD",21204,5
 "Cumberland, MD",21501,5
 "Merrifield, VA",22081,5
 "Vienna, VA",22180,5
 "Woodbridge, VA",22191,5
+"Bristol, VA",24201,5
 "Martinsburg, WV",25401,5
 "Parkersburg, WV",26101,5
 "Cary, NC",27511,5
@@ -484,9 +491,13 @@ Place,FirstZIP,Count
 "Greenville, NC",27833,5
 "Gastonia, NC",28052,5
 "New Bern, NC",28560,5
+"North Charleston, SC",29405,5
 "Rock Hill, SC",29730,5
+"Norcross, GA",30003,5
 "Alpharetta, GA",30004,5
+"Duluth, GA",30095,5
 "Carrollton, GA",30112,5
+"Kennesaw, GA",30144,5
 "Rome, GA",30161,5
 "Gainesville, GA",30501,5
 "Warner Robins, GA",31088,5
@@ -509,7 +520,6 @@ Place,FirstZIP,Count
 "Cookeville, TN",38501,5
 "Crossville, TN",38555,5
 "Pascagoula, MS",39567,5
-"London, KY",40741,5
 "Covington, KY",41011,5
 "Hammond, IN",46320,5
 "Livonia, MI",48150,5
@@ -527,11 +537,13 @@ Place,FirstZIP,Count
 "Slidell, LA",70458,5
 "Bossier City, LA",71111,5
 "Hot Springs National Park, AR",71901,5
+"Jonesboro, AR",72401,5
 "Lawton, OK",73501,5
 "Enid, OK",73701,5
 "Stillwater, OK",74074,5
 "Grand Prairie, TX",75050,5
 "Richardson, TX",75080,5
+"Mesquite, TX",75149,5
 "Lufkin, TX",75901,5
 "Nacogdoches, TX",75961,5
 "Temple, TX",76501,5
@@ -565,7 +577,6 @@ Place,FirstZIP,Count
 "Tracy, CA",95304,5
 "Merced, CA",95340,5
 "Redding, CA",96001,5
-"Bothell, WA",98011,5
 "Renton, WA",98055,5
 "Bellingham, WA",98225,5
 "Bremerton, WA",98310,5
@@ -575,8 +586,6 @@ Place,FirstZIP,Count
 "Haverhill, MA",01830,4
 "Lawrence, MA",01840,4
 "Quincy, MA",02169,4
-"Weymouth, MA",02188,4
-"Middleboro, MA",02344,4
 "Waltham, MA",02451,4
 "Warwick, RI",02886,4
 "Concord, NH",03301,4
@@ -589,20 +598,20 @@ Place,FirstZIP,Count
 "Wallingford, CT",06492,4
 "Westport, CT",06880,4
 "Plainfield, NJ",07060,4
-"Morristown, NJ",07960,4
+"Elizabeth, NJ",07201,4
 "Mount Vernon, NY",10550,4
 "New Rochelle, NY",10801,4
 "Astoria, NY",11102,4
 "Far Rockaway, NY",11690,4
 "Hicksville, NY",11801,4
 "Troy, NY",12180,4
+"Newburgh, NY",12550,4
 "Poughkeepsie, NY",12601,4
 "Rome, NY",13440,4
 "Ithaca, NY",14850,4
 "Boyers, PA",16016,4
 "State College, PA",16801,4
 "Camp Hill, PA",17001,4
-"Hanover, PA",17331,4
 "Williamsport, PA",17701,4
 "Wayne, PA",19080,4
 "West Chester, PA",19380,4
@@ -610,15 +619,12 @@ Place,FirstZIP,Count
 "Leesburg, VA",20175,4
 "Waldorf, MD",20601,4
 "Salisbury, MD",21801,4
-"Mc Lean, VA",22101,4
 "Winchester, VA",22601,4
 "Harrisonburg, VA",22801,4
 "Williamsburg, VA",23185,4
 "Yorktown, VA",23690,4
-"Petersburg, VA",23803,4
 "Blacksburg, VA",24060,4
 "Martinsville, VA",24112,4
-"Bristol, VA",24201,4
 "Rural Hall, NC",27045,4
 "Lexington, NC",27292,4
 "Wilson, NC",27893,4
@@ -635,16 +641,14 @@ Place,FirstZIP,Count
 "Hilton Head Island, SC",29925,4
 "Stone Mountain, GA",30083,4
 "Douglasville, GA",30133,4
-"Kennesaw, GA",30144,4
 "Newnan, GA",30263,4
 "Statesboro, GA",30458,4
 "Dalton, GA",30719,4
 "Jesup, GA",31545,4
 "Thomasville, GA",31757,4
-"Orange Park, FL",32003,4
 "Lake City, FL",32024,4
+"Port Orange, FL",32123,4
 "Ormond Beach, FL",32173,4
-"Gulf Breeze, FL",32561,4
 "Milton, FL",32570,4
 "Altamonte Springs, FL",32701,4
 "Deland, FL",32720,4
@@ -653,6 +657,7 @@ Place,FirstZIP,Count
 "Titusville, FL",32780,4
 "Winter Park, FL",32789,4
 "Brandon, FL",33508,4
+"Zephyrhills, FL",33539,4
 "Lutz, FL",33548,4
 "Riverview, FL",33568,4
 "Seminole, FL",33772,4
@@ -699,7 +704,6 @@ Place,FirstZIP,Count
 "Clinton, IA",52732,4
 "Waukesha, WI",53186,4
 "Janesville, WI",53545,4
-"Norwood, MN",55368,4
 "Moorhead, MN",56560,4
 "Rapid City, SD",57701,4
 "Minot, ND",58701,4
@@ -711,6 +715,7 @@ Place,FirstZIP,Count
 "Saint Charles, MO",63301,4
 "Joplin, MO",64801,4
 "Olathe, KS",66051,4
+"Mission, KS",66201,4
 "Manhattan, KS",66502,4
 "Kearney, NE",68845,4
 "Houma, LA",70360,4
@@ -718,7 +723,6 @@ Place,FirstZIP,Count
 "Pine Bluff, AR",71601,4
 "Benton, AR",72015,4
 "Conway, AR",72032,4
-"Jonesboro, AR",72401,4
 "Fayetteville, AR",72701,4
 "Springdale, AR",72762,4
 "Russellville, AR",72801,4
@@ -726,10 +730,13 @@ Place,FirstZIP,Count
 "Broken Arrow, OK",74011,4
 "Carrollton, TX",75006,4
 "Lewisville, TX",75029,4
+"Frisco, TX",75033,4
+"Mckinney, TX",75069,4
 "Greenville, TX",75401,4
 "Palestine, TX",75801,4
 "Tennessee Colony, TX",75861,4
 "Weatherford, TX",76085,4
+"Humble, TX",77338,4
 "Baytown, TX",77520,4
 "Port Arthur, TX",77640,4
 "New Braunfels, TX",78130,4
@@ -745,6 +752,7 @@ Place,FirstZIP,Count
 "Orem, UT",84057,4
 "Logan, UT",84321,4
 "Saint George, UT",84770,4
+"Apache Junction, AZ",85117,4
 "Casa Grande, AZ",85122,4
 "Sierra Vista, AZ",85635,4
 "Lake Havasu City, AZ",86403,4
@@ -787,13 +795,16 @@ Place,FirstZIP,Count
 "Corvallis, OR",97330,4
 "Auburn, WA",98001,4
 "Federal Way, WA",98003,4
+"Bothell, WA",98011,4
 "Lynnwood, WA",98036,4
 "Holtsville, NY",00501,3
 "Amherst, MA",01002,3
 "Northampton, MA",01060,3
 "Pittsfield, MA",01201,3
 "Groton, MA",01450,3
+"Dorchester, MA",02121,3
 "Somerville, MA",02143,3
+"Middleboro, MA",02344,3
 "Plymouth, MA",02360,3
 "Watertown, MA",02471,3
 "Pawtucket, RI",02860,3
@@ -810,6 +821,7 @@ Place,FirstZIP,Count
 "Fairfield, CT",06824,3
 "Greenwich, CT",06830,3
 "East Orange, NJ",07017,3
+"Morristown, NJ",07960,3
 "Cherry Hill, NJ",08002,3
 "Vineland, NJ",08360,3
 "Atlantic City, NJ",08401,3
@@ -821,7 +833,7 @@ Place,FirstZIP,Count
 "Hempstead, NY",11549,3
 "Uniondale, NY",11553,3
 "Valley Stream, NY",11580,3
-"Newburgh, NY",12550,3
+"Melville, NY",11747,3
 "Keeseville, NY",12911,3
 "Auburn, NY",13021,3
 "Liverpool, NY",13088,3
@@ -840,6 +852,7 @@ Place,FirstZIP,Count
 "Concordville, PA",19331,3
 "Southeastern, PA",19397,3
 "Norristown, PA",19401,3
+"New Castle, DE",19720,3
 "Centreville, VA",20120,3
 "Chantilly, VA",20151,3
 "Warrenton, VA",20186,3
@@ -852,6 +865,7 @@ Place,FirstZIP,Count
 "Stafford, VA",22554,3
 "Glen Allen, VA",23058,3
 "Midlothian, VA",23112,3
+"Petersburg, VA",23803,3
 "Radford, VA",24141,3
 "Salem, VA",24153,3
 "Abingdon, VA",24210,3
@@ -875,7 +889,6 @@ Place,FirstZIP,Count
 "Statesville, NC",28625,3
 "Lexington, SC",29071,3
 "Gaffney, SC",29340,3
-"North Charleston, SC",29405,3
 "Mount Pleasant, SC",29464,3
 "Conway, SC",29526,3
 "North Myrtle Beach, SC",29582,3
@@ -892,18 +905,19 @@ Place,FirstZIP,Count
 "Canton, GA",30114,3
 "Jonesboro, GA",30236,3
 "Lagrange, GA",30240,3
+"Peachtree City, GA",30269,3
 "Buford, GA",30515,3
 "Commerce, GA",30529,3
-"Dublin, GA",31021,3
 "Milledgeville, GA",31059,3
 "Waycross, GA",31501,3
 "Douglas, GA",31533,3
 "Moultrie, GA",31768,3
-"Lady Lake, FL",32158,3
+"Orange Park, FL",32065,3
 "New Smyrna Beach, FL",32168,3
 "Quincy, FL",32351,3
 "Marianna, FL",32446,3
 "Fort Walton Beach, FL",32547,3
+"Gulf Breeze, FL",32561,3
 "Apopka, FL",32703,3
 "Casselberry, FL",32707,3
 "Eustis, FL",32726,3
@@ -911,11 +925,10 @@ Place,FirstZIP,Count
 "Sanford, FL",32771,3
 "Merritt Island, FL",32952,3
 "Sebastian, FL",32958,3
-"Pembroke Pines, FL",33028,3
 "Key West, FL",33040,3
-"Opa Locka, FL",33054,3
 "Deerfield Beach, FL",33441,3
 "Dade City, FL",33523,3
+"Wesley Chapel, FL",33543,3
 "Valrico, FL",33594,3
 "Pinellas Park, FL",33780,3
 "Lake Wales, FL",33853,3
@@ -946,7 +959,6 @@ Place,FirstZIP,Count
 "Brandon, MS",39042,3
 "Clinton, MS",39056,3
 "Natchez, MS",39120,3
-"Ocean Springs, MS",39564,3
 "Brookhaven, MS",39601,3
 "Bainbridge, GA",39817,3
 "Paducah, KY",42001,3
@@ -981,7 +993,7 @@ Place,FirstZIP,Count
 "Portage, MI",49002,3
 "Holland, MI",49422,3
 "Boone, IA",50036,3
-"West Des Moines, IA",50265,3
+"Urbandale, IA",50322,3
 "Council Bluffs, IA",51501,3
 "Brookfield, WI",53005,3
 "Sheboygan, WI",53081,3
@@ -991,18 +1003,19 @@ Place,FirstZIP,Count
 "La Crosse, WI",54601,3
 "Eau Claire, WI",54701,3
 "Fond Du Lac, WI",54935,3
-"Osseo, MN",55311,3
 "Eden Prairie, MN",55344,3
+"Norwood, MN",55383,3
 "Grand Rapids, MN",55730,3
 "Mankato, MN",56001,3
 "Wahpeton, ND",58074,3
 "Jamestown, ND",58401,3
+"Williston, ND",58801,3
 "Kalispell, MT",59901,3
 "Arlington Heights, IL",60004,3
 "Crystal Lake, IL",60012,3
 "Waukegan, IL",60079,3
 "Melrose Park, IL",60160,3
-"Hinsdale, IL",60521,3
+"Hoffman Estates, IL",60169,3
 "Plainfield, IL",60544,3
 "Rock Island, IL",61201,3
 "Pekin, IL",61554,3
@@ -1013,6 +1026,7 @@ Place,FirstZIP,Count
 "Cape Girardeau, MO",63701,3
 "Blue Springs, MO",64013,3
 "Rolla, MO",65401,3
+"Leawood, KS",66206,3
 "Hutchinson, KS",67501,3
 "Bellevue, NE",68005,3
 "Grand Island, NE",68801,3
@@ -1026,11 +1040,11 @@ Place,FirstZIP,Count
 "Ruston, LA",71270,3
 "West Monroe, LA",71291,3
 "Pineville, LA",71359,3
-"Leesville, LA",71446,3
 "Natchitoches, LA",71457,3
 "Monticello, AR",71655,3
 "Arkadelphia, AR",71923,3
 "Searcy, AR",72143,3
+"Bentonville, AR",72712,3
 "Rogers, AR",72756,3
 "Ardmore, OK",73401,3
 "Duncan, OK",73533,3
@@ -1040,8 +1054,6 @@ Place,FirstZIP,Count
 "Shawnee, OK",74801,3
 "Flower Mound, TX",75022,3
 "Rowlett, TX",75030,3
-"Frisco, TX",75033,3
-"Mc Kinney, TX",75069,3
 "Sherman, TX",75090,3
 "Corsicana, TX",75109,3
 "Duncanville, TX",75116,3
@@ -1050,7 +1062,7 @@ Place,FirstZIP,Count
 "Henderson, TX",75652,3
 "Marshall, TX",75670,3
 "Bedford, TX",76021,3
-"Brownwood, TX",76801,3
+"Kingwood, TX",77325,3
 "Magnolia, TX",77353,3
 "Richmond, TX",77406,3
 "Cypress, TX",77410,3
@@ -1070,11 +1082,11 @@ Place,FirstZIP,Count
 "Rexburg, ID",83440,3
 "Caldwell, ID",83605,3
 "Meridian, ID",83642,3
-"Coeur D Alene, ID",83814,3
+"Coeur d'Alene, ID",83814,3
 "Clearfield, UT",84015,3
 "Park City, UT",84060,3
 "West Jordan, UT",84081,3
-"Queen Creek, AZ",85140,3
+"West Valley City, UT",84119,3
 "Sun City, AZ",85351,3
 "Douglas, AZ",85607,3
 "Nogales, AZ",85621,3
@@ -1086,7 +1098,6 @@ Place,FirstZIP,Count
 "Roswell, NM",88201,3
 "The Lakes, NV",88901,3
 "Mesquite, NV",89024,3
-"Moapa, NV",89025,3
 "Fallon, NV",89406,3
 "Incline Village, NV",89450,3
 "Elko, NV",89801,3
@@ -1117,9 +1128,7 @@ Place,FirstZIP,Count
 "Lake Elsinore, CA",92530,3
 "Murrieta, CA",92562,3
 "San Jacinto, CA",92581,3
-"Sun City, CA",92585,3
 "Costa Mesa, CA",92626,3
-"Laguna Hills, CA",92637,3
 "San Clemente, CA",92672,3
 "Westminster, CA",92683,3
 "Mission Viejo, CA",92690,3
@@ -1128,23 +1137,25 @@ Place,FirstZIP,Count
 "Yorba Linda, CA",92885,3
 "Camarillo, CA",93010,3
 "Lompoc, CA",93436,3
-"Carmel, CA",93921,3
 "Los Altos, CA",94022,3
 "Moraga, CA",94556,3
 "Napa, CA",94558,3
 "San Leandro, CA",94577,3
+"Rohnert Park, CA",94926,3
 "Campbell, CA",95008,3
 "Lodi, CA",95240,3
 "Turlock, CA",95380,3
 "Eureka, CA",95501,3
 "Auburn, CA",95602,3
 "Citrus Heights, CA",95610,3
+"Davis, CA",95616,3
 "Roseville, CA",95661,3
 "Rancho Cordova, CA",95670,3
 "Vacaville, CA",95687,3
 "Yuba City, CA",95991,3
 "Shasta Lake, CA",96019,3
 "Truckee, CA",96160,3
+"Hillsboro, OR",97123,3
 "Springfield, OR",97475,3
 "Grants Pass, OR",97526,3
 "Klamath Falls, OR",97601,3
@@ -1160,10 +1171,9 @@ Place,FirstZIP,Count
 "Dalton, MA",01226,2
 "Stockbridge, MA",01262,2
 "Greenfield, MA",01301,2
-"Turners Falls, MA",01349,2
-"Northfield, MA",01354,2
-"Gardner, MA",01440,2
+"Westminster, MA",01441,2
 "Shrewsbury, MA",01545,2
+"Acton, MA",01718,2
 "Burlington, MA",01803,2
 "Billerica, MA",01821,2
 "North Reading, MA",01864,2
@@ -1177,11 +1187,11 @@ Place,FirstZIP,Count
 "Bridgewater, MA",02324,2
 "Duxbury, MA",02331,2
 "Hanover, MA",02339,2
+"Lakeville, MA",02347,2
 "North Easton, MA",02356,2
 "Lexington, MA",02420,2
 "Brookline, MA",02445,2
 "Arlington, MA",02474,2
-"Needham, MA",02492,2
 "Buzzards Bay, MA",02532,2
 "Falmouth, MA",02540,2
 "Nantucket, MA",02554,2
@@ -1204,14 +1214,14 @@ Place,FirstZIP,Count
 "Orono, ME",04469,2
 "Limestone, ME",04750,2
 "Waterville, ME",04901,2
+"New Portland, ME",04954,2
 "White River Junction, VT",05001,2
-"East Corinth, VT",05040,2
-"Readsboro, VT",05350,2
 "South Burlington, VT",05403,2
 "Essex Junction, VT",05452,2
 "Saint Albans, VT",05478,2
 "Waterbury, VT",05671,2
 "Rutland, VT",05701,2
+"Barton, VT",05822,2
 "Windsor, CT",06006,2
 "Bristol, CT",06010,2
 "Suffield, CT",06078,2
@@ -1252,6 +1262,8 @@ Place,FirstZIP,Count
 "Bellmawr, NJ",08031,2
 "Riverton, NJ",08076,2
 "Absecon, NJ",08201,2
+"Millstone Township, NJ",08510,2
+"Joint Base Mdl, NJ",08640,2
 "Brick, NJ",08723,2
 "Piscataway, NJ",08854,2
 "Perth Amboy, NJ",08861,2
@@ -1271,9 +1283,7 @@ Place,FirstZIP,Count
 "Rockville Centre, NY",11570,2
 "West Babylon, NY",11704,2
 "Farmingdale, NY",11735,2
-"Melville, NY",11747,2
 "Jericho, NY",11753,2
-"Hauppauge, NY",11760,2
 "Syosset, NY",11773,2
 "Stony Brook, NY",11790,2
 "Southampton, NY",11968,2
@@ -1325,7 +1335,6 @@ Place,FirstZIP,Count
 "Harleysville, PA",19438,2
 "North Wales, PA",19454,2
 "Pottstown, PA",19464,2
-"New Castle, DE",19720,2
 "Marshall, VA",20115,2
 "Middleburg, VA",20117,2
 "Purcellville, VA",20132,2
@@ -1354,7 +1363,7 @@ Place,FirstZIP,Count
 "Lutherville Timonium, MD",21093,2
 "Pasadena, MD",21122,2
 "Westminster, MD",21157,2
-"Towson, MD",21204,2
+"Pikesville, MD",21208,2
 "Chestertown, MD",21620,2
 "Ocean City, MD",21842,2
 "Westover, MD",21871,2
@@ -1362,7 +1371,6 @@ Place,FirstZIP,Count
 "Burke, VA",22009,2
 "Dumfries, VA",22025,2
 "Lorton, VA",22079,2
-"McLean, VA",22107,2
 "Quantico, VA",22134,2
 "Bowling Green, VA",22427,2
 "Spotsylvania, VA",22551,2
@@ -1378,7 +1386,10 @@ Place,FirstZIP,Count
 "Farmville, VA",23901,2
 "Christiansburg, VA",24068,2
 "Staunton, VA",24401,2
+"Princeton, WV",24739,2
+"South Charleston, WV",25303,2
 "Beckley, WV",25801,2
+"Mount Hope, WV",25880,2
 "Fairmont, WV",26554,2
 "Kernersville, NC",27284,2
 "Eden, NC",27288,2
@@ -1387,6 +1398,7 @@ Place,FirstZIP,Count
 "Henderson, NC",27536,2
 "Roxboro, NC",27573,2
 "Wake Forest, NC",27587,2
+"Hertford, NC",27930,2
 "Albemarle, NC",28001,2
 "Davidson, NC",28035,2
 "Huntersville, NC",28070,2
@@ -1416,6 +1428,7 @@ Place,FirstZIP,Count
 "Hodges, SC",29653,2
 "Simpsonville, SC",29680,2
 "Mc Cormick, SC",29835,2
+"North Metro, GA",30026,2
 "Lithonia, GA",30038,2
 "Snellville, GA",30039,2
 "Lilburn, GA",30047,2
@@ -1429,7 +1442,6 @@ Place,FirstZIP,Count
 "Griffin, GA",30223,2
 "Mcdonough, GA",30252,2
 "Morrow, GA",30260,2
-"Peachtree City, GA",30269,2
 "Riverdale, GA",30274,2
 "Forest Park, GA",30297,2
 "Reidsville, GA",30453,2
@@ -1437,17 +1449,19 @@ Place,FirstZIP,Count
 "Blairsville, GA",30512,2
 "Dahlonega, GA",30533,2
 "Ellijay, GA",30536,2
-"Toccoa, GA",30577,2
 "Monroe, GA",30655,2
 "Calhoun, GA",30701,2
 "Cordele, GA",31010,2
+"Dublin, GA",31021,2
 "Eatonton, GA",31024,2
+"Mc Rae Helena, GA",31037,2
 "Hinesville, GA",31310,2
 "Fort Stewart, GA",31314,2
 "Baxley, GA",31513,2
 "Americus, GA",31709,2
 "Tifton, GA",31793,2
 "Fort Benning, GA",31905,2
+"Fleming Island, FL",32003,2
 "Ponte Vedra Beach, FL",32004,2
 "Raiford, FL",32026,2
 "Fernandina Beach, FL",32034,2
@@ -1456,6 +1470,8 @@ Place,FirstZIP,Count
 "Live Oak, FL",32060,2
 "Edgewater, FL",32132,2
 "Interlachen, FL",32148,2
+"Lady Lake, FL",32158,2
+"The Villages, FL",32162,2
 "Palatka, FL",32177,2
 "Ocklawaha, FL",32179,2
 "Jacksonville Beach, FL",32240,2
@@ -1466,6 +1482,7 @@ Place,FirstZIP,Count
 "Perry, FL",32347,2
 "Panama City Beach, FL",32407,2
 "Defuniak Springs, FL",32433,2
+"Wewahitchka, FL",32449,2
 "Port Saint Joe, FL",32456,2
 "Crestview, FL",32536,2
 "Destin, FL",32540,2
@@ -1483,7 +1500,9 @@ Place,FirstZIP,Count
 "Cocoa Beach, FL",32931,2
 "Rockledge, FL",32955,2
 "Hallandale, FL",33008,2
-"Weston, FL",33326,2
+"Pembroke Pines, FL",33028,2
+"Opa Locka, FL",33054,2
+"Palm Beach Gardens, FL",33410,2
 "Hobe Sound, FL",33455,2
 "Ruskin, FL",33570,2
 "Sun City Center, FL",33571,2
@@ -1492,7 +1511,7 @@ Place,FirstZIP,Count
 "Bartow, FL",33830,2
 "Haines City, FL",33844,2
 "Lake Placid, FL",33852,2
-"Everglades City, FL",33929,2
+"Estero, FL",33928,2
 "Fort Myers Beach, FL",33931,2
 "Labelle, FL",33935,2
 "Immokalee, FL",34142,2
@@ -1500,6 +1519,7 @@ Place,FirstZIP,Count
 "Palmetto, FL",34220,2
 "Nokomis, FL",34274,2
 "Belleview, FL",34420,2
+"Hernando, FL",34441,2
 "Lecanto, FL",34460,2
 "Beverly Hills, FL",34464,2
 "Silver Springs, FL",34488,2
@@ -1540,7 +1560,7 @@ Place,FirstZIP,Count
 "Goodlettsville, TN",37070,2
 "Hendersonville, TN",37075,2
 "La Vergne, TN",37086,2
-"Mc Minnville, TN",37110,2
+"Mcminnville, TN",37110,2
 "Madison, TN",37115,2
 "Mount Juliet, TN",37121,2
 "Athens, TN",37303,2
@@ -1564,6 +1584,7 @@ Place,FirstZIP,Count
 "Southaven, MS",38671,2
 "Walls, MS",38680,2
 "Cleveland, MS",38732,2
+"Indianola, MS",38749,2
 "Corinth, MS",38834,2
 "Grenada, MS",38901,2
 "Greenwood, MS",38930,2
@@ -1573,6 +1594,7 @@ Place,FirstZIP,Count
 "Bay Saint Louis, MS",39520,2
 "Stennis Space Center, MS",39522,2
 "Moss Point, MS",39562,2
+"Ocean Springs, MS",39564,2
 "Mccomb, MS",39648,2
 "Starkville, MS",39759,2
 "Cairo, GA",39827,2
@@ -1580,6 +1602,7 @@ Place,FirstZIP,Count
 "Shelbyville, KY",40065,2
 "Fort Knox, KY",40121,2
 "Radcliff, KY",40159,2
+"Shepherdsville, KY",40165,2
 "Nicholasville, KY",40340,2
 "Paris, KY",40361,2
 "Versailles, KY",40383,2
@@ -1588,6 +1611,8 @@ Place,FirstZIP,Count
 "Danville, KY",40422,2
 "Richmond, KY",40475,2
 "Corbin, KY",40701,2
+"Erlanger, KY",41018,2
+"Hebron, KY",41021,2
 "Florence, KY",41022,2
 "Pikeville, KY",41501,2
 "Hazard, KY",41701,2
@@ -1601,6 +1626,7 @@ Place,FirstZIP,Count
 "Dublin, OH",43016,2
 "Marysville, OH",43040,2
 "Reynoldsburg, OH",43068,2
+"Lockbourne, OH",43137,2
 "Marion, OH",43301,2
 "Bowling Green, OH",43402,2
 "Perrysburg, OH",43551,2
@@ -1670,10 +1696,12 @@ Place,FirstZIP,Count
 "Fremont, MI",49412,2
 "Grandville, MI",49418,2
 "Jenison, MI",49428,2
+"Wyoming, MI",49509,2
 "Gaylord, MI",49734,2
 "Grayling, MI",49738,2
 "Ankeny, IA",50021,2
-"Urbandale, IA",50322,2
+"Melcher Dallas, IA",50062,2
+"West Des Moines, IA",50265,2
 "Mason City, IA",50401,2
 "Clarion, IA",50525,2
 "Cedar Falls, IA",50613,2
@@ -1685,6 +1713,7 @@ Place,FirstZIP,Count
 "Menomonee Falls, WI",53051,2
 "New Holstein, WI",53061,2
 "West Bend, WI",53090,2
+"Mequon, WI",53092,2
 "Watertown, WI",53094,2
 "New Berlin, WI",53146,2
 "Beloit, WI",53511,2
@@ -1697,12 +1726,15 @@ Place,FirstZIP,Count
 "Chippewa Falls, WI",54729,2
 "Iola, WI",54945,2
 "Neenah, WI",54956,2
+"Elko New Market, MN",55020,2
 "Inver Grove Heights, MN",55076,2
 "Stacy, MN",55078,2
 "Stillwater, MN",55082,2
 "Hopkins, MN",55305,2
 "Burnsville, MN",55306,2
 "Howard Lake, MN",55349,2
+"Osseo, MN",55369,2
+"Rockford, MN",55373,2
 "Hibbing, MN",55746,2
 "Virginia, MN",55777,2
 "Waite Park, MN",56387,2
@@ -1717,11 +1749,11 @@ Place,FirstZIP,Count
 "Grand Forks Afb, ND",58204,2
 "Dickinson, ND",58601,2
 "Minot Afb, ND",58704,2
-"Williston, ND",58801,2
 "Ashland, MT",59003,2
 "Roundup, MT",59072,2
 "Elk Grove Village, IL",60007,2
 "Barrington, IL",60010,2
+"Glenview, IL",60025,2
 "Mchenry, IL",60050,2
 "Northbrook, IL",60062,2
 "North Chicago, IL",60064,2
@@ -1729,7 +1761,6 @@ Place,FirstZIP,Count
 "Bensenville, IL",60105,2
 "Bloomingdale, IL",60108,2
 "Glen Ellyn, IL",60137,2
-"Hoffman Estates, IL",60169,2
 "Saint Charles, IL",60174,2
 "West Chicago, IL",60185,2
 "Wheaton, IL",60187,2
@@ -1740,8 +1771,10 @@ Place,FirstZIP,Count
 "Orland Park, IL",60462,2
 "Tinley Park, IL",60477,2
 "Downers Grove, IL",60515,2
+"Hinsdale, IL",60521,2
 "Moline, IL",61265,2
 "Galesburg, IL",61401,2
+"East Peoria, IL",61611,2
 "Normal, IL",61761,2
 "Danville, IL",61832,2
 "Edwardsville, IL",62025,2
@@ -1753,7 +1786,6 @@ Place,FirstZIP,Count
 "Sedalia, MO",65301,2
 "Branson, MO",65615,2
 "Hollister, MO",65672,2
-"Arcadia, KS",66711,2
 "Salina, KS",67401,2
 "Liberal, KS",67901,2
 "Blair, NE",68008,2
@@ -1773,7 +1805,6 @@ Place,FirstZIP,Count
 "Marrero, LA",70072,2
 "Westwego, LA",70094,2
 "Morgan City, LA",70380,2
-"Angie, LA",70426,2
 "Bogalusa, LA",70427,2
 "Abbeville, LA",70510,2
 "Crowley, LA",70526,2
@@ -1784,8 +1815,8 @@ Place,FirstZIP,Count
 "Minden, LA",71055,2
 "Bastrop, LA",71220,2
 "Tallulah, LA",71282,2
+"Leesville, LA",71446,2
 "White Hall, AR",71602,2
-"Mc Gehee, AR",71654,2
 "Camden, AR",71701,2
 "El Dorado, AR",71730,2
 "Magnolia, AR",71753,2
@@ -1806,7 +1837,6 @@ Place,FirstZIP,Count
 "Mountain Home, AR",72653,2
 "Timbo, AR",72657,2
 "Norfork, AR",72658,2
-"Bentonville, AR",72712,2
 "Bella Vista, AR",72714,2
 "Van Buren, AR",72956,2
 "Chickasha, OK",73018,2
@@ -1857,6 +1887,8 @@ Place,FirstZIP,Count
 "Keller, TX",76244,2
 "Vernon, TX",76384,2
 "Stephenville, TX",76401,2
+"Brownwood, TX",76801,2
+"Early, TX",76802,2
 "Montgomery, TX",77316,2
 "Willis, TX",77318,2
 "Cleveland, TX",77327,2
@@ -1878,7 +1910,6 @@ Place,FirstZIP,Count
 "Boerne, TX",78006,2
 "Kerrville, TX",78028,2
 "Beeville, TX",78102,2
-"Universal City, TX",78148,2
 "Seguin, TX",78155,2
 "Alice, TX",78332,2
 "Aransas Pass, TX",78335,2
@@ -1886,7 +1917,6 @@ Place,FirstZIP,Count
 "Rockport, TX",78381,2
 "Weslaco, TX",78596,2
 "Cedar Park, TX",78613,2
-"Marble Falls, TX",78654,2
 "Pflugerville, TX",78660,2
 "San Marcos, TX",78666,2
 "Uvalde, TX",78801,2
@@ -1900,6 +1930,7 @@ Place,FirstZIP,Count
 "Rule, TX",79547,2
 "Snyder, TX",79549,2
 "Big Spring, TX",79720,2
+"Fort Bliss, TX",79916,2
 "Commerce City, CO",80022,2
 "Wheat Ridge, CO",80033,2
 "Parker, CO",80134,2
@@ -1908,7 +1939,7 @@ Place,FirstZIP,Count
 "Estes Park, CO",80511,2
 "Windsor, CO",80550,2
 "Limon, CO",80826,2
-"U S A F Academy, CO",80840,2
+"Usaf Academy, CO",80840,2
 "Woodland Park, CO",80863,2
 "Crowley, CO",81033,2
 "Alamosa, CO",81101,2
@@ -1934,8 +1965,8 @@ Place,FirstZIP,Count
 "Layton, UT",84040,2
 "Vernal, UT",84078,2
 "Cedar City, UT",84720,2
-"Apache Junction, AZ",85119,2
 "Maricopa, AZ",85138,2
+"San Tan Valley, AZ",85140,2
 "Fountain Hills, AZ",85268,2
 "Avondale, AZ",85323,2
 "Buckeye, AZ",85326,2
@@ -1966,6 +1997,7 @@ Place,FirstZIP,Count
 "Boulder City, NV",89005,2
 "Indian Springs, NV",89018,2
 "Jean, NV",89019,2
+"Moapa, NV",89025,2
 "Laughlin, NV",89028,2
 "Ely, NV",89301,2
 "Gardnerville, NV",89410,2
@@ -2011,7 +2043,6 @@ Place,FirstZIP,Count
 "Panorama City, CA",91402,2
 "Studio City, CA",91604,2
 "Valley Village, CA",91607,2
-"Alta Loma, CA",91701,2
 "Chino, CA",91708,2
 "Glendora, CA",91740,2
 "Walnut, CA",91788,2
@@ -2039,8 +2070,10 @@ Place,FirstZIP,Count
 "Barstow, CA",92311,2
 "Phelan, CA",92329,2
 "Rialto, CA",92376,2
+"Sun City, CA",92585,2
 "Laguna Niguel, CA",92607,2
 "Laguna Beach, CA",92651,2
+"Laguna Hills, CA",92653,2
 "Aliso Viejo, CA",92656,2
 "San Juan Capistrano, CA",92675,2
 "Trabuco Canyon, CA",92678,2
@@ -2053,7 +2086,6 @@ Place,FirstZIP,Count
 "Port Hueneme, CA",93041,2
 "Santa Paula, CA",93060,2
 "Delano, CA",93215,2
-"Frazier Park, CA",93222,2
 "Hanford, CA",93230,2
 "Lemoore, CA",93245,2
 "Porterville, CA",93257,2
@@ -2075,6 +2107,7 @@ Place,FirstZIP,Count
 "Ridgecrest, CA",93555,2
 "Tehachapi, CA",93561,2
 "Trona, CA",93562,2
+"Carmel, CA",93922,2
 "Burlingame, CA",94010,2
 "Menlo Park, CA",94025,2
 "South San Francisco, CA",94080,2
@@ -2089,8 +2122,6 @@ Place,FirstZIP,Count
 "Emeryville, CA",94608,2
 "El Sobrante, CA",94803,2
 "Corte Madera, CA",94925,2
-"Cotati, CA",94926,2
-"Rohnert Park, CA",94927,2
 "Fairfax, CA",94930,2
 "Larkspur, CA",94939,2
 "Mill Valley, CA",94941,2
@@ -2111,7 +2142,6 @@ Place,FirstZIP,Count
 "Arcata, CA",95518,2
 "Crescent City, CA",95531,2
 "Carmichael, CA",95608,2
-"Davis, CA",95616,2
 "Folsom, CA",95630,2
 "Rocklin, CA",95677,2
 "Woodland, CA",95695,2
@@ -2119,10 +2149,8 @@ Place,FirstZIP,Count
 "Oroville, CA",95965,2
 "Paradise, CA",95967,2
 "Susanville, CA",96127,2
-"Boring, OR",97009,2
 "Gresham, OR",97030,2
 "Lake Oswego, OR",97034,2
-"Hillsboro, OR",97123,2
 "Albany, OR",97321,2
 "Roseburg, OR",97470,2
 "Medford, OR",97501,2
@@ -2206,7 +2234,7 @@ Place,FirstZIP,Count
 "Great Barrington, MA",01230,1
 "Hinsdale, MA",01235,1
 "Housatonic, MA",01236,1
-"Lanesboro, MA",01237,1
+"Lanesborough, MA",01237,1
 "Lee, MA",01238,1
 "Lenox, MA",01240,1
 "Lenox Dale, MA",01242,1
@@ -2239,9 +2267,12 @@ Place,FirstZIP,Count
 "Erving, MA",01344,1
 "Heath, MA",01346,1
 "Lake Pleasant, MA",01347,1
+"Millers Falls, MA",01349,1
 "Monroe Bridge, MA",01350,1
 "Montague, MA",01351,1
+"Gill, MA",01354,1
 "New Salem, MA",01355,1
+"Northfield, MA",01360,1
 "Orange, MA",01364,1
 "Petersham, MA",01366,1
 "Rowe, MA",01367,1
@@ -2249,6 +2280,7 @@ Place,FirstZIP,Count
 "Shelburne Falls, MA",01370,1
 "South Deerfield, MA",01373,1
 "Sunderland, MA",01375,1
+"Turners Falls, MA",01376,1
 "Warwick, MA",01378,1
 "Wendell, MA",01379,1
 "Wendell Depot, MA",01380,1
@@ -2259,6 +2291,7 @@ Place,FirstZIP,Count
 "Devens, MA",01434,1
 "Baldwinville, MA",01436,1
 "East Templeton, MA",01438,1
+"Gardner, MA",01440,1
 "Harvard, MA",01451,1
 "Hubbardston, MA",01452,1
 "Leominster, MA",01453,1
@@ -2270,7 +2303,6 @@ Place,FirstZIP,Count
 "Templeton, MA",01468,1
 "Townsend, MA",01469,1
 "West Groton, MA",01472,1
-"Westminster, MA",01473,1
 "West Townsend, MA",01474,1
 "Winchendon, MA",01475,1
 "Auburn, MA",01501,1
@@ -2324,9 +2356,7 @@ Place,FirstZIP,Count
 "Sutton, MA",01590,1
 "Cherry Valley, MA",01611,1
 "Paxton, MA",01612,1
-"Village Of Nagog Woods, MA",01718,1
 "Boxborough, MA",01719,1
-"Acton, MA",01720,1
 "Ashland, MA",01721,1
 "Bedford, MA",01730,1
 "Hanscom Afb, MA",01731,1
@@ -2430,6 +2460,9 @@ Place,FirstZIP,Count
 "Walpole, MA",02081,1
 "Westwood, MA",02090,1
 "Wrentham, MA",02093,1
+"Roxbury, MA",02119,1
+"Roxbury Crossing, MA",02120,1
+"Dorchester Center, MA",02124,1
 "Mattapan, MA",02126,1
 "Charlestown, MA",02129,1
 "Jamaica Plain, MA",02130,1
@@ -2449,6 +2482,10 @@ Place,FirstZIP,Count
 "Stoneham, MA",02180,1
 "Milton, MA",02186,1
 "Milton Village, MA",02187,1
+"Weymouth, MA",02188,1
+"East Weymouth, MA",02189,1
+"South Weymouth, MA",02190,1
+"North Weymouth, MA",02191,1
 "Avon, MA",02322,1
 "Bryantville, MA",02327,1
 "Carver, MA",02330,1
@@ -2459,7 +2496,6 @@ Place,FirstZIP,Count
 "Hanson, MA",02341,1
 "Holbrook, MA",02343,1
 "Manomet, MA",02345,1
-"Lakeville, MA",02347,1
 "Monponsett, MA",02350,1
 "Abington, MA",02351,1
 "North Carver, MA",02355,1
@@ -2493,7 +2529,9 @@ Place,FirstZIP,Count
 "Waverley, MA",02479,1
 "Wellesley Hills, MA",02481,1
 "Wellesley, MA",02482,1
+"Needham, MA",02492,1
 "Weston, MA",02493,1
+"Needham Heights, MA",02494,1
 "Nonantum, MA",02495,1
 "Cataumet, MA",02534,1
 "Chilmark, MA",02535,1
@@ -2705,7 +2743,7 @@ Place,FirstZIP,Count
 "Hebron, NH",03241,1
 "Henniker, NH",03242,1
 "Hill, NH",03243,1
-"Hillsboro, NH",03244,1
+"Hillsborough, NH",03244,1
 "Holderness, NH",03245,1
 "Gilford, NH",03249,1
 "Lincoln, NH",03251,1
@@ -2757,7 +2795,7 @@ Place,FirstZIP,Count
 "Jaffrey, NH",03452,1
 "Marlborough, NH",03455,1
 "Marlow, NH",03456,1
-"Munsonville, NH",03457,1
+"Nelson, NH",03457,1
 "Peterborough, NH",03458,1
 "Rindge, NH",03461,1
 "Spofford, NH",03462,1
@@ -2878,7 +2916,7 @@ Place,FirstZIP,Count
 "Seabrook, NH",03874,1
 "Silver Lake, NH",03875,1
 "Somersworth, NH",03878,1
-"South Effingham, NH",03882,1
+"Effingham, NH",03882,1
 "South Tamworth, NH",03883,1
 "Strafford, NH",03884,1
 "Stratham, NH",03885,1
@@ -2919,7 +2957,7 @@ Place,FirstZIP,Count
 "Denmark, ME",04022,1
 "East Baldwin, ME",04024,1
 "Lebanon, ME",04027,1
-"East Parsonfield, ME",04028,1
+"East Parsonsfield, ME",04028,1
 "Sebago, ME",04029,1
 "East Waterboro, ME",04030,1
 "Fryeburg, ME",04037,1
@@ -2962,7 +3000,7 @@ Place,FirstZIP,Count
 "Waterford, ME",04088,1
 "Wells, ME",04090,1
 "West Baldwin, ME",04091,1
-"West Buxton, ME",04093,1
+"Buxton, ME",04093,1
 "West Kennebunk, ME",04094,1
 "West Newfield, ME",04095,1
 "Yarmouth, ME",04096,1
@@ -2994,7 +3032,7 @@ Place,FirstZIP,Count
 "Lisbon Falls, ME",04252,1
 "Livermore, ME",04253,1
 "Livermore Falls, ME",04254,1
-"Locke Mills, ME",04255,1
+"Greenwood, ME",04255,1
 "Mechanic Falls, ME",04256,1
 "Mexico, ME",04257,1
 "Minot, ME",04258,1
@@ -3056,7 +3094,7 @@ Place,FirstZIP,Count
 "Brownville Junction, ME",04415,1
 "Bucksport, ME",04416,1
 "Burlington, ME",04417,1
-"Cardville, ME",04418,1
+"Greenbush, ME",04418,1
 "Carmel, ME",04419,1
 "Charleston, ME",04422,1
 "Danforth, ME",04424,1
@@ -3235,11 +3273,11 @@ Place,FirstZIP,Count
 "Saint David, ME",04773,1
 "Saint Francis, ME",04774,1
 "Sheridan, ME",04775,1
-"Sherman Mills, ME",04776,1
-"Sherman Station, ME",04777,1
+"Sherman, ME",04776,1
+"Stacyville, ME",04777,1
 "Sinclair, ME",04779,1
 "Smyrna Mills, ME",04780,1
-"Soldier Pond, ME",04781,1
+"Wallagrass, ME",04781,1
 "Stockholm, ME",04783,1
 "Van Buren, ME",04785,1
 "Washburn, ME",04786,1
@@ -3276,7 +3314,7 @@ Place,FirstZIP,Count
 "Cambridge, ME",04923,1
 "Canaan, ME",04924,1
 "Caratunk, ME",04925,1
-"China, ME",04926,1
+"China Village, ME",04926,1
 "Clinton, ME",04927,1
 "Corinna, ME",04928,1
 "Detroit, ME",04929,1
@@ -3300,12 +3338,10 @@ Place,FirstZIP,Count
 "Monroe, ME",04951,1
 "Morrill, ME",04952,1
 "Newport, ME",04953,1
-"New Portland, ME",04954,1
 "New Sharon, ME",04955,1
 "New Vineyard, ME",04956,1
 "Norridgewock, ME",04957,1
 "North Anson, ME",04958,1
-"North New Portland, ME",04961,1
 "North Vassalboro, ME",04962,1
 "Oakland, ME",04963,1
 "Oquossoc, ME",04964,1
@@ -3342,6 +3378,7 @@ Place,FirstZIP,Count
 "Brownsville, VT",05037,1
 "Chelsea, VT",05038,1
 "Corinth, VT",05039,1
+"East Corinth, VT",05040,1
 "East Randolph, VT",05041,1
 "East Ryegate, VT",05042,1
 "East Thetford, VT",05043,1
@@ -3372,6 +3409,7 @@ Place,FirstZIP,Count
 "Taftsville, VT",05073,1
 "Thetford, VT",05074,1
 "Thetford Center, VT",05075,1
+"Topsham, VT",05076,1
 "Tunbridge, VT",05077,1
 "Vershire, VT",05079,1
 "Wells River, VT",05081,1
@@ -3417,7 +3455,9 @@ Place,FirstZIP,Count
 "Marlboro, VT",05344,1
 "Newfane, VT",05345,1
 "Putney, VT",05346,1
+"Readsboro, VT",05350,1
 "South Newfane, VT",05351,1
+"Stamford, VT",05352,1
 "Townshend, VT",05353,1
 "Vernon, VT",05354,1
 "Wardsboro, VT",05355,1
@@ -3430,7 +3470,7 @@ Place,FirstZIP,Count
 "Williamsville, VT",05362,1
 "Wilmington, VT",05363,1
 "Winooski, VT",05404,1
-"Alburg, VT",05440,1
+"Alburgh, VT",05440,1
 "Bakersfield, VT",05441,1
 "Belvidere Center, VT",05442,1
 "Bristol, VT",05443,1
@@ -3442,7 +3482,7 @@ Place,FirstZIP,Count
 "Essex, VT",05451,1
 "Fairfax, VT",05454,1
 "Fairfield, VT",05455,1
-"Ferrisburg, VT",05456,1
+"Ferrisburgh, VT",05456,1
 "Franklin, VT",05457,1
 "Grand Isle, VT",05458,1
 "Highgate Center, VT",05459,1
@@ -3458,7 +3498,7 @@ Place,FirstZIP,Count
 "Montgomery, VT",05470,1
 "Montgomery Center, VT",05471,1
 "New Haven, VT",05472,1
-"North Ferrisburg, VT",05473,1
+"North Ferrisburgh, VT",05473,1
 "North Hero, VT",05474,1
 "Richford, VT",05476,1
 "Richmond, VT",05477,1
@@ -3555,7 +3595,6 @@ Place,FirstZIP,Count
 "Saint Johnsbury, VT",05819,1
 "Albany, VT",05820,1
 "Barnet, VT",05821,1
-"Barton, VT",05822,1
 "Beebe Plain, VT",05823,1
 "Concord, VT",05824,1
 "Coventry, VT",05825,1
@@ -3597,7 +3636,6 @@ Place,FirstZIP,Count
 "West Charleston, VT",05872,1
 "West Danville, VT",05873,1
 "Westfield, VT",05874,1
-"West Glover, VT",05875,1
 "Averill, VT",05901,1
 "Beecher Falls, VT",05902,1
 "Canaan, VT",05903,1
@@ -3624,7 +3662,7 @@ Place,FirstZIP,Count
 "Falls Village, CT",06031,1
 "Glastonbury, CT",06033,1
 "Granby, CT",06035,1
-"Kensington, CT",06037,1
+"Berlin, CT",06037,1
 "Lakeville, CT",06039,1
 "Bolton, CT",06043,1
 "New Hartford, CT",06057,1
@@ -3633,7 +3671,7 @@ Place,FirstZIP,Count
 "North Granby, CT",06060,1
 "Pine Meadow, CT",06061,1
 "Plainville, CT",06062,1
-"Pleasant Valley, CT",06063,1
+"Barkhamsted, CT",06063,1
 "Poquonock, CT",06064,1
 "Riverton, CT",06065,1
 "Vernon Rockville, CT",06066,1
@@ -3788,10 +3826,8 @@ Place,FirstZIP,Count
 "Southington, CT",06489,1
 "Stevenson, CT",06491,1
 "Westbrook, CT",06498,1
-"East Haven, CT",06512,1
 "West Haven, CT",06516,1
 "Bethany, CT",06524,1
-"Woodbridge, CT",06525,1
 "Trumbull, CT",06611,1
 "Easton, CT",06612,1
 "Prospect, CT",06712,1
@@ -3911,6 +3947,7 @@ Place,FirstZIP,Count
 "Roselle, NJ",07203,1
 "Roselle Park, NJ",07204,1
 "Hillside, NJ",07205,1
+"Elizabethport, NJ",07206,1
 "Allendale, NJ",07401,1
 "Bloomingdale, NJ",07403,1
 "Butler, NJ",07405,1
@@ -4096,6 +4133,7 @@ Place,FirstZIP,Count
 "Mendham, NJ",07945,1
 "Millington, NJ",07946,1
 "Morris Plains, NJ",07950,1
+"Convent Station, NJ",07961,1
 "Mount Freedom, NJ",07970,1
 "New Providence, NJ",07974,1
 "New Vernon, NJ",07976,1
@@ -4184,7 +4222,7 @@ Place,FirstZIP,Count
 "Westville, NJ",08093,1
 "Williamstown, NJ",08094,1
 "Winslow, NJ",08095,1
-"Woodbury, NJ",08096,1
+"Deptford, NJ",08096,1
 "Woodbury Heights, NJ",08097,1
 "Woodstown, NJ",08098,1
 "Audubon, NJ",08106,1
@@ -4269,11 +4307,10 @@ Place,FirstZIP,Count
 "Belle Mead, NJ",08502,1
 "Blawenburg, NJ",08504,1
 "Bordentown, NJ",08505,1
-"Clarksburg, NJ",08510,1
 "Cookstown, NJ",08511,1
 "Cranbury, NJ",08512,1
 "Cream Ridge, NJ",08514,1
-"Crosswicks, NJ",08515,1
+"Chesterfield, NJ",08515,1
 "Florence, NJ",08518,1
 "Hightstown, NJ",08520,1
 "Hopewell, NJ",08525,1
@@ -4283,7 +4320,6 @@ Place,FirstZIP,Count
 "Lambertville, NJ",08530,1
 "New Egypt, NJ",08533,1
 "Pennington, NJ",08534,1
-"Perrineville, NJ",08535,1
 "Plainsboro, NJ",08536,1
 "Princeton Junction, NJ",08550,1
 "Ringoes, NJ",08551,1
@@ -4297,6 +4333,7 @@ Place,FirstZIP,Count
 "Titusville, NJ",08560,1
 "Windsor, NJ",08561,1
 "Wrightstown, NJ",08562,1
+"Lawrence Township, NJ",08648,1
 "Lakewood, NJ",08701,1
 "Allenwood, NJ",08720,1
 "Bayville, NJ",08721,1
@@ -4317,7 +4354,7 @@ Place,FirstZIP,Count
 "Seaside Heights, NJ",08751,1
 "Seaside Park, NJ",08752,1
 "Waretown, NJ",08758,1
-"Whiting, NJ",08759,1
+"Manchester Township, NJ",08759,1
 "Annandale, NJ",08801,1
 "Asbury, NJ",08802,1
 "Baptistown, NJ",08803,1
@@ -4339,7 +4376,7 @@ Place,FirstZIP,Count
 "Helmetta, NJ",08828,1
 "High Bridge, NJ",08829,1
 "Iselin, NJ",08830,1
-"Jamesburg, NJ",08831,1
+"Monroe Township, NJ",08831,1
 "Keasbey, NJ",08832,1
 "Lebanon, NJ",08833,1
 "Little York, NJ",08834,1
@@ -4440,7 +4477,6 @@ Place,FirstZIP,Count
 "Bronxville, NY",10708,1
 "Eastchester, NY",10709,1
 "Pelham, NY",10803,1
-"Wykagyl, NY",10804,1
 "Suffern, NY",10901,1
 "Arden, NY",10910,1
 "Bear Mountain, NY",10911,1
@@ -4624,6 +4660,7 @@ Place,FirstZIP,Count
 "Selden, NY",11784,1
 "Shoreham, NY",11786,1
 "Smithtown, NY",11787,1
+"Hauppauge, NY",11788,1
 "Sound Beach, NY",11789,1
 "Wading River, NY",11792,1
 "Wantagh, NY",11793,1
@@ -4938,7 +4975,6 @@ Place,FirstZIP,Count
 "Modena, NY",12548,1
 "Montgomery, NY",12549,1
 "New Windsor, NY",12553,1
-"Mid Hudson, NY",12555,1
 "New Paltz, NY",12561,1
 "Patterson, NY",12563,1
 "Pawling, NY",12564,1
@@ -5484,7 +5520,7 @@ Place,FirstZIP,Count
 "Corbettsville, NY",13749,1
 "Davenport, NY",13750,1
 "Davenport Center, NY",13751,1
-"De Lancey, NY",13752,1
+"Delancey, NY",13752,1
 "Delhi, NY",13753,1
 "Deposit, NY",13754,1
 "Downsville, NY",13755,1
@@ -5992,7 +6028,6 @@ Place,FirstZIP,Count
 "Homestead, PA",15120,1
 "Imperial, PA",15126,1
 "Ingomar, PA",15127,1
-"Library, PA",15129,1
 "South Park, PA",15129,1
 "Mc Kees Rocks, PA",15136,1
 "North Versailles, PA",15137,1
@@ -6252,7 +6287,6 @@ Place,FirstZIP,Count
 "Arcadia, PA",15712,1
 "Aultman, PA",15713,1
 "Northern Cambria, PA",15714,1
-"Barnesboro, PA",15714,1
 "Big Run, PA",15715,1
 "Black Lick, PA",15716,1
 "Blairsville, PA",15717,1
@@ -6413,7 +6447,7 @@ Place,FirstZIP,Count
 "Valencia, PA",16059,1
 "West Sunbury, PA",16061,1
 "Zelienople, PA",16063,1
-"Cranberry Twp, PA",16066,1
+"Cranberry Township, PA",16066,1
 "Adamsville, PA",16110,1
 "Atlantic, PA",16111,1
 "Bessemer, PA",16112,1
@@ -7306,7 +7340,6 @@ Place,FirstZIP,Count
 "Moosic, PA",18507,1
 "Taylor, PA",18517,1
 "Old Forge, PA",18518,1
-"Dickson City, PA",18519,1
 "Beach Haven, PA",18601,1
 "Bear Creek, PA",18602,1
 "Berwick, PA",18603,1
@@ -7454,7 +7487,6 @@ Place,FirstZIP,Count
 "Brookhaven, PA",19015,1
 "Chester Heights, PA",19017,1
 "Clifton Heights, PA",19018,1
-"Primos, PA",19018,1
 "Bensalem, PA",19020,1
 "Croydon, PA",19021,1
 "Crum Lynne, PA",19022,1
@@ -7700,7 +7732,9 @@ Place,FirstZIP,Count
 "Lovettsville, VA",20180,1
 "Waterford, VA",20197,1
 "The Plains, VA",20198,1
-"Washington Navy Yard, DC",20376,1
+"Naval Anacost Annex, DC",20373,1
+"Dhs, MD",20588,1
+"Dhs, VA",20598,1
 "Abell, MD",20606,1
 "Accokeek, MD",20607,1
 "Aquasco, MD",20608,1
@@ -7883,7 +7917,6 @@ Place,FirstZIP,Count
 "White Marsh, MD",21162,1
 "Woodstock, MD",21163,1
 "Gwynn Oak, MD",21207,1
-"Pikesville, MD",21208,1
 "Sparrows Point, MD",21219,1
 "Middle River, MD",21220,1
 "Essex, MD",21221,1
@@ -8097,7 +8130,7 @@ Place,FirstZIP,Count
 "Oakton, VA",22124,1
 "Occoquan, VA",22125,1
 "Triangle, VA",22172,1
-"Ft Myer, VA",22211,1
+"Fort Myer, VA",22211,1
 "Brooke, VA",22430,1
 "Burgess, VA",22432,1
 "Burr Hill, VA",22433,1
@@ -8332,13 +8365,12 @@ Place,FirstZIP,Count
 "Hardyville, VA",23070,1
 "Hartfield, VA",23071,1
 "Hayes, VA",23072,1
-"Highland Springs, VA",23075,1
 "Hudgins, VA",23076,1
 "Jamaica, VA",23079,1
 "Jamestown, VA",23081,1
 "Jetersville, VA",23083,1
 "Kents Store, VA",23084,1
-"King And Queen Court Hous, VA",23085,1
+"King And Queen Court House, VA",23085,1
 "King William, VA",23086,1
 "Lanexa, VA",23089,1
 "Lightfoot, VA",23090,1
@@ -8386,7 +8418,6 @@ Place,FirstZIP,Count
 "Toano, VA",23168,1
 "Topping, VA",23169,1
 "Trevilians, VA",23170,1
-"University Of Richmond, VA",23173,1
 "Urbanna, VA",23175,1
 "Wake, VA",23176,1
 "Walkerton, VA",23177,1
@@ -8463,6 +8494,7 @@ Place,FirstZIP,Count
 "Lackey, VA",23694,1
 "Seaford, VA",23696,1
 "Fort Lee, VA",23801,1
+"Virginia State University, VA",23806,1
 "Alberta, VA",23821,1
 "Ammon, VA",23822,1
 "Blackstone, VA",23824,1
@@ -8694,7 +8726,7 @@ Place,FirstZIP,Count
 "Speedwell, VA",24374,1
 "Sugar Grove, VA",24375,1
 "Tannersville, VA",24377,1
-"Trout Dale, VA",24378,1
+"Troutdale, VA",24378,1
 "Willis, VA",24380,1
 "Woodlawn, VA",24381,1
 "Wytheville, VA",24382,1
@@ -8843,8 +8875,6 @@ Place,FirstZIP,Count
 "Matoaka, WV",24736,1
 "Montcalm, WV",24737,1
 "Nemours, WV",24738,1
-"Oakvale, WV",24739,1
-"Princeton, WV",24740,1
 "Rock, WV",24747,1
 "Wolfe, WV",24751,1
 "Welch, WV",24801,1
@@ -9241,7 +9271,6 @@ Place,FirstZIP,Count
 "Saulsville, WV",25876,1
 "Midway, WV",25878,1
 "Minden, WV",25879,1
-"Mount Hope, WV",25880,1
 "Mullens, WV",25882,1
 "Oak Hill, WV",25901,1
 "Odd, WV",25902,1
@@ -9294,7 +9323,7 @@ Place,FirstZIP,Count
 "Follansbee, WV",26037,1
 "Glen Dale, WV",26038,1
 "Glen Easton, WV",26039,1
-"Mc Mechen, WV",26040,1
+"Mcmechen, WV",26040,1
 "Moundsville, WV",26041,1
 "New Cumberland, WV",26047,1
 "Newell, WV",26050,1
@@ -9618,7 +9647,7 @@ Place,FirstZIP,Count
 "Denton, NC",27239,1
 "Eagle Springs, NC",27242,1
 "Efland, NC",27243,1
-"Elon College, NC",27244,1
+"Elon, NC",27244,1
 "Ether, NC",27247,1
 "Franklinville, NC",27248,1
 "Gibsonville, NC",27249,1
@@ -9816,7 +9845,6 @@ Place,FirstZIP,Count
 "Corolla, NC",27927,1
 "Creswell, NC",27928,1
 "Currituck, NC",27929,1
-"Durants Neck, NC",27930,1
 "Edenton, NC",27932,1
 "Eure, NC",27935,1
 "Frisco, NC",27936,1
@@ -9826,7 +9854,6 @@ Place,FirstZIP,Count
 "Harbinger, NC",27941,1
 "Harrellsville, NC",27942,1
 "Hatteras, NC",27943,1
-"Hertford, NC",27944,1
 "Hobbsville, NC",27946,1
 "Jarvisburg, NC",27947,1
 "Kill Devil Hills, NC",27948,1
@@ -9934,7 +9961,7 @@ Place,FirstZIP,Count
 "Wadesboro, NC",28170,1
 "Waxhaw, NC",28173,1
 "Wingate, NC",28174,1
-"Pope A F B, NC",28308,1
+"Pope Army Airfield, NC",28308,1
 "Aberdeen, NC",28315,1
 "Autryville, NC",28318,1
 "Barnesville, NC",28319,1
@@ -10037,7 +10064,6 @@ Place,FirstZIP,Count
 "Calabash, NC",28467,1
 "Sunset Beach, NC",28468,1
 "Ocean Isle Beach, NC",28469,1
-"South Brunswick, NC",28470,1
 "Whiteville, NC",28472,1
 "Willard, NC",28478,1
 "Winnabow, NC",28479,1
@@ -10105,7 +10131,7 @@ Place,FirstZIP,Count
 "Catawba, NC",28609,1
 "Claremont, NC",28610,1
 "Collettsville, NC",28611,1
-"Connellys Springs, NC",28612,1
+"Connelly Springs, NC",28612,1
 "Conover, NC",28613,1
 "Creston, NC",28615,1
 "Crossnore, NC",28616,1
@@ -10338,7 +10364,7 @@ Place,FirstZIP,Count
 "Springfield, SC",29146,1
 "State Park, SC",29147,1
 "Summerton, SC",29148,1
-"Shaw A F B, SC",29152,1
+"Shaw Afb, SC",29152,1
 "Swansea, SC",29160,1
 "Timmonsville, SC",29161,1
 "Turbeville, SC",29162,1
@@ -10350,6 +10376,7 @@ Place,FirstZIP,Count
 "White Rock, SC",29177,1
 "Whitmire, SC",29178,1
 "Winnsboro, SC",29180,1
+"Boiling Springs, SC",29316,1
 "Arcadia, SC",29320,1
 "Buffalo, SC",29321,1
 "Campobello, SC",29322,1
@@ -10390,6 +10417,7 @@ Place,FirstZIP,Count
 "White Stone, SC",29386,1
 "Woodruff, SC",29388,1
 "Charleston Afb, SC",29404,1
+"Hanahan, SC",29410,1
 "Adams Run, SC",29426,1
 "Awendaw, SC",29429,1
 "Bonneau, SC",29431,1
@@ -10568,11 +10596,11 @@ Place,FirstZIP,Count
 "Warrenville, SC",29851,1
 "Williston, SC",29853,1
 "Windsor, SC",29856,1
-"Ladys Island, SC",29907,1
+"Parris Island, SC",29905,1
 "Okatie, SC",29909,1
 "Bluffton, SC",29910,1
 "Brunson, SC",29911,1
-"Coosawatchie, SC",29912,1
+"Coosawhatchie, SC",29912,1
 "Crocketville, SC",29913,1
 "Dale, SC",29914,1
 "Daufuskie Island, SC",29915,1
@@ -10613,6 +10641,7 @@ Place,FirstZIP,Count
 "Pine Lake, GA",30072,1
 "Redan, GA",30074,1
 "Scottdale, GA",30079,1
+"Peachtree Corners, GA",30092,1
 "Adairsville, GA",30103,1
 "Aragon, GA",30104,1
 "Armuchee, GA",30105,1
@@ -10749,7 +10778,7 @@ Place,FirstZIP,Count
 "Braselton, GA",30517,1
 "Canon, GA",30520,1
 "Carnesville, GA",30521,1
-"Cherrylog, GA",30522,1
+"Cherry Log, GA",30522,1
 "Clarkesville, GA",30523,1
 "Clayton, GA",30525,1
 "Clermont, GA",30527,1
@@ -10788,6 +10817,7 @@ Place,FirstZIP,Count
 "Tallulah Falls, GA",30573,1
 "Talmo, GA",30575,1
 "Tiger, GA",30576,1
+"Toccoa, GA",30577,1
 "Turnerville, GA",30580,1
 "Wiley, GA",30581,1
 "Young Harris, GA",30582,1
@@ -10908,6 +10938,7 @@ Place,FirstZIP,Count
 "Dudley, GA",31022,1
 "Eastman, GA",31023,1
 "Elko, GA",31025,1
+"East Dublin, GA",31027,1
 "Centerville, GA",31028,1
 "Forsyth, GA",31029,1
 "Fort Valley, GA",31030,1
@@ -10917,7 +10948,6 @@ Place,FirstZIP,Count
 "Hardwick, GA",31034,1
 "Harrison, GA",31035,1
 "Hawkinsville, GA",31036,1
-"Helena, GA",31037,1
 "Hillsboro, GA",31038,1
 "Howard, GA",31039,1
 "Ideal, GA",31041,1
@@ -10931,7 +10961,6 @@ Place,FirstZIP,Count
 "Lilly, GA",31051,1
 "Lizella, GA",31052,1
 "Mc Intyre, GA",31054,1
-"Mc Rae, GA",31055,1
 "Marshallville, GA",31057,1
 "Mauk, GA",31058,1
 "Milan, GA",31060,1
@@ -10987,6 +11016,7 @@ Place,FirstZIP,Count
 "Springfield, GA",31329,1
 "Townsend, GA",31331,1
 "Walthourville, GA",31333,1
+"Port Wentworth, GA",31407,1
 "Alma, GA",31510,1
 "Ambrose, GA",31512,1
 "Blackshear, GA",31516,1
@@ -11047,6 +11077,7 @@ Place,FirstZIP,Count
 "Statenville, GA",31648,1
 "Stockton, GA",31649,1
 "Willacoochee, GA",31650,1
+"Moody Afb, GA",31699,1
 "Andersonville, GA",31711,1
 "Arabi, GA",31712,1
 "Ashburn, GA",31714,1
@@ -11117,7 +11148,6 @@ Place,FirstZIP,Count
 "Weston, GA",31832,1
 "West Point, GA",31833,1
 "Woodland, GA",31836,1
-"Fleming Island, FL",32006,1
 "Bostwick, FL",32007,1
 "Branford, FL",32008,1
 "Bryceville, FL",32009,1
@@ -11154,7 +11184,6 @@ Place,FirstZIP,Count
 "Candler, FL",32111,1
 "Crescent City, FL",32112,1
 "Citra, FL",32113,1
-"Port Orange, FL",32129,1
 "De Leon Springs, FL",32130,1
 "East Palatka, FL",32131,1
 "Eastlake Weir, FL",32133,1
@@ -11167,7 +11196,6 @@ Place,FirstZIP,Count
 "Hollister, FL",32147,1
 "Lake Como, FL",32157,1
 "Lake Geneva, FL",32160,1
-"The Villages, FL",32163,1
 "Pierson, FL",32180,1
 "Pomona Park, FL",32181,1
 "Orange Springs, FL",32182,1
@@ -11179,9 +11207,8 @@ Place,FirstZIP,Count
 "Welaka, FL",32193,1
 "Weirsdale, FL",32195,1
 "Atlantic Beach, FL",32233,1
+"Saint Johns, FL",32259,1
 "Neptune Beach, FL",32266,1
-"Wakulla Springs, FL",32305,1
-"Miccosukee Cpo, FL",32309,1
 "Bristol, FL",32321,1
 "Carrabelle, FL",32322,1
 "Lanark Village, FL",32323,1
@@ -11198,7 +11225,6 @@ Place,FirstZIP,Count
 "Midway, FL",32343,1
 "Panacea, FL",32346,1
 "Pinetta, FL",32350,1
-"Mount Pleasant, FL",32352,1
 "Saint Marks, FL",32355,1
 "Salem, FL",32356,1
 "Shady Grove, FL",32357,1
@@ -11229,17 +11255,14 @@ Place,FirstZIP,Count
 "Greenwood, FL",32443,1
 "Lynn Haven, FL",32444,1
 "Malone, FL",32445,1
-"Kinard, FL",32449,1
 "Noma, FL",32452,1
 "Ponce De Leon, FL",32455,1
 "Santa Rosa Beach, FL",32459,1
 "Sneads, FL",32460,1
-"Rosemary Bch, FL",32461,1
-"Sunnyside, FL",32461,1
+"Rosemary Beach, FL",32461,1
 "Vernon, FL",32462,1
 "Wausau, FL",32463,1
 "Westville, FL",32464,1
-"Wewahitchka, FL",32465,1
 "Youngstown, FL",32466,1
 "Bagdad, FL",32530,1
 "Baker, FL",32531,1
@@ -11251,7 +11274,6 @@ Place,FirstZIP,Count
 "Hurlburt Field, FL",32544,1
 "Miramar Beach, FL",32550,1
 "Gonzalez, FL",32560,1
-"Harold, FL",32563,1
 "Holt, FL",32564,1
 "Jay, FL",32565,1
 "Navarre, FL",32566,1
@@ -11330,19 +11352,27 @@ Place,FirstZIP,Count
 "Dania, FL",33004,1
 "Islamorada, FL",33036,1
 "Key Largo, FL",33037,1
-"Sugarloaf Shores, FL",33042,1
 "Summerland Key, FL",33042,1
 "Big Pine Key, FL",33043,1
 "Marathon, FL",33050,1
 "Key Colony Beach, FL",33051,1
 "Marathon Shores, FL",33052,1
+"Miami Gardens, FL",33056,1
 "Tavernier, FL",33070,1
+"Coral Springs, FL",33075,1
+"Margate, FL",33093,1
+"Coconut Creek, FL",33097,1
+"Coral Gables, FL",33114,1
 "Key Biscayne, FL",33149,1
 "North Miami Beach, FL",33160,1
+"Plantation, FL",33388,1
 "North Palm Beach, FL",33408,1
+"Wellington, FL",33414,1
+"Royal Palm Beach, FL",33421,1
 "Belle Glade, FL",33430,1
 "Canal Point, FL",33438,1
 "Clewiston, FL",33440,1
+"Greenacres, FL",33454,1
 "Lake Harbor, FL",33459,1
 "Loxahatchee, FL",33470,1
 "Moore Haven, FL",33471,1
@@ -11359,7 +11389,6 @@ Place,FirstZIP,Count
 "Gibsonton, FL",33534,1
 "Lacoochee, FL",33537,1
 "Lake Panasoffkee, FL",33538,1
-"Wesley Chapel, FL",33545,1
 "Lithia, FL",33547,1
 "Mango, FL",33550,1
 "Odessa, FL",33556,1
@@ -11393,7 +11422,7 @@ Place,FirstZIP,Count
 "Kathleen, FL",33849,1
 "Lake Alfred, FL",33850,1
 "Lake Hamilton, FL",33851,1
-"Fedhaven, FL",33854,1
+"Lakeshore, FL",33854,1
 "Indian Lake Estates, FL",33855,1
 "Nalcrest, FL",33856,1
 "Lorida, FL",33857,1
@@ -11411,7 +11440,6 @@ Place,FirstZIP,Count
 "Bokeelia, FL",33922,1
 "Captiva, FL",33924,1
 "El Jobean, FL",33927,1
-"Estero, FL",33928,1
 "Felda, FL",33930,1
 "Murdock, FL",33938,1
 "Palmdale, FL",33944,1
@@ -11421,9 +11449,9 @@ Place,FirstZIP,Count
 "Saint James City, FL",33956,1
 "Sanibel, FL",33957,1
 "Venus, FL",33960,1
-"Vanderbilt Beach, FL",34107,1
 "Copeland, FL",34137,1
 "Chokoloskee, FL",34138,1
+"Everglades City, FL",34139,1
 "Goodland, FL",34140,1
 "Ochopee, FL",34141,1
 "Cortez, FL",34215,1
@@ -11443,7 +11471,6 @@ Place,FirstZIP,Count
 "Tallevast, FL",34270,1
 "Laurel, FL",34272,1
 "Floral City, FL",34436,1
-"Hernando, FL",34442,1
 "Holder, FL",34445,1
 "Homosassa Springs, FL",34447,1
 "Inglis, FL",34449,1
@@ -11988,7 +12015,7 @@ Place,FirstZIP,Count
 "Pittsview, AL",36871,1
 "Salem, AL",36874,1
 "Seale, AL",36875,1
-"Smiths, AL",36877,1
+"Smiths Station, AL",36877,1
 "Waverly, AL",36879,1
 "Bellamy, AL",36901,1
 "Butler, AL",36904,1
@@ -12146,7 +12173,7 @@ Place,FirstZIP,Count
 "Mulberry, TN",37359,1
 "Normandy, TN",37360,1
 "Ocoee, TN",37361,1
-"Oldfort, TN",37362,1
+"Old Fort, TN",37362,1
 "Ooltewah, TN",37363,1
 "Palmer, TN",37365,1
 "Pelham, TN",37366,1
@@ -12577,8 +12604,6 @@ Place,FirstZIP,Count
 "Grace, MS",38745,1
 "Gunnison, MS",38746,1
 "Hollandale, MS",38748,1
-"Holly Ridge, MS",38749,1
-"Indianola, MS",38751,1
 "Inverness, MS",38753,1
 "Isola, MS",38754,1
 "Leland, MS",38756,1
@@ -12851,6 +12876,7 @@ Place,FirstZIP,Count
 "Lakeshore, MS",39558,1
 "Long Beach, MS",39560,1
 "Mc Henry, MS",39561,1
+"Vancleave, MS",39565,1
 "Pass Christian, MS",39571,1
 "Pearlington, MS",39572,1
 "Perkinston, MS",39573,1
@@ -13012,7 +13038,6 @@ Place,FirstZIP,Count
 "Payneville, KY",40157,1
 "Rhodelia, KY",40161,1
 "Rineyville, KY",40162,1
-"Shepherdsville, KY",40165,1
 "Stephensport, KY",40170,1
 "Union Star, KY",40171,1
 "Vine Grove, KY",40175,1
@@ -13179,7 +13204,6 @@ Place,FirstZIP,Count
 "Corinth, KY",41010,1
 "Latonia, KY",41015,1
 "Ft Mitchell, KY",41017,1
-"Erlanger, KY",41018,1
 "Crittenden, KY",41030,1
 "Cynthiana, KY",41031,1
 "De Mossville, KY",41033,1
@@ -13193,7 +13217,6 @@ Place,FirstZIP,Count
 "Germantown, KY",41044,1
 "Ghent, KY",41045,1
 "Glencoe, KY",41046,1
-"Hebron, KY",41048,1
 "Hillsboro, KY",41049,1
 "Independence, KY",41051,1
 "Jonesville, KY",41052,1
@@ -13769,7 +13792,6 @@ Place,FirstZIP,Count
 "Lancaster, OH",43130,1
 "Laurelville, OH",43135,1
 "Lithopolis, OH",43136,1
-"Lockbourne, OH",43137,1
 "Logan, OH",43138,1
 "London, OH",43140,1
 "Milledgeville, OH",43142,1
@@ -13962,7 +13984,7 @@ Place,FirstZIP,Count
 "Laings, OH",43752,1
 "Lewisville, OH",43754,1
 "Lore City, OH",43755,1
-"Mc Connelsville, OH",43756,1
+"Mcconnelsville, OH",43756,1
 "Malaga, OH",43757,1
 "Malta, OH",43758,1
 "Morristown, OH",43759,1
@@ -14294,6 +14316,8 @@ Place,FirstZIP,Count
 "Bowerston, OH",44695,1
 "Zoar, OH",44697,1
 "Tippecanoe, OH",44699,1
+"North Canton, OH",44720,1
+"East Canton, OH",44730,1
 "Alvada, OH",44802,1
 "Arcadia, OH",44804,1
 "Ashland, OH",44805,1
@@ -14718,7 +14742,7 @@ Place,FirstZIP,Count
 "Kirklin, IN",46050,1
 "Lapel, IN",46051,1
 "Lebanon, IN",46052,1
-"Mc Cordsville, IN",46055,1
+"Mccordsville, IN",46055,1
 "Markleville, IN",46056,1
 "Michigantown, IN",46057,1
 "Mulberry, IN",46058,1
@@ -14985,7 +15009,6 @@ Place,FirstZIP,Count
 "Onward, IN",46967,1
 "Ora, IN",46968,1
 "Peru, IN",46970,1
-"Grissom Afb, IN",46971,1
 "Grissom Arb, IN",46971,1
 "Roann, IN",46974,1
 "Rochester, IN",46975,1
@@ -15955,9 +15978,8 @@ Place,FirstZIP,Count
 "Walkerville, MI",49459,1
 "West Olive, MI",49460,1
 "Whitehall, MI",49461,1
-"Wabaningo, MI",49463,1
+"Sylvan Beach, MI",49463,1
 "Zeeland, MI",49464,1
-"Wyoming, MI",49519,1
 "Cadillac, MI",49601,1
 "Acme, MI",49610,1
 "Alba, MI",49611,1
@@ -16249,7 +16271,6 @@ Place,FirstZIP,Count
 "Cooper, IA",50059,1
 "Corydon, IA",50060,1
 "Cumming, IA",50061,1
-"Dallas, IA",50062,1
 "Dallas Center, IA",50063,1
 "Dana, IA",50064,1
 "Davis City, IA",50065,1
@@ -16323,7 +16344,6 @@ Place,FirstZIP,Count
 "Martensdale, IA",50160,1
 "Maxwell, IA",50161,1
 "Melbourne, IA",50162,1
-"Melcher, IA",50163,1
 "Menlo, IA",50164,1
 "Millerton, IA",50165,1
 "Milo, IA",50166,1
@@ -16399,6 +16419,7 @@ Place,FirstZIP,Count
 "Zearing, IA",50278,1
 "Windsor Heights, IA",50324,1
 "Clive, IA",50325,1
+"Pleasant Hill, IA",50327,1
 "Alexander, IA",50420,1
 "Belmond, IA",50421,1
 "Britt, IA",50423,1
@@ -17184,9 +17205,7 @@ Place,FirstZIP,Count
 "Stockbridge, WI",53088,1
 "Sussex, WI",53089,1
 "Theresa, WI",53091,1
-"Thiensville, WI",53092,1
 "Waldo, WI",53093,1
-"Mequon, WI",53097,1
 "Woodland, WI",53099,1
 "Bassett, WI",53101,1
 "Benet Lake, WI",53102,1
@@ -17268,7 +17287,7 @@ Place,FirstZIP,Count
 "Dane, WI",53529,1
 "Darlington, WI",53530,1
 "Deerfield, WI",53531,1
-"De Forest, WI",53532,1
+"Deforest, WI",53532,1
 "Edgerton, WI",53534,1
 "Edmund, WI",53535,1
 "Evansville, WI",53536,1
@@ -17415,7 +17434,6 @@ Place,FirstZIP,Count
 "Wilson, WI",54027,1
 "Woodville, WI",54028,1
 "Houlton, WI",54082,1
-"Saint Joseph, WI",54082,1
 "Abrams, WI",54101,1
 "Amberg, WI",54102,1
 "Armstrong Creek, WI",54103,1
@@ -17859,7 +17877,6 @@ Place,FirstZIP,Count
 "Dalbo, MN",55017,1
 "Dennison, MN",55018,1
 "Dundas, MN",55019,1
-"Elko, MN",55020,1
 "Faribault, MN",55021,1
 "Farmington, MN",55024,1
 "Forest Lake, MN",55025,1
@@ -17885,7 +17902,6 @@ Place,FirstZIP,Count
 "Mora, MN",55051,1
 "Morristown, MN",55052,1
 "Nerstrand, MN",55053,1
-"New Market, MN",55054,1
 "Newport, MN",55055,1
 "North Branch, MN",55056,1
 "Northfield, MN",55057,1
@@ -17919,6 +17935,7 @@ Place,FirstZIP,Count
 "Becker, MN",55308,1
 "Big Lake, MN",55309,1
 "Bird Island, MN",55310,1
+"Maple Grove, MN",55311,1
 "Brownton, MN",55312,1
 "Buffalo, MN",55313,1
 "Buffalo Lake, MN",55314,1
@@ -17963,10 +17980,10 @@ Place,FirstZIP,Count
 "Mound, MN",55364,1
 "New Auburn, MN",55366,1
 "New Germany, MN",55367,1
+"Norwood Young America, MN",55368,1
 "Plato, MN",55370,1
 "Princeton, MN",55371,1
 "Prior Lake, MN",55372,1
-"Rockford, MN",55373,1
 "Rogers, MN",55374,1
 "Saint Bonifacius, MN",55375,1
 "Saint Michael, MN",55376,1
@@ -18562,7 +18579,7 @@ Place,FirstZIP,Count
 "Ponemah, MN",56666,1
 "Puposky, MN",56667,1
 "Ranier, MN",56668,1
-"Ray, MN",56669,1
+"Kabetogama, MN",56669,1
 "Redby, MN",56670,1
 "Redlake, MN",56671,1
 "Remer, MN",56672,1
@@ -18832,7 +18849,7 @@ Place,FirstZIP,Count
 "Langford, SD",57454,1
 "Lebanon, SD",57455,1
 "Leola, SD",57456,1
-"Longlake, SD",57457,1
+"Long Lake, SD",57457,1
 "Mansfield, SD",57460,1
 "Mellette, SD",57461,1
 "Northville, SD",57465,1
@@ -19366,7 +19383,7 @@ Place,FirstZIP,Count
 "Grass Range, MT",59032,1
 "Greycliff, MT",59033,1
 "Hardin, MT",59034,1
-"Yellowtail, MT",59035,1
+"Fort Smith, MT",59035,1
 "Harlowton, MT",59036,1
 "Huntley, MT",59037,1
 "Hysham, MT",59038,1
@@ -19482,7 +19499,7 @@ Place,FirstZIP,Count
 "Volborg, MT",59351,1
 "Wibaux, MT",59353,1
 "Willard, MT",59354,1
-"Malmstrom A F B, MT",59402,1
+"Malmstrom Afb, MT",59402,1
 "Augusta, MT",59410,1
 "Babb, MT",59411,1
 "Belt, MT",59412,1
@@ -19504,7 +19521,7 @@ Place,FirstZIP,Count
 "Ethridge, MT",59435,1
 "Fairfield, MT",59436,1
 "Floweree, MT",59440,1
-"Forestgrove, MT",59441,1
+"Forest Grove, MT",59441,1
 "Fort Benton, MT",59442,1
 "Fort Shaw, MT",59443,1
 "Galata, MT",59444,1
@@ -19698,8 +19715,6 @@ Place,FirstZIP,Count
 "Fox Lake, IL",60020,1
 "Fox River Grove, IL",60021,1
 "Glencoe, IL",60022,1
-"Glenview, IL",60025,1
-"Glenview Nas, IL",60026,1
 "Golf, IL",60029,1
 "Grayslake, IL",60030,1
 "Gurnee, IL",60031,1
@@ -19805,6 +19820,7 @@ Place,FirstZIP,Count
 "Chicago Ridge, IL",60415,1
 "Coal City, IL",60416,1
 "Crete, IL",60417,1
+"Crestwood, IL",60418,1
 "Dolton, IL",60419,1
 "Dwight, IL",60420,1
 "Elwood, IL",60421,1
@@ -19901,7 +19917,6 @@ Place,FirstZIP,Count
 "Yorkville, IL",60560,1
 "Darien, IL",60561,1
 "Fox Valley, IL",60599,1
-"Amf Ohare, IL",60666,1
 "Harwood Heights, IL",60706,1
 "Elmwood Park, IL",60707,1
 "Lincolnwood, IL",60712,1
@@ -20187,7 +20202,7 @@ Place,FirstZIP,Count
 "New Windsor, IL",61465,1
 "North Henderson, IL",61466,1
 "Oneida, IL",61467,1
-"Opheim, IL",61468,1
+"Ophiem, IL",61468,1
 "Oquawka, IL",61469,1
 "Prairie City, IL",61470,1
 "Raritan, IL",61471,1
@@ -20255,7 +20270,7 @@ Place,FirstZIP,Count
 "Washington, IL",61571,1
 "Yates City, IL",61572,1
 "Creve Coeur, IL",61610,1
-"East Peoria, IL",61611,1
+"Peoria Heights, IL",61616,1
 "Anchor, IL",61720,1
 "Armington, IL",61721,1
 "Arrowsmith, IL",61722,1
@@ -21636,7 +21651,7 @@ Place,FirstZIP,Count
 "Brinktown, MO",65443,1
 "Bucyrus, MO",65444,1
 "Cherryville, MO",65446,1
-"Cook Station, MO",65449,1
+"Cook Sta, MO",65449,1
 "Crocker, MO",65452,1
 "Cuba, MO",65453,1
 "Davisville, MO",65456,1
@@ -21702,7 +21717,7 @@ Place,FirstZIP,Count
 "Bradleyville, MO",65614,1
 "Brighton, MO",65617,1
 "Brixey, MO",65618,1
-"Brookline Station, MO",65619,1
+"Brookline, MO",65619,1
 "Bruner, MO",65620,1
 "Buffalo, MO",65622,1
 "Butterfield, MO",65623,1
@@ -21859,7 +21874,7 @@ Place,FirstZIP,Count
 "Highland, KS",66035,1
 "Hillsdale, KS",66036,1
 "Kincaid, KS",66039,1
-"La Cygne, KS",66040,1
+"Lacygne, KS",66040,1
 "Lancaster, KS",66041,1
 "Lane, KS",66042,1
 "Lansing, KS",66043,1
@@ -21896,6 +21911,8 @@ Place,FirstZIP,Count
 "Williamsburg, KS",66095,1
 "Winchester, KS",66097,1
 "Edwardsville, KS",66113,1
+"Prairie Village, KS",66208,1
+"Shawnee Mission, KS",66276,1
 "Alma, KS",66401,1
 "Auburn, KS",66402,1
 "Axtell, KS",66403,1
@@ -21975,6 +21992,7 @@ Place,FirstZIP,Count
 "Randolph, KS",66554,1
 "Fort Scott, KS",66701,1
 "Altoona, KS",66710,1
+"Arcadia, KS",66711,1
 "Arma, KS",66712,1
 "Baxter Springs, KS",66713,1
 "Benedict, KS",66714,1
@@ -22195,7 +22213,6 @@ Place,FirstZIP,Count
 "Wilmore, KS",67155,1
 "Winfield, KS",67156,1
 "Zenda, KS",67159,1
-"Mc Connell A F B, KS",67221,1
 "Mcconnell Afb, KS",67221,1
 "Independence, KS",67301,1
 "Altamont, KS",67330,1
@@ -22325,7 +22342,7 @@ Place,FirstZIP,Count
 "Raymond, KS",67573,1
 "Rozel, KS",67574,1
 "Rush Center, KS",67575,1
-"Saint John, KS",67576,1
+"St John, KS",67576,1
 "Stafford, KS",67578,1
 "Sterling, KS",67579,1
 "Sylvia, KS",67581,1
@@ -22373,7 +22390,7 @@ Place,FirstZIP,Count
 "Schoenchen, KS",67667,1
 "Stockton, KS",67669,1
 "Victoria, KS",67671,1
-"Wa Keeney, KS",67672,1
+"Wakeeney, KS",67672,1
 "Waldo, KS",67673,1
 "Walker, KS",67674,1
 "Woodston, KS",67675,1
@@ -22500,7 +22517,7 @@ Place,FirstZIP,Count
 "Winnebago, NE",68071,1
 "Winslow, NE",68072,1
 "Yutan, NE",68073,1
-"Offutt A F B, NE",68113,1
+"Offutt Afb, NE",68113,1
 "La Vista, NE",68128,1
 "Adams, NE",68301,1
 "Alexandria, NE",68303,1
@@ -23026,6 +23043,7 @@ Place,FirstZIP,Count
 "Abita Springs, LA",70420,1
 "Akers, LA",70421,1
 "Amite, LA",70422,1
+"Angie, LA",70426,1
 "Bush, LA",70431,1
 "Fluker, LA",70436,1
 "Folsom, LA",70437,1
@@ -23051,6 +23069,7 @@ Place,FirstZIP,Count
 "Talisheek, LA",70464,1
 "Tangipahoa, LA",70465,1
 "Tickfaw, LA",70466,1
+"Varnado, LA",70467,1
 "Arnaudville, LA",70512,1
 "Avery Island, LA",70513,1
 "Baldwin, LA",70514,1
@@ -23376,8 +23395,9 @@ Place,FirstZIP,Count
 "Montgomery, LA",71454,1
 "Mora, LA",71455,1
 "Natchez, LA",71456,1
+"Fort Polk, LA",71459,1
 "Negreet, LA",71460,1
-"Newllano, LA",71461,1
+"New Llano, LA",71461,1
 "Noble, LA",71462,1
 "Oakdale, LA",71463,1
 "Olla, LA",71465,1
@@ -23410,6 +23430,7 @@ Place,FirstZIP,Count
 "Jersey, AR",71651,1
 "Kingsland, AR",71652,1
 "Lake Village, AR",71653,1
+"Mc Gehee, AR",71654,1
 "Montrose, AR",71658,1
 "Moscow, AR",71659,1
 "New Edinburg, AR",71660,1
@@ -23417,6 +23438,7 @@ Place,FirstZIP,Count
 "Pickens, AR",71662,1
 "Portland, AR",71663,1
 "Rison, AR",71665,1
+"Rohwer, AR",71666,1
 "Star City, AR",71667,1
 "Tillar, AR",71670,1
 "Warren, AR",71671,1
@@ -23837,6 +23859,7 @@ Place,FirstZIP,Count
 "Hasty, AR",72640,1
 "Jasper, AR",72641,1
 "Lakeview, AR",72642,1
+"Lead Hill, MO",72643,1
 "Lead Hill, AR",72644,1
 "Leslie, AR",72645,1
 "Marble Falls, AR",72648,1
@@ -23999,7 +24022,6 @@ Place,FirstZIP,Count
 "Lookeba, OK",73053,1
 "Luther, OK",73054,1
 "Marlow, OK",73055,1
-"Bray, OK",73055,1
 "Marshall, OK",73056,1
 "Maysville, OK",73057,1
 "Meridian, OK",73058,1
@@ -24554,6 +24576,7 @@ Place,FirstZIP,Count
 "Wills Point, TX",75169,1
 "Wilmer, TX",75172,1
 "Nevada, TX",75173,1
+"Balch Springs, TX",75180,1
 "Sunnyvale, TX",75182,1
 "Royse City, TX",75189,1
 "Princeton, TX",75407,1
@@ -24808,7 +24831,7 @@ Place,FirstZIP,Count
 "Southlake, TX",76092,1
 "Rio Vista, TX",76093,1
 "Haltom City, TX",76117,1
-"Naval Air Station/ Jrb, TX",76127,1
+"Naval Air Station Jrb, TX",76127,1
 "Alvord, TX",76225,1
 "Argyle, TX",76226,1
 "Aubrey, TX",76227,1
@@ -24932,9 +24955,10 @@ Place,FirstZIP,Count
 "Jarrell, TX",76537,1
 "Jonesboro, TX",76538,1
 "Kempner, TX",76539,1
+"Fort Hood, TX",76544,1
 "Harker Heights, TX",76548,1
 "Lampasas, TX",76550,1
-"Little River, TX",76554,1
+"Little River Academy, TX",76554,1
 "Milano, TX",76556,1
 "Moody, TX",76557,1
 "Mound, TX",76558,1
@@ -25011,7 +25035,6 @@ Place,FirstZIP,Count
 "Whitney, TX",76692,1
 "Wortham, TX",76693,1
 "Woodway, TX",76712,1
-"Early, TX",76802,1
 "Art, TX",76820,1
 "Ballinger, TX",76821,1
 "Bangs, TX",76823,1
@@ -25364,6 +25387,8 @@ Place,FirstZIP,Count
 "Pawnee, TX",78145,1
 "Pettus, TX",78146,1
 "Poth, TX",78147,1
+"Universal City, TX",78148,1
+"Jbsa Randolph, TX",78150,1
 "Runge, TX",78151,1
 "Saint Hedwig, TX",78152,1
 "Schertz, TX",78154,1
@@ -25373,6 +25398,8 @@ Place,FirstZIP,Count
 "Tuleta, TX",78162,1
 "Bulverde, TX",78163,1
 "Yorktown, TX",78164,1
+"Jbsa Ft Sam Houston, TX",78234,1
+"Jbsa Lackland, TX",78236,1
 "Agua Dulce, TX",78330,1
 "Armstrong, TX",78338,1
 "Banquete, TX",78339,1
@@ -25497,8 +25524,10 @@ Place,FirstZIP,Count
 "Mc Neil, TX",78651,1
 "Manchaca, TX",78652,1
 "Manor, TX",78653,1
+"Marble Falls, TX",78654,1
 "Martindale, TX",78655,1
 "Maxwell, TX",78656,1
+"Horseshoe Bay, TX",78657,1
 "Ottine, TX",78658,1
 "Paige, TX",78659,1
 "Prairie Lea, TX",78661,1
@@ -25524,7 +25553,7 @@ Place,FirstZIP,Count
 "Comstock, TX",78837,1
 "Concan, TX",78838,1
 "Crystal City, TX",78839,1
-"Laughlin A F B, TX",78843,1
+"Laughlin Afb, TX",78843,1
 "D Hanis, TX",78850,1
 "Dryden, TX",78851,1
 "El Indio, TX",78860,1
@@ -25827,12 +25856,14 @@ Place,FirstZIP,Count
 "Franktown, CO",80116,1
 "Kiowa, CO",80117,1
 "Larkspur, CO",80118,1
+"Lone Tree, CO",80124,1
 "Louviers, CO",80131,1
 "Monument, CO",80132,1
 "Palmer Lake, CO",80133,1
 "Sedalia, CO",80135,1
 "Strasburg, CO",80136,1
 "Watkins, CO",80137,1
+"Thornton, CO",80241,1
 "Alma, CO",80420,1
 "Bailey, CO",80421,1
 "Black Hawk, CO",80422,1
@@ -26518,7 +26549,7 @@ Place,FirstZIP,Count
 "Middleton, ID",83644,1
 "Midvale, ID",83645,1
 "Mountain Home, ID",83647,1
-"Mountain Home A F B, ID",83648,1
+"Mountain Home Afb, ID",83648,1
 "Murphy, ID",83650,1
 "New Meadows, ID",83654,1
 "New Plymouth, ID",83655,1
@@ -26826,27 +26857,30 @@ Place,FirstZIP,Count
 "Veyo, UT",84782,1
 "Dammeron Valley, UT",84783,1
 "Hildale, UT",84784,1
-"Anthem, AZ",85086,1
 "New River, AZ",85087,1
 "Gold Canyon, AZ",85118,1
 "Bapchule, AZ",85121,1
 "Arizona City, AZ",85123,1
+"Chandler Heights, AZ",85127,1
 "Coolidge, AZ",85128,1
 "Eloy, AZ",85131,1
 "Florence, AZ",85132,1
 "Hayden, AZ",85135,1
 "Kearny, AZ",85137,1
 "Picacho, AZ",85141,1
+"Queen Creek, AZ",85142,1
 "Red Rock, AZ",85145,1
 "Sacaton, AZ",85147,1
 "Stanfield, AZ",85172,1
 "Superior, AZ",85173,1
+"Tortilla Flat, AZ",85190,1
+"Valley Farms, AZ",85191,1
 "Winkelman, AZ",85192,1
 "Higley, AZ",85236,1
 "Paradise Valley, AZ",85253,1
 "Rio Verde, AZ",85263,1
 "Fort Mcdowell, AZ",85264,1
-"Luke Afb, AZ",85309,1
+"Luke Air Force Base, AZ",85309,1
 "Aguila, AZ",85320,1
 "Ajo, AZ",85321,1
 "Arlington, AZ",85322,1
@@ -26936,7 +26970,6 @@ Place,FirstZIP,Count
 "Cortaro, AZ",85652,1
 "Rillito, AZ",85654,1
 "Catalina, AZ",85738,1
-"Oro Valley, AZ",85755,1
 "Cibecue, AZ",85911,1
 "White Mountain Lake, AZ",85912,1
 "Alpine, AZ",85920,1
@@ -26990,7 +27023,7 @@ Place,FirstZIP,Count
 "Williams, AZ",86046,1
 "Winslow, AZ",86047,1
 "North Rim, AZ",86052,1
-"Kaibito, AZ",86053,1
+"Kaibeto, AZ",86053,1
 "Shonto, AZ",86054,1
 "Ash Fork, AZ",86320,1
 "Bagdad, AZ",86321,1
@@ -27073,7 +27106,7 @@ Place,FirstZIP,Count
 "La Joya, NM",87028,1
 "Lindrith, NM",87029,1
 "Los Lunas, NM",87031,1
-"Mc Intosh, NM",87032,1
+"Mcintosh, NM",87032,1
 "Pueblo Of Acoma, NM",87034,1
 "Moriarty, NM",87035,1
 "Mountainair, NM",87036,1
@@ -27178,7 +27211,7 @@ Place,FirstZIP,Count
 "Rowe, NM",87562,1
 "San Cristobal, NM",87564,1
 "San Jose, NM",87565,1
-"San Juan Pueblo, NM",87566,1
+"Ohkay Owingeh, NM",87566,1
 "Santa Cruz, NM",87567,1
 "Serafina, NM",87569,1
 "Taos, NM",87571,1
@@ -27193,6 +27226,7 @@ Place,FirstZIP,Count
 "Vallecitos, NM",87581,1
 "Velarde, NM",87582,1
 "Villanueva, NM",87583,1
+"Spaceport City, NM",87654,1
 "Las Vegas, NM",87701,1
 "Angel Fire, NM",87710,1
 "Anton Chico, NM",87711,1
@@ -27319,7 +27353,7 @@ Place,FirstZIP,Count
 "Loco Hills, NM",88255,1
 "Loving, NM",88256,1
 "Lovington, NM",88260,1
-"Mc Donald, NM",88262,1
+"Mcdonald, NM",88262,1
 "Malaga, NM",88263,1
 "Maljamar, NM",88264,1
 "Monument, NM",88265,1
@@ -27367,7 +27401,7 @@ Place,FirstZIP,Count
 "Gladstone, NM",88422,1
 "Grenville, NM",88424,1
 "Logan, NM",88426,1
-"Mc Alister, NM",88427,1
+"Mcalister, NM",88427,1
 "Nara Visa, NM",88430,1
 "Newkirk, NM",88431,1
 "Quay, NM",88433,1
@@ -27387,6 +27421,7 @@ Place,FirstZIP,Count
 "Logandale, NV",89021,1
 "Manhattan, NV",89022,1
 "Mercury, NV",89023,1
+"Coyote Springs, NV",89037,1
 "Cal Nev Ari, NV",89039,1
 "Overton, NV",89040,1
 "Panaca, NV",89042,1
@@ -27455,8 +27490,9 @@ Place,FirstZIP,Count
 "West Wendover, NV",89883,1
 "West Hollywood, CA",90069,1
 "Dodgertown, CA",90090,1
-"Bell, CA",90201,1
-"Bell Gardens, CA",90202,1
+"Playa Vista, CA",90094,1
+"Bell Gardens, CA",90201,1
+"Bell, CA",90202,1
 "El Segundo, CA",90245,1
 "Hermosa Beach, CA",90254,1
 "Huntington Park, CA",90255,1
@@ -27483,6 +27519,7 @@ Place,FirstZIP,Count
 "Signal Hill, CA",90755,1
 "Mount Wilson, CA",91023,1
 "Verdugo City, CA",91046,1
+"Porter Ranch, CA",91326,1
 "Oak Park, CA",91377,1
 "Stevenson Ranch, CA",91381,1
 "Universal City, CA",91608,1
@@ -27497,7 +27534,7 @@ Place,FirstZIP,Count
 "Rowland Heights, CA",91748,1
 "La Verne, CA",91750,1
 "Mira Loma, CA",91752,1
-"Mt Baldy, CA",91759,1
+"Mount Baldy, CA",91759,1
 "Montclair, CA",91763,1
 "Diamond Bar, CA",91765,1
 "San Dimas, CA",91773,1
@@ -27558,7 +27595,7 @@ Place,FirstZIP,Count
 "Thousand Palms, CA",92276,1
 "Vidal, CA",92280,1
 "Westmorland, CA",92281,1
-"White Water, CA",92282,1
+"Whitewater, CA",92282,1
 "Winterhaven, CA",92283,1
 "Landers, CA",92285,1
 "Adelanto, CA",92301,1
@@ -27609,7 +27646,7 @@ Place,FirstZIP,Count
 "Wrightwood, CA",92397,1
 "Yermo, CA",92398,1
 "Yucaipa, CA",92399,1
-"March Air Force Base, CA",92518,1
+"March Air Reserve Base, CA",92518,1
 "Aguanga, CA",92536,1
 "Anza, CA",92539,1
 "Homeland, CA",92548,1
@@ -27617,6 +27654,7 @@ Place,FirstZIP,Count
 "Mountain Center, CA",92561,1
 "Nuevo, CA",92567,1
 "Menifee, CA",92584,1
+"Quail Valley, CA",92587,1
 "Wildomar, CA",92595,1
 "Winchester, CA",92596,1
 "El Toro, CA",92609,1
@@ -27625,6 +27663,7 @@ Place,FirstZIP,Count
 "Corona Del Mar, CA",92625,1
 "Dana Point, CA",92629,1
 "Lake Forest, CA",92630,1
+"Laguna Woods, CA",92637,1
 "East Irvine, CA",92650,1
 "Midway City, CA",92655,1
 "Newport Coast, CA",92657,1
@@ -27655,8 +27694,10 @@ Place,FirstZIP,Count
 "Earlimart, CA",93219,1
 "Edison, CA",93220,1
 "Exeter, CA",93221,1
+"Pine Mountain Club, CA",93222,1
 "Farmersville, CA",93223,1
 "Fellows, CA",93224,1
+"Frazier Park, CA",93225,1
 "Glennville, CA",93226,1
 "Goshen, CA",93227,1
 "Huron, CA",93234,1
@@ -27779,7 +27820,7 @@ Place,FirstZIP,Count
 "Parlier, CA",93648,1
 "Piedra, CA",93649,1
 "Prather, CA",93651,1
-"Raisin, CA",93652,1
+"Raisin City, CA",93652,1
 "Raymond, CA",93653,1
 "Reedley, CA",93654,1
 "Riverdale, CA",93656,1
@@ -27797,6 +27838,7 @@ Place,FirstZIP,Count
 "Traver, CA",93673,1
 "Squaw Valley, CA",93675,1
 "Big Sur, CA",93920,1
+"Carmel By The Sea, CA",93921,1
 "Carmel Valley, CA",93924,1
 "Chualar, CA",93925,1
 "Gonzales, CA",93926,1
@@ -27878,6 +27920,7 @@ Place,FirstZIP,Count
 "Bodega Bay, CA",94923,1
 "Bolinas, CA",94924,1
 "Dillon Beach, CA",94929,1
+"Cotati, CA",94931,1
 "Forest Knolls, CA",94933,1
 "Inverness, CA",94937,1
 "Lagunitas, CA",94938,1
@@ -27943,10 +27986,8 @@ Place,FirstZIP,Count
 "West Point, CA",95255,1
 "Wilseyville, CA",95257,1
 "Woodbridge, CA",95258,1
-"Lyoth, CA",95296,1
 "Atwater, CA",95301,1
 "Ballico, CA",95303,1
-"Banta, CA",95304,1
 "Big Oak Flat, CA",95305,1
 "Catheys Valley, CA",95306,1
 "Ceres, CA",95307,1
@@ -28037,7 +28078,7 @@ Place,FirstZIP,Count
 "Kenwood, CA",95452,1
 "Lakeport, CA",95453,1
 "Laytonville, CA",95454,1
-"Littleriver, CA",95456,1
+"Little River, CA",95456,1
 "Lower Lake, CA",95457,1
 "Lucerne, CA",95458,1
 "Manchester, CA",95459,1
@@ -28117,7 +28158,6 @@ Place,FirstZIP,Count
 "Coloma, CA",95613,1
 "Cool, CA",95614,1
 "Courtland, CA",95615,1
-"El Macero, CA",95618,1
 "Diamond Springs, CA",95619,1
 "Dixon, CA",95620,1
 "El Dorado, CA",95623,1
@@ -28144,7 +28184,6 @@ Place,FirstZIP,Count
 "Lincoln, CA",95648,1
 "Loomis, CA",95650,1
 "Lotus, CA",95651,1
-"Mcclellan Afb, CA",95652,1
 "Mcclellan, CA",95652,1
 "Madison, CA",95653,1
 "Martell, CA",95654,1
@@ -28215,7 +28254,7 @@ Place,FirstZIP,Count
 "Brownsville, CA",95919,1
 "Butte City, CA",95920,1
 "Camptonville, CA",95922,1
-"Canyondam, CA",95923,1
+"Canyon Dam, CA",95923,1
 "Cedar Ridge, CA",95924,1
 "Challenge, CA",95925,1
 "Clipper Mills, CA",95930,1
@@ -28253,7 +28292,7 @@ Place,FirstZIP,Count
 "Rackerby, CA",95972,1
 "Richvale, CA",95974,1
 "Rough And Ready, CA",95975,1
-"Smartville, CA",95977,1
+"Smartsville, CA",95977,1
 "Stirling City, CA",95978,1
 "Stonyford, CA",95979,1
 "Storrie, CA",95980,1
@@ -28337,7 +28376,7 @@ Place,FirstZIP,Count
 "Whitmore, CA",96096,1
 "Yreka, CA",96097,1
 "Alturas, CA",96101,1
-"Blairsden-Graeagle, CA",96103,1
+"Blairsden Graeagle, CA",96103,1
 "Cedarville, CA",96104,1
 "Chilcoot, CA",96105,1
 "Clio, CA",96106,1
@@ -28376,9 +28415,11 @@ Place,FirstZIP,Count
 "Tahoe City, CA",96145,1
 "Olympic Valley, CA",96146,1
 "Tahoe Vista, CA",96148,1
+"APO STA, ",96365,1
 "Antelope, OR",97001,1
 "Aurora, OR",97002,1
 "Beavercreek, OR",97004,1
+"Boring, OR",97009,1
 "Bridal Veil, OR",97010,1
 "Brightwood, OR",97011,1
 "Canby, OR",97013,1
@@ -28429,6 +28470,7 @@ Place,FirstZIP,Count
 "Wilsonville, OR",97070,1
 "Woodburn, OR",97071,1
 "Happy Valley, OR",97086,1
+"Damascus, OR",97089,1
 "Amity, OR",97101,1
 "Arch Cape, OR",97102,1
 "Astoria, OR",97103,1
@@ -28753,6 +28795,7 @@ Place,FirstZIP,Count
 "Snoqualmie, WA",98065,1
 "Snoqualmie Pass, WA",98068,1
 "Vashon, WA",98070,1
+"Mill Creek, WA",98082,1
 "Bainbridge Island, WA",98110,1
 "Acme, WA",98220,1
 "Anacortes, WA",98221,1
@@ -28868,6 +28911,7 @@ Place,FirstZIP,Count
 "Longmire, WA",98397,1
 "Paradise Inn, WA",98398,1
 "Camp Murray, WA",98430,1
+"Mcchord Afb, WA",98438,1
 "University Place, WA",98467,1
 "Tumwater, WA",98511,1
 "Aberdeen, WA",98520,1
