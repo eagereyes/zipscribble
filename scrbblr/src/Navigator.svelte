@@ -41,7 +41,9 @@
 			} else if (state >= 0) {
 				highlightRange = [digits[first].states[state].startOffset, digits[first].states[state].endOffset];
 			} else {
-				highlightRange = zoomRange;
+				timeoutID = setTimeout(() => {
+					highlightRange = zoomRange;
+				}, 10);
 			}
 		} else {
 			timeoutID = setTimeout(() => {
@@ -79,7 +81,9 @@
 				on:mouseenter={() => setActiveDigit(i, -1, s)} on:mouseleave={() => setActiveDigit(i, -1, -1)} />
 			<line x1={xScale(state.startOffset)} y1={40} x2={xScale(state.startOffset)} y2={60} />
 			{#if xScale(state.endOffset)-xScale(state.startOffset) > 20}
-				<text x={(xScale(state.startOffset)+xScale(state.endOffset))/2} y={55} >{state.state}</text>
+				<text x={(xScale(state.startOffset)+xScale(state.endOffset))/2} y={55} 
+					class:active={(activeFirst === i && activeState === s) || (activeState >= 0 && activeState < digits[activeFirst].states.length && state.state === digits[activeFirst].states[activeState].state)}
+					>{state.state}</text>
 			{/if}
 		{/each}
 		<line x1={0} y1={20} x2={width} y2={20} />

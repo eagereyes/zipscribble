@@ -122,7 +122,7 @@
 <main>
 	{#if zipCodes}
 		<svg width={SVGWIDTH} height={SVGHEIGHT}>
-			<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-50} {zipCodes}
+			<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-60} {zipCodes}
 				{zoomRange} {highlightRange} />
 			<Navigator y={SVGHEIGHT-60} width={SVGWIDTH}
 				{digits} numZIPs={zipCodes.length}
