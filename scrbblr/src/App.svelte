@@ -1,5 +1,5 @@
 <script>
-	import { text } from 'd3-fetch';
+	import { csv, text } from 'd3-fetch';
 	import { geoAlbers } from 'd3-geo';
 	import { onMount } from 'svelte';
 
@@ -7,8 +7,8 @@
 	import PlacesBars from './PlacesBars.svelte';
 	import Navigator from './Navigator.svelte';
 
-	const FILENAME = 'data/US.txt';
-	const EXCLUDES = ['AA', 'AK', 'AP', 'HI', 'GU', 'FM', 'PW', 'MP', 'MH'];
+	// const FILENAME = 'data/US.txt';
+	const FILENAME = 'data/us-lower48.csv';
 	const PROJECTION = geoAlbers();
 
 	const SVGWIDTH = 800;
@@ -32,29 +32,37 @@
 	let highlightRange = [];
 
 	onMount(async () => {
-		text(FILENAME).then(data => {
-			let records = data.split('\n');
-			let zips = [];
-			for (let r of records) {
-				let row = r.split('\t');
-				if (!EXCLUDES.includes(row[4]) && row.length > 1) {
-					const lon = +row[10];
-					const lat = +row[9];
-					const p = PROJECTION([lon, lat]);
-					let z = {
-						zip:		+row[1],
-						place:		row[2],
-						state:		row[4],
-						lon:		+lon,
-						lat:		+lat,
-						lon_proj:	p[0],
-						lat_proj:	p[1]
-					};
-					zips.push(z);
-				}
-			}
+		// text(FILENAME).then(data => {
+		// 	let records = data.split('\n');
+		// 	let zips = [];
+		// 	for (let r of records) {
+		// 		let row = r.split('\t');
+		// 		if (!EXCLUDES.includes(row[4]) && row.length > 1) {
+		// 			const lon = +row[10];
+		// 			const lat = +row[9];
+		// 			const p = PROJECTION([lon, lat]);
+		// 			let z = {
+		// 				zip:		+row[1],
+		// 				place:		row[2],
+		// 				state:		row[4],
+		// 				lon:		+lon,
+		// 				lat:		+lat,
+		// 				lon_proj:	p[0],
+		// 				lat_proj:	p[1]
+		// 			};
+		// 			zips.push(z);
+		// 		}
+		// 	}
 
-			zips.sort((a, b) => a.zip-b.zip);
+		// 	zips.sort((a, b) => a.zip-b.zip);
+
+		csv(FILENAME).then(zips => {
+
+			for (let z of zips) {
+				const p = PROJECTION([z.lon, z.lat]);
+				z.lon_proj = p[0];
+				z.lat_proj = p[1];
+			}
 
 			let currentDigit = 0;
 			let currentSecondDig = 0;
