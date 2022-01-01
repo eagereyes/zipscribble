@@ -1,14 +1,13 @@
 <script>
-	import { csv, text } from 'd3-fetch';
+	import { csv, json } from 'd3-fetch';
 	import { geoAlbers } from 'd3-geo';
 	import { onMount } from 'svelte';
 
 	import ZIPScribble from './ZIPScribble.svelte';
-	import PlacesBars from './PlacesBars.svelte';
 	import Navigator from './Navigator.svelte';
 
-	// const FILENAME = 'data/US.txt';
-	const FILENAME = 'data/us-lower48.csv';
+	const ZIPSFILENAME = 'data/us-lower48.csv';
+	const STATESFILENAME = 'data/us-states-20m.json';
 	const PROJECTION = geoAlbers();
 
 	const SVGWIDTH = 800;
@@ -28,12 +27,14 @@
 											}})
 					}});
 
+	let states = [];
+
 	let zoomRange = [];
 	let highlightRange = [];
 
 	onMount(async () => {
 
-		csv(FILENAME).then(zips => {
+		csv(ZIPSFILENAME).then(zips => {
 
 			for (let z of zips) {
 				const p = PROJECTION([z.lon, z.lat]);
@@ -101,13 +102,37 @@
 
 			places.sort((a, b) => b.zips - a.zips);
 		});
+
+		json(STATESFILENAME).then(statesGeoJSON => {
+			states = statesGeoJSON.features
+				.filter(s => !['02', '15', '72'].includes(s.properties.STATE))
+				.map(s => {
+					let geo;
+					if (s.geometry.type === 'Polygon')
+						geo = [s.geometry.coordinates[0].map(coord => PROJECTION([coord[0], coord[1]]))];
+					else
+						geo = s.geometry.coordinates.map(p => p[0].map(coord => PROJECTION([coord[0], coord[1]])));
+					return {
+						'state': s.properties.NAME,
+						'geo': geo.map(a => a.map(p => { return {
+							'lat_proj': p[1],
+							'lon_proj': p[0]
+							}}))
+					}
+				});
+			console.log(states);
+		});
+
 	});
+
+
 </script>
 
 <main>
 	{#if zipCodes}
 		<svg width={SVGWIDTH} height={SVGHEIGHT}>
-			<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-60} {zipCodes}
+			<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-60}
+				{zipCodes} {states}
 				{zoomRange} {highlightRange} />
 			<Navigator y={SVGHEIGHT-60} width={SVGWIDTH}
 				{digits} numZIPs={zipCodes.length}

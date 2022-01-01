@@ -9,6 +9,7 @@
 	export let width;
 	export let height;
 	export let zipCodes;
+	export let states;
 	export let zoomRange;
 	export let highlightRange;
 	
@@ -90,6 +91,11 @@
 
 {#if zipCodes}
 <g transform={makeTransform($t)}>
+	{#each states as statePolys}
+		{#each statePolys.geo as p}
+			<path d={makePath(p)} class="state" />
+		{/each}
+	{/each}
 	{#if zoomRange && zoomRange.length > 0}
 		<path d={fullPath} class="background" />
 	{/if}
@@ -103,13 +109,18 @@
 <style>
 	path {
 		stroke: #333;
-		stroke-width: 1px;
+		stroke-width: .7px;
 		stroke-linejoin: miter;
 		fill: none;
 	}
 
 	path.background {
-		stroke: lightgrey;
+		stroke: #ccc;
+	}
+
+	path.state {
+		stroke: white;
+		fill: #eee;
 	}
 
 	@media (prefers-color-scheme: dark) {
