@@ -12,6 +12,9 @@ Additional data sources:
 - [Simple Maps ZIP Codes Database, Basic version](https://simplemaps.com/data/us-zips)
 - [Zip Codes.org, Personal/Free version](https://www.unitedstateszipcodes.org/zip-code-database/)
 
+State and county boundaries from [the US Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html), converted by
+[Eric Celeste](https://eric.clst.org/tech/usgeojson/).
+
 ## Scripts
 
 There are two scripts that download and process the data to be ready for rendering.
