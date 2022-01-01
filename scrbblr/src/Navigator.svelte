@@ -14,7 +14,7 @@
 	let xScale = scaleLinear([0, numZIPs], [0, width]);
 
 	let activeFirst = -1;
-	let activeSecond = -1;
+	let activeSecond = undefined;
 	let activeState = -1;
 
 	let timeoutID = 0;
@@ -25,6 +25,55 @@
 	onMount(() => {
 		svg = document.querySelector('svg');
 		point = svg.createSVGPoint();
+
+		document.onkeydown = e => {
+			if (e.key >= '0' && e.key <= '9') {
+				setActiveDigit(+e.key);
+			} else {
+				switch(e.key) {
+					case 'x':
+						setActiveDigit(-1);
+					break;
+					case "ArrowLeft":
+						if (activeSecond >= 0) {
+							if (activeSecond === 0) {
+								if (activeFirst > 0) {
+									setActiveDigit(activeFirst-1, 9);
+								}
+							} else {
+								setActiveDigit(activeFirst, activeSecond-1);
+							}
+						} else if (activeFirst > 0) {
+							setActiveDigit(activeFirst-1);
+						}
+					break;
+					case "ArrowRight":
+						if (activeSecond >= 0) {
+							if (activeSecond === 9) {
+								if (activeFirst < 9 ) {
+									setActiveDigit(activeFirst+1, 0);
+								}
+							} else {
+								setActiveDigit(activeFirst, activeSecond+1);
+							}
+						} else if (activeFirst < 9) {
+							setActiveDigit(activeFirst+1);
+						}
+					break;
+					case "ArrowDown":
+						if (!activeSecond) {
+							setActiveDigit(activeFirst, 0);
+						}
+					break;
+					case "ArrowUp":
+						if (activeSecond >= 0) {
+							setActiveDigit(activeFirst);
+						}
+					break;
+				}
+			}
+			e.preventDefault();
+		}
 	});
 
 	function setActiveDigit(first, second, state) {
@@ -54,7 +103,7 @@
 		}
 		activeFirst = first;
 		activeSecond = second;
-		activeState = state;
+		activeState = state; 
 	}
 
 
