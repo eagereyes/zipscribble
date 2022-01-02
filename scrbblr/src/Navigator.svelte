@@ -42,7 +42,7 @@
 								} else if (activeFirst > 0) {
 									setActiveDigit(activeFirst-1, 9);
 								}
-							} else {
+							} else if (activeFirst !== 0 || activeSecond !== 1) { // don't got below 01xxx
 								setActiveDigit(activeFirst, activeSecond-1);
 							}
 						} else if (activeFirst > 0) {
@@ -66,7 +66,11 @@
 					break;
 					case "ArrowDown":
 						if (!activeSecond) {
-							setActiveDigit(activeFirst, 0);
+							if (activeFirst === 0) {
+								setActiveDigit(0, 1); // start at 01xxx
+							} else {
+								setActiveDigit(activeFirst, 0);
+							}
 						}
 					break;
 					case "ArrowUp":
