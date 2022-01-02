@@ -88,6 +88,26 @@
 			// console.log(digits);
 			// console.log(`${zips.length} ZIP codes`);
 
+			// remove (spurious?) extremely short runs of ZIPs and stitch states back together
+			for (let d of digits) {
+				d.states = d.states.filter(s => s.endOffset-s.startOffset > 2);
+				let s = d.states[0];
+				let i = 0;
+				let newStates = [];
+				do {
+					while (i < d.states.length-1 && d.states[i+1].state === s.state) {
+						i += 1;
+						s.endOffset = d.states[i].endOffset;
+					}
+					newStates.push(s);
+					i += 1;
+					if (i < d.states.length) {
+						s = d.states[i];
+					}
+				} while (i < d.states.length);
+				d.states = newStates;
+			}
+
 			zipCodes = zips;
 
 			let placeHash = {};
