@@ -13,6 +13,13 @@
 	const SVGWIDTH = 800;
 	const SVGHEIGHT = 600;
 
+	const STATECODES = ['', 'AL', 'AK', '', 'AZ', 'AR', 'CA', '', 'CO', 'CT',
+						'DE', 'DC', 'FL', 'GA', '', 'HI', 'ID', 'IL', 'IN', 'IA',
+						'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO',
+						'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH',
+						'OK', 'OR', 'PA', '', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT',
+						'VT', 'VA', '', 'WA', 'WV', 'WI', 'WY'];
+
 	let zipCodes = null;
 	let places = [];
 	let digits = [...Array(10)].map(d => {
@@ -113,14 +120,13 @@
 					else
 						geo = s.geometry.coordinates.map(p => p[0].map(coord => PROJECTION([coord[0], coord[1]])));
 					return {
-						'state': s.properties.NAME,
+						'state': STATECODES[+s.properties.STATE],
 						'geo': geo.map(a => a.map(p => { return {
 							'lat_proj': p[1],
 							'lon_proj': p[0]
 							}}))
 					}
 				});
-			console.log(states);
 		});
 
 	});

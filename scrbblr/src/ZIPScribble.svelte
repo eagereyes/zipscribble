@@ -109,7 +109,7 @@
 <style>
 	path {
 		stroke: #333;
-		stroke-width: .7px;
+		stroke-width: .5px;
 		stroke-linejoin: miter;
 		fill: none;
 	}
@@ -130,6 +130,12 @@
 
 		path.background {
 			stroke: #666;
+		}
+
+		path.state {
+			stroke: #333;
+			stroke-width: 2px;
+			fill: #444;
 		}
 	}
 </style>
