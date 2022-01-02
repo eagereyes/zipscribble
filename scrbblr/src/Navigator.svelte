@@ -37,7 +37,9 @@
 					case "ArrowLeft":
 						if (activeSecond >= 0) {
 							if (activeSecond === 0) {
-								if (activeFirst > 0) {
+								if (activeFirst === 1) { // go from 10xxx to 08xxx, skip 09xxx
+									setActiveDigit(0, 8);
+								} else if (activeFirst > 0) {
 									setActiveDigit(activeFirst-1, 9);
 								}
 							} else {
@@ -49,7 +51,9 @@
 					break;
 					case "ArrowRight":
 						if (activeSecond >= 0) {
-							if (activeSecond === 9) {
+							if (activeFirst === 0 && activeSecond === 8) { // go from 08xxx to 10xxx
+								setActiveDigit(1, 0);
+							} else if (activeSecond === 9) {
 								if (activeFirst < 9 ) {
 									setActiveDigit(activeFirst+1, 0);
 								}
