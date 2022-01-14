@@ -7,11 +7,13 @@
 	export let y;
 	export let width;
 	export let digits;
-	export let numZIPs;
+	export let zips;
 	export let zoomRange = [];
 	export let highlightRange = [];
+	export let title;
+	export let subtitle;
 
-	let xScale = scaleLinear([0, numZIPs], [0, width]);
+	let xScale = scaleLinear([0, zips.length], [0, width]);
 
 	let activeFirst = -1;
 	let activeSecond = undefined;
@@ -102,6 +104,10 @@
 					highlightRange = zoomRange;
 				}, 10);
 			}
+			const rangeStart = second >= 0 ? highlightRange[0] : zoomRange[0];
+			const rangeEnd = second >= 0 ? highlightRange[1] : zoomRange[1];
+			title = `ZIP Codes ${first}${second >= 0 ? second : 'x'}xxx: ${zips[rangeStart].zip} to ${zips[rangeEnd-1].zip}`;
+			subtitle = `${zips[rangeStart].place}, ${zips[rangeStart].state} to ${zips[rangeEnd-1].place}, ${zips[rangeEnd-1].state}`
 		} else {
 			timeoutID = setTimeout(() => {
 				zoomRange = [];

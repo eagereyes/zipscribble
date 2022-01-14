@@ -5,6 +5,7 @@
 
 	import ZIPScribble from './ZIPScribble.svelte';
 	import Navigator from './Navigator.svelte';
+	import Title from './Title.svelte';
 
 	const ZIPSFILENAME = 'data/us-lower48.csv';
 	const STATESFILENAME = 'data/us-states-20m.json';
@@ -12,6 +13,7 @@
 
 	const SVGWIDTH = 800;
 	const SVGHEIGHT = 600;
+	const TITLEHEIGHT = 50;
 
 	const STATECODES = ['', 'AL', 'AK', '', 'AZ', 'AR', 'CA', '', 'CO', 'CT',
 						'DE', 'DC', 'FL', 'GA', '', 'HI', 'ID', 'IL', 'IN', 'IA',
@@ -38,6 +40,9 @@
 
 	let zoomRange = [];
 	let highlightRange = [];
+
+	let title = '';
+	let subtitle = '';
 
 	onMount(async () => {
 
@@ -157,12 +162,16 @@
 <main>
 	{#if zipCodes}
 		<svg width={SVGWIDTH} height={SVGHEIGHT}>
-			<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-60}
+			<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-60-TITLEHEIGHT} y={TITLEHEIGHT}
 				{zipCodes} {states}
 				{zoomRange} {highlightRange} />
+			<Title width={SVGWIDTH} height={TITLEHEIGHT}
+				{title} {subtitle} />
 			<Navigator y={SVGHEIGHT-60} width={SVGWIDTH}
-				{digits} numZIPs={zipCodes.length}
-				bind:zoomRange={zoomRange} bind:highlightRange={highlightRange} />
+				{digits} zips={zipCodes}
+				bind:zoomRange={zoomRange} bind:highlightRange={highlightRange}
+				bind:title={title} bind:subtitle={subtitle}
+				 />
 		</svg>
 	{/if}
 </main>
