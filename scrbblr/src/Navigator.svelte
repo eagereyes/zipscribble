@@ -13,7 +13,7 @@
 	export let title;
 	export let subtitle;
 
-	let xScale = scaleLinear([0, zips.length], [0, width]);
+	$: xScale = scaleLinear([0, zips.length], [0, width]);
 
 	let activeFirst = -1;
 	let activeSecond = undefined;

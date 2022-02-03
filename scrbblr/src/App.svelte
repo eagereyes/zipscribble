@@ -1,7 +1,7 @@
 <script>
 	import { csv, json } from 'd3-fetch';
 	import { geoAlbers } from 'd3-geo';
-	import { onMount } from 'svelte';
+	import { onMount, afterUpdate } from 'svelte';
 
 	import ZIPScribble from './ZIPScribble.svelte';
 	import Navigator from './Navigator.svelte';
@@ -11,8 +11,8 @@
 	const STATESFILENAME = 'data/us-states-20m.json';
 	const PROJECTION = geoAlbers();
 
-	const SVGWIDTH = 800;
-	const SVGHEIGHT = 600;
+	let SVGWIDTH = 800;
+	let SVGHEIGHT = 600;
 	const TITLEHEIGHT = 50;
 
 	const STATECODES = ['', 'AL', 'AK', '', 'AZ', 'AR', 'CA', '', 'CO', 'CT',
@@ -45,6 +45,8 @@
 	let subtitle = '';
 
 	onMount(async () => {
+
+		window.onresize = resized;
 
 		csv(ZIPSFILENAME).then(zips => {
 
@@ -153,15 +155,24 @@
 					}
 				});
 		});
-
 	});
 
+	let svgElement;
+	function resized() {
+		if (svgElement) {
+			SVGWIDTH = svgElement.width.baseVal.value;
+			SVGHEIGHT = svgElement.height.baseVal.value;
+			console.log(SVGWIDTH, SVGHEIGHT);
+		}
+	}
+
+	afterUpdate(resized);
 
 </script>
 
 <main>
-	{#if zipCodes}
-		<svg width={SVGWIDTH} height={SVGHEIGHT}>
+	<svg width="100%" height="100%" bind:this={svgElement}>
+		{#if zipCodes}
 			<ZIPScribble width={SVGWIDTH} height={SVGHEIGHT-60-TITLEHEIGHT} y={TITLEHEIGHT}
 				{zipCodes} {states}
 				{zoomRange} {highlightRange} />
@@ -171,24 +182,21 @@
 				{digits} zips={zipCodes}
 				bind:zoomRange={zoomRange} bind:highlightRange={highlightRange}
 				bind:title={title} bind:subtitle={subtitle}
-				 />
-		</svg>
-	{/if}
+				/>
+		{/if}
+	</svg>
 </main>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		margin: 0;
+		width: 100%;
+		height: 100%;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	:global(body) {
+		margin: 0;
+		padding: 0;
 	}
 
 	@media (min-width: 640px) {

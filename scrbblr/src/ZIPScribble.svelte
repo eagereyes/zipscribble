@@ -24,7 +24,7 @@
 
 	let fullPath = '';
 
-	$: if (zipCodes) {
+	$: if (zipCodes && height > 0 && width > 0) {
 		view = makeView(zipCodes);
 		fullPath = makePath(zipCodes);
 	}
