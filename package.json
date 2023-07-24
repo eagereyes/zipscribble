@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear"
+    "start": "sirv public --no-clear",
+    "deploy": "npx gh-pages -d public"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
