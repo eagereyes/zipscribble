@@ -1,10 +1,10 @@
 data/*.txt
 data/*.json
 data/*.zip
-ZIPTPCMap/LKH*
-ZIPTPCMap/qsopt*
-ZIPTPCMap/concorde
 srcdata
+
+/public/build/
+
 
 *.twbx
 *.icloud
