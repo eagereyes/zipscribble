@@ -28,8 +28,10 @@ jobs:
       - name: install dependencies
         run: npm ci
 
-      # Runs a set of commands using the runners shell
-      - name: build and deploy
-        run: |
-          npm run build
-          npm run deploy
+      - name: build
+        run: npm run build
+
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public
