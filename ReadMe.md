@@ -1,6 +1,6 @@
-# The ZIPScribble Map and Traveling Presidential Candidate Map
+# The ZIPScribble Map
 
-Connect all the ZIP/postal codes in a country in ascending order.
+Connect all the ZIP/postal codes in a country in ascending order. The U.S. version is available at [zipscribble.us](https://zipscribble.us/).
 
 ## Data Source
 
