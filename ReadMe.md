@@ -1,6 +1,6 @@
 # The ZIPScribble Map
 
-Connect all the ZIP/postal codes in a country in ascending order. You can see it at [https://zipscribble.us/](https://eagereyes.org/app/zipscribble-map).
+Connect all the ZIP/postal codes in a country in ascending order. You can [see it and play with it here](https://eagereyes.org/app/zipscribble-map).
 
 ## Data Source
 
