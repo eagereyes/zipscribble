@@ -12,3 +12,4 @@ node_modules
 Cavalry Autosaves
 *.cv
 .DS_Store
+.svelte-kit
