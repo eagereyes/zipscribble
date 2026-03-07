@@ -23,9 +23,11 @@ This is a **Svelte 5 + SvelteKit + Vite** app. The UI is entirely SVG-based — 
 
 ### Frontend (`src/`)
 
-- **`App.svelte`** — Root component. Loads `public/data/us-lower48.csv` (ZIP codes) and `public/data/us-states-20m.json` (state boundaries) on mount. Applies `d3-geo` Albers projection to all coordinates. Builds a `digits` data structure indexing ZIPs by first digit (0–9), second digit (0–9), and state, with start/end offsets into the sorted ZIP array.
+- **`routes/+page.svelte`** — SvelteKit entry point; simply renders `<App />`.
 
-- **`ZIPScribble.svelte`** — Renders the map as SVG `<path>` elements. Uses `d3-interpolate`'s `interpolateZoom` and Svelte `tweened` stores for animated zoom transitions when the selection changes. The scribble line is a single SVG polyline path through all ZIP coordinates in numeric order.
+- **`App.svelte`** — Root component. Loads `static/data/us-lower48.csv` (ZIP codes) and `static/data/us-states-20m.json` (state boundaries) on mount. Applies `d3-geo` Albers projection to all coordinates. Builds a `digits` data structure indexing ZIPs by first digit (0–9), second digit (0–9), and state, with start/end offsets into the sorted ZIP array.
+
+- **`ZIPScribble.svelte`** — Renders the map as SVG `<path>` elements. Uses `d3-interpolate`'s `interpolateZoom` and Svelte `tweened` stores for animated zoom transitions when the selection changes. The scribble line is a single SVG polyline path through all ZIP coordinates in numeric order. Three `$effect` blocks (zipCodes/dimensions, zoomRange, highlightRange) each use `untrack()` internally to prevent reactive cycles — this pattern is load-bearing, don't remove it.
 
 - **`Navigator.svelte`** — The horizontal bar UI at the bottom. Three rows of clickable/hoverable `<rect>` elements representing first digit, second digit, and state breakdown. Keyboard navigation (digit keys, arrow keys) drives `zoomRange` and `highlightRange` back up to `App.svelte`.
 
@@ -35,7 +37,7 @@ This is a **Svelte 5 + SvelteKit + Vite** app. The UI is entirely SVG-based — 
 
 - Source data: tab-separated `.txt` files from [geonames](http://download.geonames.org/export/zip/) in `data/`
 - `bin/txt2json.py` converts them to `data/zipscribble_XX.json` (GeoJSON LineString or FeatureCollection) and `data/countryinfo.json` (bounding boxes per country)
-- The US-specific visualization uses `public/data/us-lower48.csv` (from Simple Maps), not the geonames JSON files
+- The US-specific visualization uses `static/data/us-lower48.csv` (from Simple Maps), not the geonames JSON files; static assets are served from `static/` (SvelteKit convention)
 
 ### Data flow
 
