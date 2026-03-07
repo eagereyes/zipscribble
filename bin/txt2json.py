@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Convert all the ZIP code tab-separated files to geoJSON that can be used on the web
 
@@ -21,14 +21,11 @@ import json
 import sys
 import os
 
-def compare(a, b):
-	return cmp(a['zip'], b['zip'])
-
 countryInfo = {}
 
 # Parses the geonames ZIP code location file and returns a list of ZIP items and a list of states
 def parseZIPsFile(country):
-	reader = csv.reader(open('data/'+country+'.txt', 'rb'), delimiter='\t')
+	reader = csv.reader(open('data/'+country+'.txt', 'r', encoding='utf-8'), delimiter='\t')
 
 	states = {}
 	zips = []
@@ -53,7 +50,7 @@ def parseZIPsFile(country):
 	return (zips, states)
 
 def parseTPCFile(filename):
-	reader = csv.DictReader(open(filename, 'rb'))
+	reader = csv.DictReader(open(filename, 'r', encoding='utf-8'))
 
 	zips = []
 	for row in reader:
@@ -88,14 +85,14 @@ def convertCountry(country, zips, states, sortZIPs):
 		[boundingbox['minLon'], boundingbox['maxLon'], boundingbox['minLat'], boundingbox['maxLat']]
 	}
 	
-	print countryInfo[country]['bbox'];
+	print(countryInfo[country]['bbox'])
 
 	if len(zips) == 0:
-		print 'No data for '+country+'!'
+		print('No data for '+country+'!')
 	else:
 	
 		if sortZIPs:
-			zips.sort(compare)
+			zips.sort(key=lambda z: z['zip'])
 		
 			# uniq
 			last = zips[-1]
@@ -124,7 +121,7 @@ def convertCountry(country, zips, states, sortZIPs):
 				'bbox': countryInfo[country]['bbox']
 			}
 			
-			geoJSON['coordinates'] = map(lambda z : [z['lon'], z['lat']], zips)
+			geoJSON['coordinates'] = list(map(lambda z : [z['lon'], z['lat']], zips))
 			
 			countryInfo[country]['states'] = False
 			
@@ -148,7 +145,7 @@ def convertCountry(country, zips, states, sortZIPs):
 				'bbox': countryInfo[country]['bbox']
 			}
 			
-			geoJSON['features'] = map(lambda s :
+			geoJSON['features'] = list(map(lambda s :
 				{'type': 'Feature',
 				 'geometry': {
 				 	'type': 'LineString',
@@ -156,7 +153,7 @@ def convertCountry(country, zips, states, sortZIPs):
 				 },
 				 'properties': {},
 				 'id': s
-				}, states.keys())
+				}, states.keys()))
 		
 			# geoJSON['features'].insert(0, {
 			# 	'type': 'Feature',
@@ -171,7 +168,7 @@ def convertCountry(country, zips, states, sortZIPs):
 			countryInfo[country]['states'] = True
 	
 		
-		with open('data/zipscribble_'+country+'.json', 'wb') as out:
+		with open('data/zipscribble_'+country+'.json', 'w') as out:
 			json.dump(geoJSON, out)		
 
 
@@ -179,7 +176,7 @@ def convertCountry(country, zips, states, sortZIPs):
 for file in os.listdir('data'):
 	if len(file) == 6 and file[-4:] == '.txt':
 		country = file[:2]
-		print country
+		print(country)
 		zips, states = parseZIPsFile(country)
 #		convertCountry(country, zips, states, True)
 		# pretend we have no states, to see if that reduces artifacts
@@ -189,5 +186,5 @@ for file in os.listdir('data'):
 zips = parseTPCFile('ZIPTPCMap/USTPCmap.csv')
 convertCountry('USTPC', zips, {'US': []}, False)
 
-with open('data/countryinfo.json', 'wb') as info:
+with open('data/countryinfo.json', 'w') as info:
 	json.dump(countryInfo, info)
