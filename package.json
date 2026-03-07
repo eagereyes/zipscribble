@@ -2,6 +2,7 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -11,6 +12,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.53.4",
     "@types/d3-array": "^3.0.9",
     "@types/d3-fetch": "^3.0.5",

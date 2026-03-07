@@ -1,7 +1,7 @@
 <script>
 	import { csv, json } from 'd3-fetch';
 	import { geoAlbers } from 'd3-geo';
-	import { onMount, afterUpdate } from 'svelte';
+	import { onMount } from 'svelte';
 
 	import ZIPScribble from './ZIPScribble.svelte';
 	import Navigator from './Navigator.svelte';
@@ -11,8 +11,8 @@
 	const STATESFILENAME = 'data/us-states-20m.json';
 	const PROJECTION = geoAlbers();
 
-	let SVGWIDTH = 800;
-	let SVGHEIGHT = 600;
+	let SVGWIDTH = $state(800);
+	let SVGHEIGHT = $state(600);
 	const TITLEHEIGHT = 50;
 
 	const STATECODES = ['', 'AL', 'AK', '', 'AZ', 'AR', 'CA', '', 'CO', 'CT',
@@ -22,9 +22,9 @@
 						'OK', 'OR', 'PA', '', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT',
 						'VT', 'VA', '', 'WA', 'WV', 'WI', 'WY'];
 
-	let zipCodes = null;
-	let places = [];
-	let digits = [...Array(10)].map(d => {
+	let zipCodes = $state(null);
+	let places = $state([]);
+	let digits = $state([...Array(10)].map(d => {
 					return {
 						startOffset:	0,
 						endOffset:		0,
@@ -34,15 +34,15 @@
 												startOffset:	0,
 												endOffset:		0,
 											}})
-					}});
+					}}));
 
-	let states = [];
+	let states = $state([]);
 
-	let zoomRange = [];
-	let highlightRange = [];
+	let zoomRange = $state([]);
+	let highlightRange = $state([]);
 
-	let title = '';
-	let subtitle = '';
+	let title = $state('');
+	let subtitle = $state('');
 
 	onMount(async () => {
 
@@ -157,7 +157,7 @@
 		});
 	});
 
-	let svgElement;
+	let svgElement = $state();
 	function resized() {
 		if (svgElement) {
 			SVGWIDTH = svgElement.width.baseVal.value;
@@ -166,7 +166,7 @@
 		}
 	}
 
-	afterUpdate(resized);
+	$effect(resized);
 
 </script>
 
@@ -198,6 +198,16 @@
 		margin: 0;
 		padding: 0;
 	}
+
+	svg {
+		background-color: white;
+	}
+
+@media (prefers-color-scheme: dark) {
+	svg {
+		background-color: #111;
+	}
+}
 
 	@media (min-width: 640px) {
 		main {

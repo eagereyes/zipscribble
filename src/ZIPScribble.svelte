@@ -3,43 +3,48 @@
 	import { extent } from 'd3-array';
 	import { interpolateZoom } from 'd3-interpolate';
 	import { tweened } from 'svelte/motion';
+	import { untrack } from 'svelte';
 
-	export let x = 0;
-	export let y = 0;
-	export let width;
-	export let height;
-	export let zipCodes;
-	export let states;
-	export let zoomRange;
-	export let highlightRange;
+	let { x = 0, y = 0, width, height, zipCodes, states, zoomRange, highlightRange } = $props();
 	
-	let view;
-	let interpolator;
+	let view = $state();
+	let interpolator = $state();
 	const t = tweened(0);
 
 	const prevAlpha = tweened(0);
-	let prevPath = null;
+	let prevPath = $state(null);
 	const currentAlpha = tweened(1);
-	let currentPath = null;
+	let currentPath = $state(null);
 
-	let fullPath = '';
+	let fullPath = $state('');
 
-	$: if (zipCodes && height > 0 && width > 0) {
-		view = makeView(zipCodes);
-		fullPath = makePath(zipCodes);
-	}
+	$effect(() => {
+		const zips = zipCodes, w = width, h = height;
+		untrack(() => {
+			if (zips && h > 0 && w > 0) {
+				view = makeView(zips);
+				fullPath = makePath(zips);
+			}
+		});
+	});
 
-	$: if (zoomRange) {
-		subsetZIPs(zipCodes, zoomRange);
-	}
+	$effect(() => {
+		const range = zoomRange, zips = zipCodes;
+		untrack(() => {
+			if (range) subsetZIPs(zips, range);
+		});
+	});
 
-	$: if (highlightRange) {
-		if (highlightRange === []) {
-			currentPath = fullPath;
-		} else {
-			currentPath = makePath(zipCodes.slice(highlightRange[0], highlightRange[1]));
-		}
-	}
+	$effect(() => {
+		const range = highlightRange, zips = zipCodes;
+		untrack(() => {
+			if (range && range.length > 0) {
+				currentPath = makePath(zips.slice(range[0], range[1]));
+			} else {
+				currentPath = fullPath;
+			}
+		});
+	});
 
 	function makeView(zips) {
 		const xExt = extent(zips, z => z.lon_proj);
@@ -89,7 +94,7 @@
 	}
 </script>
 
-{#if zipCodes}
+{#if zipCodes && view}
 <g transform={makeTransform($t)}>
 	{#each states as statePolys}
 		{#each statePolys.geo as p}

@@ -1,9 +1,6 @@
 <script>
 
-    export let width;
-    export let height;
-    export let title;
-    export let subtitle;
+    let { width, height, title, subtitle } = $props();
 
 </script>
 

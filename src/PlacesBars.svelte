@@ -3,22 +3,19 @@
 	import { scaleLog } from 'd3-scale';
 	import { extent } from 'd3-array';
 
-	export let x = 0;
-	export let y = 0;
-	export let width;
-	export let height;
-	export let places;
+	let { x = 0, y = 0, width, height, places, range = $bindable([]) } = $props();
 
-	let barWidth;
-	let yScale;
+	let barWidth = $state();
+	let yScale = $state();
 
-	let activeIndex = -1;
-	export let range = [];
+	let activeIndex = $state(-1);
 
-	$: if (places) {
-		yScale = scaleLog(extent(places, p => p.zips), [0, height]);
-		barWidth = Math.floor(width/places.length);
-	}
+	$effect(() => {
+		if (places) {
+			yScale = scaleLog(extent(places, p => p.zips), [0, height]);
+			barWidth = Math.floor(width/places.length);
+		}
+	});
 
 	function mouseMove(e) {
 		activeIndex = Math.floor(e.offsetX/barWidth);
@@ -38,8 +35,8 @@
 
 <g transform={`translate(${x},${y})`}>
 	<rect x={0} y={0} {width} {height} class="overlay"
-		on:mouseleave={mouseLeave}
-		on:mousemove={mouseMove} on:mousedown={mouseClick} />
+		onmouseleave={mouseLeave}
+		onmousemove={mouseMove} onmousedown={mouseClick} />
 	{#each places as p, i}
 		<rect x={i*barWidth} y={height-yScale(p.zips)} width={barWidth-1} height={yScale(p.zips)} class={activeIndex === i ? 'active' : 'zipbar'} />
 	{/each}

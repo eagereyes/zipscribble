@@ -3,26 +3,22 @@
 	import { scaleLinear } from "d3-scale";
 	import { onMount } from 'svelte';
 
-	export let x = 0;
-	export let y;
-	export let width;
-	export let digits;
-	export let zips;
-	export let zoomRange = [];
-	export let highlightRange = [];
-	export let title;
-	export let subtitle;
+	let { x = 0, y, width, digits, zips,
+		zoomRange = $bindable([]),
+		highlightRange = $bindable([]),
+		title = $bindable(''),
+		subtitle = $bindable('') } = $props();
 
-	$: xScale = scaleLinear([0, zips.length], [0, width]);
+	let xScale = $derived(scaleLinear([0, zips.length], [0, width]));
 
-	let activeFirst = -1;
-	let activeSecond = undefined;
-	let activeState = -1;
+	let activeFirst = $state(-1);
+	let activeSecond = $state(undefined);
+	let activeState = $state(-1);
 
-	let timeoutID = 0;
+	let timeoutID = $state(0);
 
-	let svg;
-	let point;
+	let svg = $state();
+	let point = $state();
 
 	onMount(() => {
 		svg = document.querySelector('svg');
@@ -127,7 +123,7 @@
 	{#each digits as d, i}
 		<rect x={xScale(d.startOffset)} y={0} width={xScale(d.endOffset)-xScale(d.startOffset)} height={20}
 			class:active={activeFirst === i}
-			on:mouseenter={() => setActiveDigit(i)} on:mouseleave={() => setActiveDigit(-1)} />
+			onmouseenter={() => setActiveDigit(i)} onmouseleave={() => setActiveDigit(-1)} />
 		{#if i > 0}
 			<line x1={xScale(d.startOffset)} y1={0} x2={xScale(d.startOffset)} y2={20} />
 		{/if}
@@ -135,13 +131,13 @@
 		{#each d.secondDigits as second, s}
 			<rect x={xScale(second.startOffset)} y={20} width={xScale(second.endOffset)-xScale(second.startOffset)} height={20}
 				class:active={activeFirst === i && activeSecond === s}
-				on:mouseenter={() => setActiveDigit(i, s)} on:mouseleave={() => setActiveDigit(i, -1)} />
+				onmouseenter={() => setActiveDigit(i, s)} onmouseleave={() => setActiveDigit(i, -1)} />
 			<line x1={xScale(second.startOffset)} y1={20} x2={xScale(second.startOffset)} y2={40} />
 		{/each}
 		{#each d.states as state, s}
 			<rect x={xScale(state.startOffset)} y={40} width={xScale(state.endOffset)-xScale(state.startOffset)} height={20}
 				class:active={(activeFirst === i && activeState === s) || (activeState >= 0 && activeState < digits[activeFirst].states.length && state.state === digits[activeFirst].states[activeState].state)}
-				on:mouseenter={() => setActiveDigit(i, -1, s)} on:mouseleave={() => setActiveDigit(i, -1, -1)} />
+				onmouseenter={() => setActiveDigit(i, -1, s)} onmouseleave={() => setActiveDigit(i, -1, -1)} />
 			<line x1={xScale(state.startOffset)} y1={40} x2={xScale(state.startOffset)} y2={60} />
 			{#if xScale(state.endOffset)-xScale(state.startOffset) > 20}
 				<text x={(xScale(state.startOffset)+xScale(state.endOffset))/2} y={55} 
