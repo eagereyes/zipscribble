@@ -2,6 +2,10 @@
 
 Connect all the ZIP/postal codes in a country in ascending order. You can [see it and play with it here](https://eagereyes.org/app/zipscribble-map).
 
+## This repo is now archived
+
+The map has been moved over to my [eagereyes repo](https://github.com/eagereyes/eagereyes.org) and will not be maintained anymore. I have archived it as of April 2026.
+
 ## Data Source
 
 All data is coming from [geonames](http://geonames.org), in particular the daily [postal code data dumps](http://download.geonames.org/export/zip/). The scripts do some work to sort the codes, remove duplicates (several adjacent codes sharing the same location), etc.
